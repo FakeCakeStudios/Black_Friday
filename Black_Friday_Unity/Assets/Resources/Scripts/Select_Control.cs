@@ -1,0 +1,59 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class Select_Control : MonoBehaviour
+{
+	//ints
+	private int 		selection;
+
+	//bools
+	private bool 		back;
+
+	//master game object
+	private GameObject 	master;
+
+	// Use this for initialization
+	void Start()
+	{
+		//default values
+		selection 	= 0;
+		back 		= false;
+
+		//obtain master object
+		master 		= GameObject.FindGameObjectWithTag("Master");
+	}
+	
+	//change to appropiate level indicated by user input
+	//never destroy the master object
+	void Update()
+	{
+		switch(selection)
+		{
+		case(1):
+		{
+			DontDestroyOnLoad(master);
+			Application.LoadLevel("Level 1");
+			break;
+		}
+		case(2):
+		{
+			DontDestroyOnLoad(master);
+			Application.LoadLevel("Level 2");
+			break;
+		}
+		case(3):
+		{
+			DontDestroyOnLoad(master);
+			Application.LoadLevel("Level 3");
+			break;
+		}
+		}
+
+		//back changes scene to the Main Menu
+		if(back)
+		{
+			DontDestroyOnLoad(master);
+			Application.LoadLevel("Menu");
+		}
+	}
+}
