@@ -1,0 +1,130 @@
+fileFormatVersion: 2
+guid: fa2e0f39aee3807438b9bb7b306f6159
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: FoldChair
+    100002: FoldChair1
+    100004: FoldChair2
+    100006: //RootNode
+    100008: Industrial_Rack1
+    100010: StorageBox10
+    100012: StorageBox11
+    100014: StorageBox12
+    100016: StorageBox2
+    100018: StorageBox3
+    100020: StorageBox4
+    100022: StorageBox5
+    100024: StorageBox7
+    100026: StorageBox8
+    100028: StorageBox9
+    400000: FoldChair
+    400002: FoldChair1
+    400004: FoldChair2
+    400006: //RootNode
+    400008: Industrial_Rack1
+    400010: StorageBox10
+    400012: StorageBox11
+    400014: StorageBox12
+    400016: StorageBox2
+    400018: StorageBox3
+    400020: StorageBox4
+    400022: StorageBox5
+    400024: StorageBox7
+    400026: StorageBox8
+    400028: StorageBox9
+    2300000: FoldChair
+    2300002: FoldChair1
+    2300004: FoldChair2
+    2300006: Industrial_Rack1
+    2300008: StorageBox10
+    2300010: StorageBox11
+    2300012: StorageBox12
+    2300014: StorageBox2
+    2300016: StorageBox3
+    2300018: StorageBox4
+    2300020: StorageBox5
+    2300022: StorageBox7
+    2300024: StorageBox8
+    2300026: StorageBox9
+    3300000: FoldChair
+    3300002: FoldChair1
+    3300004: FoldChair2
+    3300006: Industrial_Rack1
+    3300008: StorageBox10
+    3300010: StorageBox11
+    3300012: StorageBox12
+    3300014: StorageBox2
+    3300016: StorageBox3
+    3300018: StorageBox4
+    3300020: StorageBox5
+    3300022: StorageBox7
+    3300024: StorageBox8
+    3300026: StorageBox9
+    4300000: StorageBox2
+    4300002: StorageBox3
+    4300004: StorageBox4
+    4300006: StorageBox7
+    4300008: StorageBox8
+    4300010: StorageBox9
+    4300012: StorageBox5
+    4300014: StorageBox10
+    4300016: StorageBox11
+    4300018: StorageBox12
+    4300020: Industrial_Rack1
+    4300022: FoldChair2
+    4300024: FoldChair
+    4300026: FoldChair1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

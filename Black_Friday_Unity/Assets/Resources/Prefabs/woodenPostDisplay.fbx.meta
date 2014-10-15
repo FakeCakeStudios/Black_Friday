@@ -1,0 +1,130 @@
+fileFormatVersion: 2
+guid: 54141ca020e81264e91f0ac76c1e59e0
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Industrial_Rack5
+    100002: StorageBox28
+    100004: StorageBox29
+    100006: StorageBox30
+    100008: StorageBox31
+    100010: StorageBox32
+    100012: StorageBox33
+    100014: StorageBox34
+    100016: StorageBox35
+    100018: StorageBox36
+    100020: StorageBox37
+    100022: Wooden_Post
+    100024: Wooden_Post1
+    100026: Wooden_Post2
+    100028: //RootNode
+    400000: Industrial_Rack5
+    400002: StorageBox28
+    400004: StorageBox29
+    400006: StorageBox30
+    400008: StorageBox31
+    400010: StorageBox32
+    400012: StorageBox33
+    400014: StorageBox34
+    400016: StorageBox35
+    400018: StorageBox36
+    400020: StorageBox37
+    400022: Wooden_Post
+    400024: Wooden_Post1
+    400026: Wooden_Post2
+    400028: //RootNode
+    2300000: Industrial_Rack5
+    2300002: StorageBox28
+    2300004: StorageBox29
+    2300006: StorageBox30
+    2300008: StorageBox31
+    2300010: StorageBox32
+    2300012: StorageBox33
+    2300014: StorageBox34
+    2300016: StorageBox35
+    2300018: StorageBox36
+    2300020: StorageBox37
+    2300022: Wooden_Post
+    2300024: Wooden_Post1
+    2300026: Wooden_Post2
+    3300000: Industrial_Rack5
+    3300002: StorageBox28
+    3300004: StorageBox29
+    3300006: StorageBox30
+    3300008: StorageBox31
+    3300010: StorageBox32
+    3300012: StorageBox33
+    3300014: StorageBox34
+    3300016: StorageBox35
+    3300018: StorageBox36
+    3300020: StorageBox37
+    3300022: Wooden_Post
+    3300024: Wooden_Post1
+    3300026: Wooden_Post2
+    4300000: Wooden_Post
+    4300002: Industrial_Rack5
+    4300004: Wooden_Post1
+    4300006: Wooden_Post2
+    4300008: StorageBox28
+    4300010: StorageBox29
+    4300012: StorageBox30
+    4300014: StorageBox31
+    4300016: StorageBox32
+    4300018: StorageBox33
+    4300020: StorageBox34
+    4300022: StorageBox35
+    4300024: StorageBox36
+    4300026: StorageBox37
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

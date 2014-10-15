@@ -1,0 +1,105 @@
+fileFormatVersion: 2
+guid: adcd7f9956e1dbb4a9697ee855b471b5
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: air_purifier_01
+    100002: //RootNode
+    100004: Industrial_Rack
+    100006: Maya_File_Assets:TexturedAssetsCurrent:Assets:air_purifier_01
+    100008: Maya_File_Assets:TexturedAssetsCurrent:standupFan
+    100010: Standup_Fan
+    100012: StorageBox5
+    100014: StorageBox6
+    100016: StorageBox7
+    100018: StorageBox8
+    400000: air_purifier_01
+    400002: //RootNode
+    400004: Industrial_Rack
+    400006: Maya_File_Assets:TexturedAssetsCurrent:Assets:air_purifier_01
+    400008: Maya_File_Assets:TexturedAssetsCurrent:standupFan
+    400010: Standup_Fan
+    400012: StorageBox5
+    400014: StorageBox6
+    400016: StorageBox7
+    400018: StorageBox8
+    2300000: air_purifier_01
+    2300002: Industrial_Rack
+    2300004: Maya_File_Assets:TexturedAssetsCurrent:Assets:air_purifier_01
+    2300006: Maya_File_Assets:TexturedAssetsCurrent:standupFan
+    2300008: Standup_Fan
+    2300010: StorageBox5
+    2300012: StorageBox6
+    2300014: StorageBox7
+    2300016: StorageBox8
+    3300000: air_purifier_01
+    3300002: Industrial_Rack
+    3300004: Maya_File_Assets:TexturedAssetsCurrent:Assets:air_purifier_01
+    3300006: Maya_File_Assets:TexturedAssetsCurrent:standupFan
+    3300008: Standup_Fan
+    3300010: StorageBox5
+    3300012: StorageBox6
+    3300014: StorageBox7
+    3300016: StorageBox8
+    4300000: Industrial_Rack
+    4300002: StorageBox8
+    4300004: StorageBox7
+    4300006: StorageBox6
+    4300008: air_purifier_01
+    4300010: StorageBox5
+    4300012: Maya_File_Assets:TexturedAssetsCurrent:Assets:air_purifier_01
+    4300014: Maya_File_Assets:TexturedAssetsCurrent:standupFan
+    4300016: Standup_Fan
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 
