@@ -44,4 +44,19 @@ public class Menu_Control : MonoBehaviour
 			Application.LoadLevel("Webstore");
 		}
 	}
+
+	public void SetPlay(bool source)
+	{
+		play = source;
+	}
+
+	public void SetWebstore(bool source)
+	{
+		webstore = source;
+	}
+
+	public void SetCredits(bool source)
+	{
+		credits = source;
+	}
 }
