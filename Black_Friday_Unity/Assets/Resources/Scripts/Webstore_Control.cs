@@ -13,6 +13,7 @@ public class Webstore_Control : MonoBehaviour
 	//ints
 	private int				state;
 	private List<int> 		itemCost;
+	private int				selection;
 
 	//Game Objects
 	private GameObject 		kart;
@@ -36,6 +37,7 @@ public class Webstore_Control : MonoBehaviour
 		//default values
 		state 			= 0;
 		itemCost 		= new List<int>();
+		selection 		= 0;
 
 		//obtain game objects needed
 		kart 			= GameObject.Find("Kart");
@@ -231,5 +233,30 @@ public class Webstore_Control : MonoBehaviour
 			break;
 		}
 		}
+	}
+
+	public void SetKartMenu(bool source)
+	{
+		kartMenu = source;
+	}
+
+	public void SetPowerupMenu(bool source)
+	{
+		powerupMenu = source;
+	}
+
+	public void SetBack(bool source)
+	{
+		back = source;
+	}
+
+	public void SetChange(bool source)
+	{
+		change = source;
+	}
+
+	public void SetSelection(int source)
+	{
+		selection = source;
 	}
 }
