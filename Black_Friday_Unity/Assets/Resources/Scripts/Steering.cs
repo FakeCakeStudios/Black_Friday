@@ -262,7 +262,7 @@ public static class Steering
 		{
 			nextPoint = path.checkPoints.Count - 1;
 		}
-		output = Pursue(source.GetSelf().position, path.checkPoints[nextPoint], source.GetVelocity(), Vector3.zero);
+		output = Pursue(source.GetSelf().position, path.checkPoints[nextPoint].self, source.GetVelocity(), Vector3.zero);
 
 		if(output.linear == Vector3.zero)
 		{
@@ -365,7 +365,7 @@ public static class Steering
 		int point = -1;
 		for(int i = 0; i < route.checkPoints.Count; i++)
 		{
-			distance = Vector3.Distance(srcPos, route.checkPoints[i]);
+			distance = Vector3.Distance(srcPos, route.checkPoints[i].self);
 			if(distance > shortDistance)
 			{
 				shortDistance = distance;

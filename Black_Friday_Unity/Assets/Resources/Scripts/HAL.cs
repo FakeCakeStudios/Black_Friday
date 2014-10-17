@@ -2,13 +2,28 @@
 using System.Collections;
 using System.Collections.Generic;
 
+public class Lines
+{
+	public List<Transform>			lines;
+
+	public void Initialize()
+	{
+		lines	= new List<Transform>();
+	}
+
+	public void Reset()
+	{
+		lines.Clear();
+	}
+}
+
 public class HAL
 {
 	private List<GameObject> 		entities;
 	private List<Entity_Data> 		scriptEnts;
 	private List<Spawn_Triggers> 	triggers;
 	private List<Vector3>			keyPoints;
-	private List<Transform>			checkoutLine;
+	private List<Lines>				checkout;
 
 	private PathManager 			pathsMng;
 	private Guard1					guardType1;
@@ -34,12 +49,12 @@ public class HAL
 		testTimer = 0.0f;
 		testTrigger = 5.0f;
 
-		entities 		= new List<GameObject>();
-		scriptEnts 		= new List<Entity_Data>();
-		triggers 		= new List<Spawn_Triggers>();
-		keyPoints 		= new List<Vector3>();
-		checkoutLine	= new List<Transform>();
-		pathsMng 		= new PathManager();
+		entities 	= new List<GameObject>();
+		scriptEnts 	= new List<Entity_Data>();
+		triggers 	= new List<Spawn_Triggers>();
+		keyPoints 	= new List<Vector3>();
+		checkout 	= new List<Lines>();
+		pathsMng 	= new PathManager();
 		pathsMng.SetupPaths();
 
 		shopperType1	= new Shopper1();
@@ -68,8 +83,11 @@ public class HAL
 		scriptEnts.Clear();
 		triggers.Clear();
 		keyPoints.Clear();
-		checkoutLine.Clear();
 		pathsMng.ResetPaths();
+		for(int i = 0; i < checkout.Count; i++)
+		{
+			checkout[i].Reset();
+		}
 	}
 	
 	public void SetupLevel()
@@ -78,6 +96,7 @@ public class HAL
 		SetTriggers();
 		pathsMng.SetPaths();
 		SetSpawnPoint();
+		SetCheckoutPoint();
 	}
 
 	public void MyUpdate()
@@ -113,11 +132,20 @@ public class HAL
 				{
 					if(!scriptEnts[i].alive)
 					{
-						checkoutLine.Add(scriptEnts[i].GetSelf());
-						scriptEnts[i].pathRoute = checkoutLine.Count - 1;
+						int num = 1000;
+						for(int k = 0; k < checkout.Count; k++)
+						{
+							if(checkout[k].lines.Count < num)
+							{
+								num = k;
+							}
+						}
+						checkout[num].lines.Add(scriptEnts[i].GetSelf());
+						scriptEnts[i].pathRoute = checkout[num].lines.Count - 1;
+						scriptEnts[i].SetLastCheckPoint(num);
 						scriptEnts[i].alive = true;
 					}
-					shopperType1.GetInLine(scriptEnts[i], checkoutLine);
+					shopperType1.GetInLine(scriptEnts[i], checkout[scriptEnts[i].GetLastCheckPoint()].lines);
 				}
 				break;
 			}
@@ -159,7 +187,7 @@ public class HAL
 	void SpawnShopper()
 	{
 		GameObject spawn;
-		/*
+
 		int shopperModel = Random.Range(0, 2);
 		switch(shopperModel)
 		{
@@ -170,12 +198,12 @@ public class HAL
 		}
 		case(1):
 		{
-			spawn = GameObject.Instantiate(Shopper2, spawnPoint, spawnRot)as GameObject;
+			//spawn = GameObject.Instantiate(Shopper2, spawnPoint, spawnRot)as GameObject;
 			break;
 		}
 		case(2):
 		{
-			spawn = GameObject.Instantiate(Shopper3, spawnPoint, spawnRot)as GameObject;
+			//spawn = GameObject.Instantiate(Shopper3, spawnPoint, spawnRot)as GameObject;
 			break;
 		}
 		default:
@@ -184,7 +212,7 @@ public class HAL
 			break;
 		}
 		}
-		*/
+
 		spawn = GameObject.Instantiate(Shopper1, spawnPoint, spawnRot)as GameObject;
 		entities.Add(spawn);
 		scriptEnts.Add(spawn.GetComponent<Entity_Data>());
@@ -237,7 +265,7 @@ public class HAL
 		}
 	}
 
-	/*
+
 	void SetPaths()
 	{
 		GameObject[] checkPoints = GameObject.FindGameObjectsWithTag("Check Point");
@@ -249,22 +277,28 @@ public class HAL
 				pathsMng.paths.Add(new Path());
 				pathsMng.paths[pathIndex].Setup();
 			}
-			pathsMng.paths[pathIndex].checkPoints.Add(checkPoints[i].GetComponent<Transform>().position);
+			pathsMng.paths[pathIndex].checkPoints.Add(checkPoints[i].GetComponent<CheckPoint>());
 			GameObject.Destroy(checkPoints[i].gameObject);
 		}
-		/*
-		for(int i = 0; i < pathsMng.paths.Count; i++)
+	}
+
+	void SetCheckoutPoint()
+	{
+		GameObject[] registers = GameObject.FindGameObjectsWithTag("Checkout");
+		for(int i = 0; i < checkout.Count; i++)
 		{
-			OrganizePathPoints(0, pathsMng.paths[i]);
+			Lines temp = new Lines();
+			temp.Initialize();
+			temp.lines.Add(registers[i].transform);
+			checkout.Add(temp);
 		}
-	}*/
+	}
 	
 	void SetSpawnPoint()
 	{
 		GameObject shopperSpawn = GameObject.FindGameObjectWithTag("Spawn Point");
 		if(shopperSpawn != null)
 		{
-			checkoutLine.Add(shopperSpawn.transform);
 			spawnPoint 	= shopperSpawn.transform.position;
 			spawnRot	= shopperSpawn.transform.rotation;
 		}

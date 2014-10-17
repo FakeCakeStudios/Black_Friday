@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 public class Path
 {
-	public List<Vector3>	checkPoints;
+	public List<CheckPoint> checkPoints;
 
 	//call at the beginning of the application
 	public void Setup()
 	{
-		checkPoints 	= new List<Vector3>();
+		checkPoints = new List<CheckPoint>();
 	}
 	
 	//call between levels when paths change
@@ -39,17 +39,16 @@ public class PathManager
 
 	public void SetPaths()
 	{
-		GameObject[] checkPoints = GameObject.FindGameObjectsWithTag("Check Point");
-		for(int i = 0; i < checkPoints.Length; i++)
+		GameObject[] points = GameObject.FindGameObjectsWithTag("Check Point");
+		for(int i = 0; i < points.Length; i++)
 		{
-			int pathIndex = -8 + checkPoints[i].layer;
+			int pathIndex = -8 + points[i].layer;
 			if(pathIndex + 1 > paths.Count)
 			{
 				paths.Add(new Path());
 				paths[pathIndex].Setup();
 			}
-			paths[pathIndex].checkPoints.Add(checkPoints[i].GetComponent<Transform>().position);
-			GameObject.Destroy(checkPoints[i].gameObject);
+			paths[pathIndex].checkPoints.Add(points[i].GetComponent<CheckPoint>());
 		}
 	}
 }

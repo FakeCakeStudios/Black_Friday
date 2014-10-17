@@ -1,14 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\CheckPoint.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\HAL.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\Master_Control.cs" Line="28" Column="24" />
-      <File FileName="Assets\Resources\Scripts\Player_Data.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Guard1.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Behavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Guard2.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\PathManager.cs" Line="53" Column="3" />
+      <File FileName="Assets\Resources\Scripts\CheckPoint.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\Scripts\Shopper1.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\CheckPoint.cs" Line="8" Column="23" />
+      <File FileName="Assets\Resources\Scripts\HAL.cs" Line="288" Column="36" />
+      <File FileName="Assets\Resources\Scripts\Entity_Data.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
