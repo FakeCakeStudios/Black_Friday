@@ -56,14 +56,4 @@ public class Select_Control : MonoBehaviour
 			Application.LoadLevel("Menu");
 		}
 	}
-
-	public void SetSelection(int source)
-	{
-		selection = source;
-	}
-
-	public void SetBack(bool source)
-	{
-		back = source;
-	}
 }

@@ -1,26 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Credits_Button : MonoBehaviour
+public class Credits_Button : Button_Base
 {
 	private Menu_Control menuScene;
 	
-	void Start()
+	override public void Initialize()
 	{
 		menuScene = GameObject.Find("Scene Control").GetComponent<Menu_Control>();
 	}
 	
-	void OnPress(bool isPressed)
+	override public void OnPress(bool isPressed)
 	{
 		menuScene.SetCredits(true);
 	}
 	
-	void OnHover(bool isOver)
+	override public void OnHover(bool isOver)
 	{
 		
 	}
 	
-	void OnSelect(bool selected)
+	override public void OnSelect(bool selected)
 	{
 		
 	}
