@@ -12,26 +12,27 @@ public class Spawn_Triggers : MonoBehaviour
 	public int 			numOfSpawns;
 
 	//number of guards that have spawned from this trigger
-	public int 			spawned;
+	private int 		spawned;
 
 	//timer for trigger use
 	private float 		timer;
 
 	//amount of time between spawns is capable of spawning more than one
-	public float 		trigger;
+	public float 		spawnDelay;
 
 	//used to let HAL know to spawn a guard
-	public bool 		spawnNPC;
+	private bool 		spawnNPC;
 
 	//used to let HAL know where to spawn the guard from this trigger
-	public Vector3 		spawnPos;
+	private Vector3 	spawnPos;
 
 	//used to let HAL know the rotation of the guard from this trigger
-	public Quaternion 	spawnRot;
+	private Quaternion 	spawnRot;
 	
 	void Start()
 	{
 		//starting values for comparison variables
+		numOfSpawns = 1;
 		spawned 	= 0;
 		timer 		= 0.0f;
 		spawnNPC 	= false;
@@ -54,7 +55,7 @@ public class Spawn_Triggers : MonoBehaviour
 			if(!spawnNPC)
 			{
 				//only spawn if more are allowed to be spawned from here and if the time delay has passed
-				if(timer > trigger && numOfSpawns > spawned)
+				if(timer > spawnDelay && numOfSpawns > spawned)
 				{
 					spawned 	+= 1;
 					spawnNPC 	= true;
@@ -72,5 +73,25 @@ public class Spawn_Triggers : MonoBehaviour
 		{
 			timer = 0.0f;
 		}
+	}
+
+	public bool GetSpawnNPC()
+	{
+		return spawnNPC;
+	}
+
+	public void SetSpawnNPC(bool source)
+	{
+		spawnNPC = source;
+	}
+
+	public int GetNumOfSpawns()
+	{
+		return numOfSpawns;
+	}
+
+	public int GetSpawnCount()
+	{
+		return spawned;
 	}
 }

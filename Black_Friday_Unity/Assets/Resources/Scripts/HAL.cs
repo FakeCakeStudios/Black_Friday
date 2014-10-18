@@ -4,11 +4,12 @@ using System.Collections.Generic;
 
 public class Lines
 {
-	public List<Transform>			lines;
+	public List<Transform> lines;
+
 
 	public void Initialize()
 	{
-		lines	= new List<Transform>();
+		lines = new List<Transform>();
 	}
 
 	public void Reset()
@@ -162,16 +163,16 @@ public class HAL
 	{
 		for(int i = 0; i < triggers.Count; i++)
 		{
-			if(triggers[i].spawnNPC)
+			if(triggers[i].GetSpawnNPC())
 			{
 				Vector3 pos = playerPos.forward * -5.0f;
 				pos.y = 0.1f;
 				GameObject spawn = GameObject.Instantiate(Guard1, playerPos.position + pos, playerPos.rotation)as GameObject;
 				entities.Add(spawn);
 				scriptEnts.Add(spawn.GetComponent<Entity_Data>());
-				triggers[i].spawnNPC = false;
+				triggers[i].SetSpawnNPC(false);
 				//currently destroy the trigger game object after the guard has spawned to reduce number of game objects, because we only spawn one guard from each trigger for now
-				if(triggers[i].numOfSpawns <= triggers[i].spawned)
+				if(triggers[i].GetNumOfSpawns() <= triggers[i].GetSpawnCount())
 				{
 					GameObject.Destroy(triggers[i].gameObject);
 					triggers.RemoveAt(i);
@@ -301,6 +302,7 @@ public class HAL
 		{
 			spawnPoint 	= shopperSpawn.transform.position;
 			spawnRot	= shopperSpawn.transform.rotation;
+			GameObject.Destroy(shopperSpawn);
 		}
 	}
 }

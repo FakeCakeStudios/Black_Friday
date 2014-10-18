@@ -153,6 +153,7 @@
      <Compile Include="Assets\Resources\Scripts\Select_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Shopper1.cs" />
      <Compile Include="Assets\Resources\Scripts\Spawn_Triggers.cs" />
+     <Compile Include="Assets\Resources\Scripts\Splash_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Steering.cs" />
      <Compile Include="Assets\Resources\Scripts\Types_Def.cs" />
      <Compile Include="Assets\Resources\Scripts\Webstore_Button.cs" />
