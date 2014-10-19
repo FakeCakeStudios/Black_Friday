@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 //this is the base class for all behaviorr types, being;
 //guard1, guard2, shopper1
-public class Behavior
+public class Behavior : MonoBehaviour
 {
 	//public Transform self;
 

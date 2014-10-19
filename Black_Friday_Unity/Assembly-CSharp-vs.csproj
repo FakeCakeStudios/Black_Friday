@@ -143,6 +143,8 @@
      <Compile Include="Assets\Resources\Scripts\Guard2.cs" />
      <Compile Include="Assets\Resources\Scripts\HAL.cs" />
      <Compile Include="Assets\Resources\Scripts\Index_Button.cs" />
+     <Compile Include="Assets\Resources\Scripts\Indicator_Control.cs" />
+     <Compile Include="Assets\Resources\Scripts\Level_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Master_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Menu_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\PathManager.cs" />
@@ -163,6 +165,7 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Dynamic Font (AlphaClip).shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Masked Colored.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (AlphaClip) .shader" />
+     <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored (AlphaClip).shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (AlphaClip).shader" />
      <None Include="Assets\NGUI\Resources\Shaders\GUI - Text Shader (AlphaClip).shader" />
@@ -176,6 +179,7 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed).shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Additive Colored.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth.shader" />
+     <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (SoftClip).shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/Joshua/Documents/GitHub/Black_Friday/Black_Friday_Unity/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>

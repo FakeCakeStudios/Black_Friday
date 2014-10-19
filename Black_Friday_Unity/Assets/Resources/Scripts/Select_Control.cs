@@ -32,19 +32,20 @@ public class Select_Control : MonoBehaviour
 		case(1):
 		{
 			DontDestroyOnLoad(master);
-			Application.LoadLevel("Level 1");
+			Application.LoadLevel("Level_1");
 			break;
 		}
 		case(2):
 		{
 			DontDestroyOnLoad(master);
-			Application.LoadLevel("Level 2");
+			Application.LoadLevel("Level_2");
 			break;
 		}
 		case(3):
 		{
-			DontDestroyOnLoad(master);
-			Application.LoadLevel("Level 3");
+			//uncomment when level 3 is in the project, but commented out to prevent any errors
+			//DontDestroyOnLoad(master);
+			//Application.LoadLevel("Level_3");
 			break;
 		}
 		}
