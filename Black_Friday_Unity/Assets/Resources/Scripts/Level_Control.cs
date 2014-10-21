@@ -12,14 +12,14 @@ public class Level_Control : MonoBehaviour
 
 	void Awake()
 	{
-		master = GameObject.Find("Master Control");
-		masterScript = master.GetComponent<Master_Control>();
+		//master = GameObject.Find("Master Control");
+		//masterScript = master.GetComponent<Master_Control>();
 	}
 
 	// Use this for initialization
 	void Start()
 	{
-		masterScript.LevelSetup();
+		//masterScript.LevelSetup();
 	}
 	
 	// Update is called once per frame
