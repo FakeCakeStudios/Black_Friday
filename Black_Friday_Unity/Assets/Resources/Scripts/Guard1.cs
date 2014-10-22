@@ -21,6 +21,7 @@ public class Guard1 : Behavior
 
 	public void BehaviorControl(Entity_Data source, Entity_Data playerInfo, Path path)
 	{
+		source.AddTime();
 		Transform self 				= source.GetSelf();
 		Vector3 playerPos 			= playerInfo.GetSelf().position;
 		List<Interaction> actions 	= source.GetAction();
@@ -43,6 +44,7 @@ public class Guard1 : Behavior
 			source.timer1 += Time.deltaTime;
 			if(source.timer1 >= source.trigger1)
 			{
+				source.timer1 = 0.0f;
 				source.SetActAgro(agroDetect);
 				source.SetNewDestination(true);
 			}
@@ -61,10 +63,9 @@ public class Guard1 : Behavior
 			source.SetStopped(true);
 		}
 
-		if(!source.GetStopped())
+		SteeringOutput output = new SteeringOutput();
+		if(!source.GetStopped() && !actions.Contains(Interaction.Runaway))
 		{
-			SteeringOutput output = new SteeringOutput();
-
 			if(agrod)
 			{
 				source.SetNewDestination(true);
@@ -105,6 +106,21 @@ public class Guard1 : Behavior
 				//always look in the direction we are moving
 				source.SetOutput(Steering.AddSteeringOutputs(output, Steering.LookInDir(self, output.linear)));
 			}
+		}
+		else if(!source.GetStopped() && actions.Contains(Interaction.Runaway))
+		{
+			output = Steering.Evade(self.position, playerInfo.GetSelf().position, source.GetVelocity(), playerInfo.GetVelocity());
+			//assemble new target in case obstacles are in the way
+			Vector3 target 	= new Vector3();
+			target 			= Detection.AvoidObstacles(source);
+			//if target is not 0, then Seek the new target to avoid the obstacle
+			if(target != Vector3.zero)
+			{
+				//source.output = steering.AddSteeringOutputs(source.output, steering.Seek(source.self.position, target));
+				output = Steering.Seek(self.position, target);
+			}
+			//always look in the direction we are moving
+			source.SetOutput(Steering.AddSteeringOutputs(output, Steering.LookInDir(self, output.linear)));
 		}
 	}
 }

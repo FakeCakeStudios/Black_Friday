@@ -8,6 +8,8 @@ public class Entity_Data : MonoBehaviour
 	private Vector3	 		velocity;
 	public float			maxRotation;
 	public float 			maxSpeed;
+	public float 			slowSpeed;
+	private float 			currentSpeed;
 	public float 			maxAccel;
 
 	//behavior variables, currently setting up for Shopper1
@@ -35,8 +37,9 @@ public class Entity_Data : MonoBehaviour
 	
 	//has NPC been agro'd by player?
 	private bool 				actAgro;
-	private bool 				interaction;
 	private List<Interaction> 	action;
+	private List<float>			actionTimers;
+	private List<float>			actionTriggers;
 
 	//collision avoidance variables
 	public float[] 			rayDist;
@@ -50,7 +53,7 @@ public class Entity_Data : MonoBehaviour
 	public float 			trigger1;
 	public float 			timer2;
 	public float 			trigger2;
-	
+
 	public Transform GetSelf()
 	{
 		return self;
@@ -146,30 +149,56 @@ public class Entity_Data : MonoBehaviour
 		return actAgro;
 	}
 
-	public bool GetInteraction()
-	{
-		return interaction;
-	}
-	
-	public void SetInteraction(bool source)
-	{
-		interaction = source;
-	}
-
 	public List<Interaction> GetAction()
 	{
 		return action;
 	}
 	
-	public void SetAction(Interaction source)
+	public void SetAction(Interaction source, float trigger)
 	{
 		action.Add(source);
+		actionTriggers.Add(trigger);
+		actionTimers.Add(0.0f);
+		if(source == Interaction.Stop)
+		{
+			stopped = true;
+		}
+		else if(source == Interaction.Slow)
+		{
+			currentSpeed = slowSpeed;
+		}
 	}
 
+	public void AddTime()
+	{
+		for(int i = 0; i < actionTimers.Count; i++)
+		{
+			actionTimers[i] += Time.deltaTime;
+
+			if(actionTimers[i] >= actionTriggers[i])
+			{
+				if(action[i] == Interaction.Stop)
+				{
+					stopped = false;
+				}
+				else if(action[i] == Interaction.Slow)
+				{
+					currentSpeed = maxSpeed;
+				}
+				actionTimers.RemoveAt(i);
+				actionTriggers.RemoveAt(i);
+				action.RemoveAt(i);
+			}
+		}
+	}
+	
 	void Awake()
 	{
 		self 				= this.gameObject.transform;
 		output 				= new SteeringOutput();
+		action 				= new List<Interaction>();
+		actionTimers 		= new List<float>();
+		actionTriggers 		= new List<float>();
 	}
 
 	// Use this for initialization
@@ -185,8 +214,7 @@ public class Entity_Data : MonoBehaviour
 		stopped				= false;
 		alive 				= true;
 		doneShopping 		= false;
-		interaction 		= true;
-		action 				= new List<Interaction>();
+
 
 		//ints
 		pathRoute 			= 0;
@@ -194,6 +222,8 @@ public class Entity_Data : MonoBehaviour
 
 		//floats
 		maxSpeed 			= 3.0f;
+		slowSpeed			= 1.5f;
+		currentSpeed		= maxSpeed;
 		maxRotation 		= 100.0f;
 		maxAccel 			= 100.0f;
 		timer1 				= 0.0f;
@@ -230,10 +260,10 @@ public class Entity_Data : MonoBehaviour
 				//currently all object move in the direction they are facing, no side stepping
 				velocity += self.forward * maxAccel * Time.deltaTime;
 
-				if(velocity.magnitude > maxSpeed)
+				if(velocity.magnitude > currentSpeed)
 				{
 					velocity = Vector3.Normalize(velocity);
-					velocity *= maxSpeed;
+					velocity *= currentSpeed;
 				}
 			}
 			else

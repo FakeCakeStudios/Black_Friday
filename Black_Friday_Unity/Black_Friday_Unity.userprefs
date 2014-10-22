@@ -1,14 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Entity_Data.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Shopper1.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\Guard1.cs" Line="35" Column="4" />
-      <File FileName="Assets\Resources\Scripts\Guard2.cs" Line="17" Column="52" />
-      <File FileName="Assets\Resources\Scripts\Entity_Data.cs" Line="197" Column="22" />
-      <File FileName="Assets\Resources\Scripts\Behavior.cs" Line="20" Column="2" />
-      <File FileName="Assets\Resources\Scripts\HAL.cs" Line="333" Column="84" />
-      <File FileName="Assets\Resources\Scripts\Shopper1.cs" Line="16" Column="41" />
-      <File FileName="Assets\Resources\Scripts\Types_Def.cs" Line="13" Column="8" />
+      <File FileName="Assets\Resources\Scripts\Guard1.cs" Line="68" Column="4" />
+      <File FileName="Assets\Resources\Scripts\Guard2.cs" Line="56" Column="48" />
+      <File FileName="Assets\Resources\Scripts\Shopper1.cs" Line="21" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

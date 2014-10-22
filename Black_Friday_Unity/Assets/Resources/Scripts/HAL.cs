@@ -128,7 +128,7 @@ public class HAL
 			{
 				if(!scriptEnts[i].doneShopping)
 				{
-					shopperType1.BehaviorControl(scriptEnts[i], pathsMng.paths[scriptEnts[i].pathRoute]);
+					shopperType1.BehaviorControl(scriptEnts[i], playerScript, pathsMng.paths[scriptEnts[i].pathRoute]);
 				}
 				else
 				{
@@ -290,7 +290,7 @@ public class HAL
 		}
 	}
 
-	public void SetPlayerDetectable(bool source)
+	public void SetPlayerDetectable(bool source, float effectedTime)
 	{
 		for(int i = 0; i < entities.Count; i++)
 		{
@@ -308,24 +308,31 @@ public class HAL
 			{
 				if(source)
 				{
-					scriptEnts[i].SetAction(Interaction.Undetectable);
+					scriptEnts[i].SetAction(Interaction.Undetectable, effectedTime);
 				}
 				else
 				{
-					scriptEnts[i].SetAction(Interaction.None);
+					scriptEnts[i].SetAction(Interaction.None, 0.0f);
 				}
 				break;
 			}
 			case(BehaviorType.Guard2):
 			{
-				scriptEnts[i].SetAction(Interaction.Undetectable);
+				if(source)
+				{
+					scriptEnts[i].SetAction(Interaction.Undetectable, effectedTime);
+				}
+				else
+				{
+					scriptEnts[i].SetAction(Interaction.None, 0.0f);
+				}
 				break;
 			}
 			}
 		}
 	}
 
-	public void SetFleePlayer()
+	public void SetFleePlayer(float effectedTime)
 	{
 		float distance;
 		for(int i = 0; i < entities.Count; i++)
@@ -333,7 +340,7 @@ public class HAL
 			distance = Vector3.Distance(playerPos.position, scriptEnts[i].GetSelf().position);
 			if(distance <= 3.0f)
 			{
-				scriptEnts[i].SetAction(Interaction.Runaway);
+				scriptEnts[i].SetAction(Interaction.Runaway, effectedTime);
 			}
 		}
 	}

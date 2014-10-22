@@ -10,15 +10,16 @@ public class Shopper1 : Behavior
 
 	}
 
-	public void BehaviorControl(Entity_Data source, Path path)
+	public void BehaviorControl(Entity_Data source, Entity_Data playerInfo, Path path)
 	{
+		source.AddTime();
 		Transform self 				= source.GetSelf();
 		bool agrod 					= source.GetActAgro();
+		List<Interaction> actions   = source.GetAction();
 
 		source.timer2 += Time.deltaTime;
 		SteeringOutput output = new SteeringOutput();
-
-		if(!source.GetStopped())// && !actions.Contains(Interaction.Runaway))
+		if(!source.GetStopped() && !actions.Contains(Interaction.Runaway))
 		{
 			if(source.timer2 < source.trigger2)
 			{
@@ -57,9 +58,9 @@ public class Shopper1 : Behavior
 				source.alive 		= false;
 			}
 		}
-		else// if(actions.Contains(Interaction.Runaway))
+		else if(!source.GetStopped() && actions.Contains(Interaction.Runaway))
 		{
-
+			output = Steering.Evade(self.position, playerInfo.GetSelf().position, source.GetVelocity(), playerInfo.GetVelocity());
 		}
 		//assemble new target in case obstacles are in the way
 		Vector3 target 	= new Vector3();
