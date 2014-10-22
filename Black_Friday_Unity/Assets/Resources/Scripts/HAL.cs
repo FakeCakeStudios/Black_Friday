@@ -65,9 +65,9 @@ public class HAL
 		guardType2		= new Guard2();
 		guardType2.Start();
 
-		Guard1 			= Resources.Load("Prefabs/Guard1");
+		Guard1 			= Resources.Load("Prefabs/Characters/BigCop");
 		//Guard2 			= Resources.Load("Prefabs/Guard2");
-		Shopper1 		= Resources.Load ("Prefabs/Shopper1");
+		//Shopper1 		= Resources.Load ("Prefabs/Shopper1");
 		//Shopper2 		= Resources.Load ("Prefabs/Shopper2");
 		//Shopper3 		= Resources.Load ("Prefabs/Shopper3");
 	}
