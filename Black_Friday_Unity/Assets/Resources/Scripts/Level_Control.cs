@@ -20,6 +20,7 @@ public class Level_Control : MonoBehaviour
 	void Start()
 	{
 		masterScript.LevelSetup();
+		masterScript.SetInGame(true);
 	}
 	
 	// Update is called once per frame

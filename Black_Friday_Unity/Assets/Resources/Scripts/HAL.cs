@@ -55,6 +55,7 @@ public class HAL
 		triggers 	= new List<Spawn_Triggers>();
 		keyPoints 	= new List<Vector3>();
 		checkout 	= new List<Lines>();
+
 		pathsMng 	= new PathManager();
 		pathsMng.SetupPaths();
 
@@ -67,7 +68,7 @@ public class HAL
 
 		Guard1 			= Resources.Load("Prefabs/Characters/BigCop");
 		//Guard2 			= Resources.Load("Prefabs/Guard2");
-		//Shopper1 		= Resources.Load ("Prefabs/Shopper1");
+		Shopper1 		= Resources.Load ("Prefabs/Characters/Shopper1");
 		//Shopper2 		= Resources.Load ("Prefabs/Shopper2");
 		//Shopper3 		= Resources.Load ("Prefabs/Shopper3");
 	}
@@ -266,27 +267,10 @@ public class HAL
 		}
 	}
 
-
-	void SetPaths()
-	{
-		GameObject[] checkPoints = GameObject.FindGameObjectsWithTag("Check Point");
-		for(int i = 0; i < checkPoints.Length; i++)
-		{
-			int pathIndex = -8 + checkPoints[i].layer;
-			if(pathIndex + 1 > pathsMng.paths.Count)
-			{
-				pathsMng.paths.Add(new Path());
-				pathsMng.paths[pathIndex].Setup();
-			}
-			pathsMng.paths[pathIndex].checkPoints.Add(checkPoints[i].GetComponent<CheckPoint>());
-			GameObject.Destroy(checkPoints[i].gameObject);
-		}
-	}
-
 	void SetCheckoutPoint()
 	{
 		GameObject[] registers = GameObject.FindGameObjectsWithTag("Checkout");
-		for(int i = 0; i < checkout.Count; i++)
+		for(int i = 0; i < registers.Length; i++)
 		{
 			Lines temp = new Lines();
 			temp.Initialize();

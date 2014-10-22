@@ -13,7 +13,7 @@ public class Master_Control : MonoBehaviour
 	private Player_Data player;
 
 	//shoulmd only be done one during runtie at the beginning of the application start
-	void Start()
+	void Awake()
 	{
 		inGame = false;
 
