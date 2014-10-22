@@ -69,7 +69,7 @@ public static class Detection
 		float 		avoidDist = 5.0f;
 		Vector3 	toSeek;
 
-		toSeek 		= new Vector3();
+		toSeek 	= new Vector3();
 		rays 	= new Ray[3];
 
 		//center ray

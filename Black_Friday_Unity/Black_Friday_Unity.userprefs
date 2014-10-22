@@ -1,15 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\HAL.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Level_Control.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\Guard2.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Steering.cs" Line="367" Column="4" />
-      <File FileName="Assets\Resources\Scripts\Shopper1.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\HAL.cs" Line="274" Column="4" />
-      <File FileName="Assets\Resources\Scripts\CheckPoint.cs" Line="14" Column="12" />
-      <File FileName="Assets\Resources\Scripts\Master_Control.cs" Line="16" Column="12" />
-      <File FileName="Assets\Resources\Scripts\Level_Control.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\PathManager.cs" Line="51" Column="75" />
+      <File FileName="Assets\Resources\Scripts\Cody\player\Entities\ClassesSetOne.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Cody\player\Entities\PCPLayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Cody\player\Entities\PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Cody\player\EntityScripts\CamRotation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Cody\player\EntityScripts\EntityCharacter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Cody\player\EntityScripts\EntityManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Cody\player\EntityScripts\MyMasterControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Level_Control.cs" Line="20" Column="1" />
+      <File FileName="Assets\Resources\Scripts\RunTime.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
