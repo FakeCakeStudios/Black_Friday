@@ -8,6 +8,11 @@ public enum BehaviorType
 	Player, Guard1, Guard2, Shopper1, Shopper2, Shopper3
 }
 
+public enum Interaction
+{
+	None, Slow, Stop, Runaway, Undetectable
+}
+
 //TODO needs to be completed with the names of the powerups in the game
 public enum Powerups
 {

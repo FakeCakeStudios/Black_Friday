@@ -12,15 +12,14 @@ public class Shopper1 : Behavior
 
 	public void BehaviorControl(Entity_Data source, Path path)
 	{
-		Transform self 	= source.GetSelf();
-		bool agrod 		= source.GetActAgro();
+		Transform self 				= source.GetSelf();
+		bool agrod 					= source.GetActAgro();
 
 		source.timer2 += Time.deltaTime;
+		SteeringOutput output = new SteeringOutput();
 
-		if(!source.GetStopped())
+		if(!source.GetStopped())// && !actions.Contains(Interaction.Runaway))
 		{
-			SteeringOutput output = new SteeringOutput();
-
 			if(source.timer2 < source.trigger2)
 			{
 				//new destination is representing if the shopper is wanting to go down a new isle
@@ -57,18 +56,22 @@ public class Shopper1 : Behavior
 				source.doneShopping = true;
 				source.alive 		= false;
 			}
-			//assemble new target in case obstacles are in the way
-			Vector3 target 	= new Vector3();
-			target 			= Detection.AvoidObstacles(source);
-			//if target is not 0, then Seek the new target to avoid the obstacle
-			if(target != Vector3.zero)
-			{
-				//source.output = steering.AddSteeringOutputs(source.output, steering.Seek(source.self.position, target));
-				output = Steering.Seek(self.position, target);
-			}
-			//always look in the direction we are moving
-			source.SetOutput(Steering.AddSteeringOutputs(output, Steering.LookInDir(self, output.linear)));
 		}
+		else// if(actions.Contains(Interaction.Runaway))
+		{
+
+		}
+		//assemble new target in case obstacles are in the way
+		Vector3 target 	= new Vector3();
+		target 			= Detection.AvoidObstacles(source);
+		//if target is not 0, then Seek the new target to avoid the obstacle
+		if(target != Vector3.zero)
+		{
+			//source.output = steering.AddSteeringOutputs(source.output, steering.Seek(source.self.position, target));
+			output = Steering.Seek(self.position, target);
+		}
+		//always look in the direction we are moving
+		source.SetOutput(Steering.AddSteeringOutputs(output, Steering.LookInDir(self, output.linear)));
 	}
 
 	public void GetInLine(Entity_Data source, List<Transform> line)

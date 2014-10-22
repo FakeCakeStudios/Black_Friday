@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Guard2 : Behavior
 {
@@ -11,12 +12,24 @@ public class Guard2 : Behavior
 	
 	public void BehaviorControl(Entity_Data source, Entity_Data playerInfo)
 	{
-		Transform self 		= source.GetSelf();
-		Vector3 playerPos 	= playerInfo.GetSelf().position;
+		Transform self 				= source.GetSelf();
+		Vector3 playerPos 			= playerInfo.GetSelf().position;
+		List<Interaction> actions   = source.GetAction();
+
 		bool agrod 			= source.GetActAgro();
+		bool agroDetect 	= false;
+		
+		//check to see if player is within agro range and sight
+		if(!actions.Contains(Interaction.Undetectable))
+		{
+			agroDetect = Detection.PlayerAgro(source, playerPos);
+		}
+		else
+		{
+			source.SetActAgro(agroDetect);
+		}
 
 		//check to see if player is within agro range and sight
-		bool agroDetect = Detection.PlayerAgro(source, playerPos);
 		if(agrod == true && agrod != agroDetect)
 		{
 			source.timer1 += Time.deltaTime;
@@ -30,9 +43,13 @@ public class Guard2 : Behavior
 			source.SetActAgro(agroDetect);
 		}
 
-		if(agrod)
+		if(agrod && !actions.Contains(Interaction.Stop))
 		{
 			source.SetStopped(false);
+		}
+		else if(actions.Contains(Interaction.Stop))
+		{
+			source.SetStopped(true);
 		}
 
 		if(!source.GetStopped())

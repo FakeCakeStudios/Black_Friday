@@ -6,8 +6,6 @@ using System.Collections.Generic;
 //guard1, guard2, shopper1
 public class Behavior : MonoBehaviour
 {
-	//public Transform self;
-
 	//virtual function to b overridden by child classes to polymorph
 	virtual public void Initialize()
 	{

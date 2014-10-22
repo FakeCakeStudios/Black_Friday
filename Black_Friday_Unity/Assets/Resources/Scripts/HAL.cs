@@ -289,4 +289,52 @@ public class HAL
 			GameObject.Destroy(shopperSpawn);
 		}
 	}
+
+	public void SetPlayerDetectable(bool source)
+	{
+		for(int i = 0; i < entities.Count; i++)
+		{
+			switch(scriptEnts[i].behavior)
+			{
+			case(BehaviorType.Player):
+			{
+				break;
+			}
+			case(BehaviorType.Shopper1):
+			{
+				break;
+			}
+			case(BehaviorType.Guard1):
+			{
+				if(source)
+				{
+					scriptEnts[i].SetAction(Interaction.Undetectable);
+				}
+				else
+				{
+					scriptEnts[i].SetAction(Interaction.None);
+				}
+				break;
+			}
+			case(BehaviorType.Guard2):
+			{
+				scriptEnts[i].SetAction(Interaction.Undetectable);
+				break;
+			}
+			}
+		}
+	}
+
+	public void SetFleePlayer()
+	{
+		float distance;
+		for(int i = 0; i < entities.Count; i++)
+		{
+			distance = Vector3.Distance(playerPos.position, scriptEnts[i].GetSelf().position);
+			if(distance <= 3.0f)
+			{
+				scriptEnts[i].SetAction(Interaction.Runaway);
+			}
+		}
+	}
 }

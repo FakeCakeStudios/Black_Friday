@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Entity_Data : MonoBehaviour
 {
@@ -33,7 +34,9 @@ public class Entity_Data : MonoBehaviour
 	public float 			agroRad;
 	
 	//has NPC been agro'd by player?
-	private bool 			actAgro;
+	private bool 				actAgro;
+	private bool 				interaction;
+	private List<Interaction> 	action;
 
 	//collision avoidance variables
 	public float[] 			rayDist;
@@ -47,7 +50,7 @@ public class Entity_Data : MonoBehaviour
 	public float 			trigger1;
 	public float 			timer2;
 	public float 			trigger2;
-
+	
 	public Transform GetSelf()
 	{
 		return self;
@@ -143,6 +146,26 @@ public class Entity_Data : MonoBehaviour
 		return actAgro;
 	}
 
+	public bool GetInteraction()
+	{
+		return interaction;
+	}
+	
+	public void SetInteraction(bool source)
+	{
+		interaction = source;
+	}
+
+	public List<Interaction> GetAction()
+	{
+		return action;
+	}
+	
+	public void SetAction(Interaction source)
+	{
+		action.Add(source);
+	}
+
 	void Awake()
 	{
 		self 				= this.gameObject.transform;
@@ -162,6 +185,8 @@ public class Entity_Data : MonoBehaviour
 		stopped				= false;
 		alive 				= true;
 		doneShopping 		= false;
+		interaction 		= true;
+		action 				= new List<Interaction>();
 
 		//ints
 		pathRoute 			= 0;
@@ -169,7 +194,7 @@ public class Entity_Data : MonoBehaviour
 
 		//floats
 		maxSpeed 			= 3.0f;
-		maxRotation 		= 65.0f;
+		maxRotation 		= 100.0f;
 		maxAccel 			= 100.0f;
 		timer1 				= 0.0f;
 		timer2 				= 0.0f;
