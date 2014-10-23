@@ -4,6 +4,7 @@ using System.Collections;
 public class Master_Control : MonoBehaviour
 {
 	private bool inGame;
+	private bool pause;
 
 	//AI is currently not in so it is commented out from the master currently
 	//artificial intelligence
@@ -16,6 +17,7 @@ public class Master_Control : MonoBehaviour
 	void Awake()
 	{
 		inGame = false;
+		pause = false;
 
 		//only call at the beginning of the application
 		ai = new HAL();
@@ -55,5 +57,19 @@ public class Master_Control : MonoBehaviour
 	public void SetInGame(bool source)
 	{
 		inGame = source;
+	}
+
+	public void SetPause()
+	{
+		if(pause)
+		{
+			pause = false;
+			Time.timeScale = 1.0f;
+		}
+		else
+		{
+			pause = true;
+			Time.timeScale = 0.0f;
+		}
 	}
 }
