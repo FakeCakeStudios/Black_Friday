@@ -100,8 +100,11 @@ public static class Detection
 		{
 			if(Physics.Raycast(rays[i], out hit, entity.rayDist[i]))
 			{
-				toSeek = (hit.point + hit.normal * avoidDist);
-				toSeek.y = 0.0f;
+				if(hit.transform.gameObject.layer != 9)
+				{
+					toSeek = (hit.point + hit.normal * avoidDist);
+					toSeek.y = 0.0f;
+				}
 			}
 		}
 		//the return variable is to remind to call the Seek function of Steering after this call if not zero vectors

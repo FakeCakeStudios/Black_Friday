@@ -41,6 +41,7 @@ public class HAL
 	public Transform				playerPos;
 	private Vector3					spawnPoint;
 	private Quaternion				spawnRot;
+	private Vector3					exitPoint;
 
 	private float testTimer;
 	private float testTrigger;
@@ -134,21 +135,39 @@ public class HAL
 				{
 					if(!scriptEnts[i].alive)
 					{
-						int num = 1000;
+						int currLine = 0;
+						int shortestLine = checkout[0].lines.Count;
+
 						for(int k = 0; k < checkout.Count; k++)
 						{
-							if(checkout[k].lines.Count < num)
+							if(checkout[k].lines.Count <= shortestLine)
 							{
-								num = k;
+								shortestLine = checkout[k].lines.Count;
+								currLine = k;
 							}
 						}
-						checkout[num].lines.Add(scriptEnts[i].GetSelf());
-						scriptEnts[i].pathRoute = checkout[num].lines.Count - 1;
-						scriptEnts[i].SetLastCheckPoint(num);
+						checkout[currLine].lines.Add(scriptEnts[i].GetSelf());
+						scriptEnts[i].pathRoute = checkout[currLine].lines.Count - 1;
+						scriptEnts[i].SetLastCheckPoint(currLine);
 						scriptEnts[i].alive = true;
+						scriptEnts[i].trigger1 = Random.Range(3.0f, 8.0f);
+						scriptEnts[i].timer1 = 0.0f;
 					}
 					shopperType1.GetInLine(scriptEnts[i], checkout[scriptEnts[i].GetLastCheckPoint()].lines);
 				}
+				for(int k = 0; k < checkout.Count; k++)
+				{
+					if(checkout[k].lines.Count > 0)
+					{
+
+					}
+				}
+
+
+
+
+
+
 				break;
 			}
 			case(BehaviorType.Player):
@@ -277,6 +296,7 @@ public class HAL
 			temp.lines.Add(registers[i].transform);
 			checkout.Add(temp);
 		}
+		exitPoint = GameObject.FindGameObjectWithTag("Exit").transform.position;
 	}
 	
 	void SetSpawnPoint()

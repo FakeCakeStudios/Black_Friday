@@ -115,6 +115,11 @@ public class Shopper1 : Behavior
 			source.SetOutput(output);
 		}
 	}
+
+	public void LeaveStore(Vector3 exit)
+	{
+
+	}
 	
 	//takes one entity at a time and determines to avoid obstacles by raycasting
 	Vector3 IsleShopPoint(Entity_Data entity)
