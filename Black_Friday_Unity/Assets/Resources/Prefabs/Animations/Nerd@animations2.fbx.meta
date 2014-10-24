@@ -119,9 +119,9 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
-    animationPositionError: .5
+    animationPositionError: .200000003
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
@@ -142,9 +142,9 @@ ModelImporter:
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -466,9 +466,9 @@ ModelImporter:
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -557,7 +557,7 @@ ModelImporter:
       - path: Master_Root_Control/Skin_Root_Joint_GRP/Skin_Root_Joint/Skin_Spine_AJNT/Skin_Spine_BJNT/Skin_Right_Clavicle_AJNT/Skin_Right_Shoulder_AJNT/Skin_Right_Elbow_AJNT/Skin_Right_Wrist_AJNT/transform2/Skin_Right_Thumb_AJNT/Skin_Right_Thumb_BJNT
         weight: 1
       maskType: 0
-      maskSource: {instanceID: 0}
+      maskSource: {fileID: 101100000, guid: 17ab27157736fa14b8a75d93f3bef8cd, type: 2}
     - serializedVersion: 16
       name: GrabLowRight_02
       takeName: Take 001
@@ -1980,7 +1980,7 @@ ModelImporter:
       keepOriginalOrientation: 0
       keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -2721,7 +2721,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: .100000001
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
