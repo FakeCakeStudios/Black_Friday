@@ -31,3 +31,20 @@ public struct SteeringOutput
 	public Vector3 	linear;
 	public float 	angle;
 }
+
+public enum Buttons{
+	Left,
+	Right,
+	None
+}
+public enum Motor{
+	SpeedUp,
+	SlowDown
+}
+public enum EntityType{
+	Player,
+	PCplayer,
+	GuardOne,
+	GuardTwo,
+	NPC
+}

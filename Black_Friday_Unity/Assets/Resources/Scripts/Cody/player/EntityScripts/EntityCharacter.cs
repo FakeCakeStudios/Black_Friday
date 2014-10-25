@@ -158,7 +158,7 @@ public class EntityCharacter : MonoBehaviour{
 			this.transform.Rotate(rotDirection);
 			//rotDirection *= turn;
 		}
-		moveDirection.y -= gravity * Time.deltaTime;
+		//moveDirection.y -= gravity * Time.deltaTime;
 		this.controller.Move(moveDirection * Time.deltaTime);
 	}
 }

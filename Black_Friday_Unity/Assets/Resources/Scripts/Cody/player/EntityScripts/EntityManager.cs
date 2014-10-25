@@ -30,6 +30,7 @@ public class EntityManager{
 		}
 	}
 }
+/*
 public enum Buttons{
 	Left,
 	Right,
@@ -45,4 +46,4 @@ public enum EntityType{
 	GuardOne,
 	GuardTwo,
 	NPC
-}
+}*/
