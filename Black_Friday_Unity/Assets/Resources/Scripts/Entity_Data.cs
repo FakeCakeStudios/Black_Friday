@@ -4,10 +4,12 @@ using System.Collections.Generic;
 
 public class Entity_Data : MonoBehaviour
 {
+	private Animator		charAnimations;
 	private Transform 		self;
 	private Vector3	 		velocity;
 	public float			maxRotation;
-	public float 			maxSpeed;
+	public float 			runSpeed;
+	public float 			walkSpeed;
 	public float 			slowSpeed;
 	private float 			currentSpeed;
 	public float 			maxAccel;
@@ -20,6 +22,7 @@ public class Entity_Data : MonoBehaviour
 	private int 			animRepeat;
 	private bool 			playingAnim;
 	private bool 			stopped;
+	private bool 			slowed;
 
 	//pathing variables
 	private int				lastCheckPoint;
@@ -142,6 +145,14 @@ public class Entity_Data : MonoBehaviour
 	public void SetActAgro(bool source)
 	{
 		actAgro = source;
+		if(actAgro)
+		{
+			currentSpeed = runSpeed;
+		}
+		else
+		{
+			currentSpeed = walkSpeed;
+		}
 	}
 	
 	public bool GetActAgro()
@@ -166,6 +177,7 @@ public class Entity_Data : MonoBehaviour
 		else if(source == Interaction.Slow)
 		{
 			currentSpeed = slowSpeed;
+			slowed = true;
 		}
 	}
 
@@ -183,7 +195,8 @@ public class Entity_Data : MonoBehaviour
 				}
 				else if(action[i] == Interaction.Slow)
 				{
-					currentSpeed = maxSpeed;
+					currentSpeed = walkSpeed;
+					slowed = false;
 				}
 				actionTimers.RemoveAt(i);
 				actionTriggers.RemoveAt(i);
@@ -194,11 +207,12 @@ public class Entity_Data : MonoBehaviour
 	
 	void Awake()
 	{
-		self 				= this.gameObject.transform;
-		output 				= new SteeringOutput();
-		action 				= new List<Interaction>();
-		actionTimers 		= new List<float>();
-		actionTriggers 		= new List<float>();
+		self 			= this.gameObject.transform;
+		output 			= new SteeringOutput();
+		action 			= new List<Interaction>();
+		actionTimers 	= new List<float>();
+		actionTriggers 	= new List<float>();
+		charAnimations	= this.gameObject.GetComponent<Animator>();
 	}
 
 	// Use this for initialization
@@ -214,6 +228,7 @@ public class Entity_Data : MonoBehaviour
 		stopped				= false;
 		alive 				= true;
 		doneShopping 		= false;
+		slowed 				= false;
 
 
 		//ints
@@ -221,9 +236,10 @@ public class Entity_Data : MonoBehaviour
 		animRepeat 			= 1;
 
 		//floats
-		maxSpeed 			= 3.0f;
+		runSpeed 			= 6.0f;
+		walkSpeed			= 3.0f;
 		slowSpeed			= 1.5f;
-		currentSpeed		= maxSpeed;
+		currentSpeed		= walkSpeed;
 		maxRotation 		= 100.0f;
 		maxAccel 			= 100.0f;
 		timer1 				= 0.0f;
@@ -265,11 +281,31 @@ public class Entity_Data : MonoBehaviour
 					velocity = Vector3.Normalize(velocity);
 					velocity *= currentSpeed;
 				}
+				if(actAgro && !slowed)
+				{
+					charAnimations.SetBool("run", true);
+					charAnimations.SetBool("idle", false);
+				}
+				else
+				{
+					charAnimations.SetBool("walk", true);
+					charAnimations.SetBool("idle", false);
+				}
 			}
 			else
 			{
 				velocity = Vector3.zero;
+				charAnimations.SetBool("idle", true);
+				charAnimations.SetBool("walk", false);
+				charAnimations.SetBool("run", false);
 			}
+		}
+		else
+		{
+			velocity = Vector3.zero;
+			charAnimations.SetBool("idle", true);
+			charAnimations.SetBool("walk", false);
+			charAnimations.SetBool("run", false);
 		}
 	}
 

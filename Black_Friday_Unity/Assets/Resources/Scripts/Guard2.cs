@@ -30,7 +30,6 @@ public class Guard2 : Behavior
 			source.SetActAgro(agroDetect);
 		}
 
-		//check to see if player is within agro range and sight
 		if(agrod == true && agrod != agroDetect)
 		{
 			source.timer1 += Time.deltaTime;

@@ -50,7 +50,7 @@ public static class Detection
 		{
 			if(Physics.Raycast(ray, out hit, entity.agroRad))
 			{
-				if(Vector3.Distance(hit.point, playerPos) < 2.0f)
+				if(Vector3.Distance(hit.point, playerPos) < 0.5f)
 				{
 					return true;
 				}

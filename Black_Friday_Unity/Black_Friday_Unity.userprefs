@@ -1,11 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\HAL.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Entity_Data.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\HAL.cs" Line="47" Column="28" />
-      <File FileName="Assets\Resources\Scripts\Shopper1.cs" Line="119" Column="37" />
-      <File FileName="Assets\Resources\Scripts\Detection.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\DeathZone_Trigger.cs" Line="21" Column="29" />
+      <File FileName="Assets\Resources\Scripts\Guard2.cs" Line="32" Column="3" />
+      <File FileName="Assets\Resources\Scripts\Entity_Data.cs" Line="154" Column="29" />
+      <File FileName="Assets\Resources\Scripts\Detection.cs" Line="53" Column="52" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
