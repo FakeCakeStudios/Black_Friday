@@ -23,6 +23,7 @@ public class Entity_Data : MonoBehaviour
 	private bool 			playingAnim;
 	private bool 			stopped;
 	private bool 			slowed;
+	private bool 			tackle;
 
 	//pathing variables
 	private int				lastCheckPoint;
@@ -181,6 +182,12 @@ public class Entity_Data : MonoBehaviour
 		}
 	}
 
+	public void SetTackle(bool source)
+	{
+		tackle = source;
+		charAnimations.SetBool("tackle", true);
+	}
+
 	public void AddTime()
 	{
 		for(int i = 0; i < actionTimers.Count; i++)
@@ -229,7 +236,7 @@ public class Entity_Data : MonoBehaviour
 		alive 				= true;
 		doneShopping 		= false;
 		slowed 				= false;
-
+		tackle 				= false;
 
 		//ints
 		pathRoute 			= 0;
@@ -258,19 +265,22 @@ public class Entity_Data : MonoBehaviour
 		//if we're not stopped then continue movement
 		if(!stopped)
 		{
-			if(Mathf.Abs(output.angle) > maxRotation)
+			if(!tackle)
 			{
-				if(output.angle < 0.0f)
+				if(Mathf.Abs(output.angle) > maxRotation)
 				{
-					output.angle = -maxRotation;
+					if(output.angle < 0.0f)
+					{
+						output.angle = -maxRotation;
+					}
+					else
+					{
+						output.angle = maxRotation;
+					}
 				}
-				else
-				{
-					output.angle = maxRotation;
-				}
+				self.Rotate(new Vector3(0.0f, 1.0f, 0.0f), output.angle * Time.deltaTime);
 			}
-			self.Rotate(new Vector3(0.0f, 1.0f, 0.0f), output.angle * Time.deltaTime);
-
+		
 			if(output.linear != Vector3.zero)
 			{
 				//currently all object move in the direction they are facing, no side stepping

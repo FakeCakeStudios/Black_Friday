@@ -94,6 +94,15 @@ public class Guard2 : Behavior
 				{
 					output = Steering.Seek(self.position, target);
 				}
+				else
+				{
+					float distance = Vector3.Distance(playerPos, self.position);
+					distance = Mathf.Abs (distance);
+					if(distance < 3.0f)
+					{
+						source.SetTackle(true);
+					}
+				}
 				//always look in the direction we are moving
 				source.SetOutput(Steering.AddSteeringOutputs(output, Steering.LookInDir(self, output.linear)));
 			}
