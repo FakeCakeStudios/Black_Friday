@@ -1,0 +1,123 @@
+fileFormatVersion: 2
+guid: e9ec9ab26c7337a409d93bf64964ca29
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: fat1
+    100002: Fat_Civilian_Rig01
+    100004: //RootNode
+    100006: LeftArm_SR_AJNT
+    100008: LeftArm_SR_BJNT
+    100010: LeftArm_SR_CJNT
+    100012: LeftHand_SR_AJNT
+    100014: LeftLeg_SR_AJNT
+    100016: LeftLeg_SR_BJNT
+    100018: LeftLeg_SR_CJNT
+    100020: LeftLeg_SR_DJNT
+    100022: LeftLeg_SR_End
+    100024: LeftThumb_SR_AJNT
+    100026: Master_Control
+    100028: Neck_SR_AJNT
+    100030: RightArm_SR_AJNT
+    100032: RightArm_SR_BJNT
+    100034: RightArm_SR_CJNT
+    100036: RightHand_SR_AJNT
+    100038: RightLeg_SR_AJNT
+    100040: RightLeg_SR_BJNT
+    100042: RightLeg_SR_CJNT
+    100044: RightLeg_SR_DJNT
+    100046: RightLeg_SR_End
+    100048: RightThumb_SR_AJNT
+    100050: Root_SR
+    100052: Skin_Rig
+    100054: Spine_SR_AJNT
+    100056: Spine_SR_BJNT
+    100058: Spine_SR_End
+    400000: fat1
+    400002: Fat_Civilian_Rig01
+    400004: //RootNode
+    400006: LeftArm_SR_AJNT
+    400008: LeftArm_SR_BJNT
+    400010: LeftArm_SR_CJNT
+    400012: LeftHand_SR_AJNT
+    400014: LeftLeg_SR_AJNT
+    400016: LeftLeg_SR_BJNT
+    400018: LeftLeg_SR_CJNT
+    400020: LeftLeg_SR_DJNT
+    400022: LeftLeg_SR_End
+    400024: LeftThumb_SR_AJNT
+    400026: Master_Control
+    400028: Neck_SR_AJNT
+    400030: RightArm_SR_AJNT
+    400032: RightArm_SR_BJNT
+    400034: RightArm_SR_CJNT
+    400036: RightHand_SR_AJNT
+    400038: RightLeg_SR_AJNT
+    400040: RightLeg_SR_BJNT
+    400042: RightLeg_SR_CJNT
+    400044: RightLeg_SR_DJNT
+    400046: RightLeg_SR_End
+    400048: RightThumb_SR_AJNT
+    400050: Root_SR
+    400052: Skin_Rig
+    400054: Spine_SR_AJNT
+    400056: Spine_SR_BJNT
+    400058: Spine_SR_End
+    4300000: fat1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: fat1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

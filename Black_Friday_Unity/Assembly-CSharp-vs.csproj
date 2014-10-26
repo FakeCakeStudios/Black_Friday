@@ -135,6 +135,9 @@
      <Compile Include="Assets\Resources\Scripts\Behavior.cs" />
      <Compile Include="Assets\Resources\Scripts\Camera_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\CheckPoint.cs" />
+     <Compile Include="Assets\Resources\Scripts\Cody\Shelving\ItemPickup.cs" />
+     <Compile Include="Assets\Resources\Scripts\Cody\Shelving\ItemPickupItem.cs" />
+     <Compile Include="Assets\Resources\Scripts\Cody\Shelving\_ItemSpawner.cs" />
      <Compile Include="Assets\Resources\Scripts\Cody\UI\UI-Scripts\_SpriteSheetCollector.cs" />
      <Compile Include="Assets\Resources\Scripts\Cody\UI\UI-Scripts\__SpriteSheets.cs" />
      <Compile Include="Assets\Resources\Scripts\Cody\player\Entities\ClassesSetOne.cs" />
