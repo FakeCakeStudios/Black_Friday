@@ -140,6 +140,7 @@
      <Compile Include="Assets\Resources\Scripts\Cody\Shelving\_ItemSpawner.cs" />
      <Compile Include="Assets\Resources\Scripts\Cody\player\Entities\ClassesSetOne.cs" />
      <Compile Include="Assets\Resources\Scripts\Cody\player\Entities\PCPLayerController.cs" />
+     <Compile Include="Assets\Resources\Scripts\Cody\player\Entities\PlayerController.cs" />
      <Compile Include="Assets\Resources\Scripts\Cody\player\EntityScripts\CamRotation.cs" />
      <Compile Include="Assets\Resources\Scripts\Cody\player\EntityScripts\EntityCharacter.cs" />
      <Compile Include="Assets\Resources\Scripts\Credits_Button.cs" />

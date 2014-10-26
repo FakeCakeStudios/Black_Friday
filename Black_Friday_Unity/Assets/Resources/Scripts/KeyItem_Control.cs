@@ -42,7 +42,7 @@ public class KeyItem_Control : MonoBehaviour
 	public void SetActive(bool source)
 	{
 		active = source;
-
+		
 		if(active)
 		{
 			selfMats.enabled 				= true;
