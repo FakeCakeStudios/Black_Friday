@@ -9,7 +9,7 @@ public class EntityCharacter : MonoBehaviour{
 	//----------------- Character's Mesh ----------------------
 	public GameObject CharacterMesh;
 	//---------------- Gravity Variables ----------------------
-	public float gravity = 8f;
+	//public float gravity = 8f;
 	//--------------- Speed Rate Variables --------------------
 	public float speed = 0;
 	public float speedMax = 5f;
@@ -35,15 +35,17 @@ public class EntityCharacter : MonoBehaviour{
 	private int rightFingerId = -1;
 	private bool leftOn = false;
 	private bool rightOn = false;
+	private bool powerUp = false;
+	private bool shoppingList = false;
 	
-	void Start(){
-		if(type == EntityType.Player){
-			CameraObject = Camera.main.transform.gameObject;
-		}
+	void Start()
+	{
+		CameraObject = Camera.main.transform.gameObject;
+
 		if(CharacterMesh != null){
-			temp = Instantiate(CharacterMesh, this.transform.position, this.transform.rotation) as GameObject;
-			temp.transform.parent = this.transform;
-			temp.name = "Entity(Mesh)";
+			//temp = Instantiate(CharacterMesh, this.transform.position, this.transform.rotation) as GameObject;
+			//temp.transform.parent = this.transform;
+			//temp.name = "Entity(Mesh)";
 		}
 		OverView.ViewStart();
 		CameraObject = Camera.main.gameObject;
@@ -62,65 +64,62 @@ public class EntityCharacter : MonoBehaviour{
 				CameraObject.transform.localPosition = this.transform.position + cameraPosition;
 				CameraObject.transform.LookAt(this.transform.position + lookAtOffset);
 
-				if(type == EntityType.Player){
-					//--------------- Android Touch Inputs--------------------
-					if(controller.isGrounded){
-						if(Input.touchCount>0){
-							// Both Buttons Condition
-							foreach(Touch touch in Input.touches){
-								if(touch.phase == TouchPhase.Began){
-									// add origin for this touch to array
-									if(UI.LeftSide1.Contains(touch.position) || UI.LeftSide2.Contains(touch.position)){
-										// touch instance 1
-										leftFingerId = touch.fingerId;
-										leftOn = true;// turns boolean on if position is in the left side of the screen
-									}
-									if(UI.RightSide1.Contains(touch.position) || UI.RightSide2.Contains(touch.position)){
-										// touch instance 2
-										rightFingerId = touch.fingerId;
-										rightOn = true;// turns boolean on if position is in the right side of the screen
-									}
-								}
-								if(touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled){
-									if(touch.fingerId == leftFingerId){
-										// touch instance 1
-										leftFingerId = -1;
-										leftOn = false;// turns boolean off if position is in the left side of the screen
 
-									}
-									if(touch.fingerId == rightFingerId){
-										// touch instance 2
-										rightFingerId = -1;
-										rightOn = false;// turns boolean off if position is in the left side of the screen
-									}
+				//--------------- Android Touch Inputs--------------------
+				/*
+			if(controller.isGrounded){
+				if(Input.touchCount>0){
+					// Both Buttons Condition
+					foreach(Touch touch in Input.touches){
+						if(touch.phase == TouchPhase.Began){
+								// add origin for this touch to array
+								if(UI.LeftSide1.Contains(touch.position) || UI.LeftSide2.Contains(touch.position)){
+									// touch instance 1
+									leftFingerId = touch.fingerId;
+									leftOn = true;// turns boolean on if position is in the left side of the screen
+								}
+								if(UI.RightSide1.Contains(touch.position) || UI.RightSide2.Contains(touch.position)){
+									// touch instance 2
+									rightFingerId = touch.fingerId;
+									rightOn = true;// turns boolean on if position is in the right side of the screen
 								}
 							}
+							if(touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled){
+								if(touch.fingerId == leftFingerId){
+									// touch instance 1
+									leftFingerId = -1;
+									leftOn = false;// turns boolean off if position is in the left side of the screen
 
-							if(leftOn && rightOn){
-								motor(Motor.SlowDown);
-							}
-							else{
-								if(leftOn){
-									Direction(Buttons.Left);
 								}
-								else if(rightOn){
-									Direction(Buttons.Right);
+								if(touch.fingerId == rightFingerId){
+									// touch instance 2
+									rightFingerId = -1;
+									rightOn = false;// turns boolean off if position is in the left side of the screen
 								}
-								else{
-									Direction(Buttons.None);
-								}
-								motor(Motor.SpeedUp);
 							}
 						}
+*/
+						if(leftOn && rightOn){
+							motor(Motor.SlowDown);
+						}
+						else{
+							if(leftOn){
+								Direction(Buttons.Left);
+							}
+							else if(rightOn){
+								Direction(Buttons.Right);
+							}
+							else{
+								Direction(Buttons.None);
+							}
+							motor(Motor.SpeedUp);
+						}
 					}
-					MoveAndRotate();
 				}
-				if(type == EntityType.PCplayer){
-
-				}
+				MoveAndRotate();
 			}
-		}
-	}
+		//}
+	//}
 	//--------------- Function to speed up or down --------------------
 	public void motor(Motor den){
 		if(den == Motor.SpeedUp && speed<speedMax){
@@ -154,4 +153,26 @@ public class EntityCharacter : MonoBehaviour{
 		//moveDirection.y -= gravity * Time.deltaTime;
 		this.controller.Move(moveDirection * Time.deltaTime);
 	}
+
+	public void SetLeft(bool source)
+	{
+		leftOn = source;
+	}
+	
+	public void SetRight(bool source)
+	{
+		rightOn = source;
+	}
+	
+	public void SetPowerup(bool source)
+	{
+		powerUp = source;
+	}
+	
+	public void SetShoppingList(bool source)
+		
+	{
+		shoppingList = source;
+	}
+
 }

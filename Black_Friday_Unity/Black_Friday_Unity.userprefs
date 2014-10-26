@@ -1,8 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Cody\player\EntityScripts\EntityCharacter.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\ShoppingList_Button.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\Cody\player\EntityScripts\EntityCharacter.cs" Line="73" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Cody\player\EntityScripts\EntityCharacter.cs" Line="12" Column="4" />
+      <File FileName="Assets\Resources\Scripts\Back_Button.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Input_Button.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Tutorial_Triggers.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Pause_Button.cs" Line="26" Column="3" />
+      <File FileName="Assets\Resources\Scripts\Master_Control.cs" Line="1" Column="1" />
+      <File FileName="Assets\Resources\Scripts\ShoppingList_Button.cs" Line="26" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
