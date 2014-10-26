@@ -29,4 +29,9 @@ public class Credits_Control : MonoBehaviour
 			Application.LoadLevel("Menu");
 		}
 	}
+
+	public void SetBack(bool source)
+	{
+		back = source;
+	}
 }

@@ -47,14 +47,14 @@ public class Webstore_Control : MonoBehaviour
 		panels 			= new UIPanel[10];
 		panels[0] 		= GameObject.Find("Store Select").GetComponent<UIPanel>();
 		panels[1] 		= GameObject.Find("Webstore 1").GetComponent<UIPanel>();
-		panels[2] 		= GameObject.Find("Webstore 2").GetComponent<UIPanel>();
-		panels[3] 		= GameObject.Find("Webstore 3").GetComponent<UIPanel>();
+		//panels[2] 		= GameObject.Find("Webstore 2").GetComponent<UIPanel>();
+		//panels[3] 		= GameObject.Find("Webstore 3").GetComponent<UIPanel>();
 		panels[4] 		= GameObject.Find("Kart 1").GetComponent<UIPanel>();
-		panels[5] 		= GameObject.Find("Kart 2").GetComponent<UIPanel>();
-		panels[6] 		= GameObject.Find("Kart 3").GetComponent<UIPanel>();
+		//panels[5] 		= GameObject.Find("Kart 2").GetComponent<UIPanel>();
+		//panels[6] 		= GameObject.Find("Kart 3").GetComponent<UIPanel>();
 		panels[7] 		= GameObject.Find("Powerups 1").GetComponent<UIPanel>();
-		panels[8] 		= GameObject.Find("Powerups 2").GetComponent<UIPanel>();
-		panels[9] 		= GameObject.Find("Powerups 3").GetComponent<UIPanel>();
+		//panels[8] 		= GameObject.Find("Powerups 2").GetComponent<UIPanel>();
+		//panels[9] 		= GameObject.Find("Powerups 3").GetComponent<UIPanel>();
 		masterScript 	= master.GetComponent<Master_Control>();
 		player 			= masterScript.GetPlayerData();
 	}
