@@ -28,7 +28,6 @@ public class EntityCharacter : MonoBehaviour{
 	private GameObject temp;
 	private CharacterController controller;
 	private GameObject CameraObject;
-	private UIGUI UI;
 
 	//private Vector2 leftRef;
 	private int leftFingerId = -1;
@@ -48,12 +47,6 @@ public class EntityCharacter : MonoBehaviour{
 		}
 		OverView.ViewStart();
 		CameraObject = Camera.main.gameObject;
-	}
-	public virtual void UIControl(UIGUI ui){
-		// Checks if there is a UIObject : returns a Error if not
-		if(type == EntityType.Player){
-			UI = ui;
-		}
 	}
 
 	public virtual void EntityControl(){
