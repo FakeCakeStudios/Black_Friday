@@ -3,17 +3,17 @@ using System.Collections;
 
 public class Input_Button : MonoBehaviour
 {
-	private GameObject 	player;
-	public string 		functionName;
+	private Player_Control 	playerControl;
+	public string 			functionName;
 	
-	void Start()
+	public void Initialize()
 	{
-		player = GameObject.FindGameObjectWithTag("Player");
+		playerControl = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Control>();
 	}
 	
 	void OnPress(bool isPressed)
 	{
-		player.SendMessage(functionName, true, SendMessageOptions.DontRequireReceiver);
+		playerControl.SendMessage(functionName, true, SendMessageOptions.DontRequireReceiver);
 	}
 	
 	void OnHover(bool isOver)
