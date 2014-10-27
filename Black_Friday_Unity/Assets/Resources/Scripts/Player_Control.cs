@@ -100,11 +100,13 @@ public class Player_Control : MonoBehaviour
 			}
 			else
 			{
-				//CameraObject.transform.localPosition = this.transform.position + cameraPosition;
-				Vector3 temp = this.transform.position + (-this.transform.forward * camDistance);
-				temp.y += camHeight;
-				CameraObject.transform.localPosition = temp;
-				CameraObject.transform.LookAt(this.transform.position+new Vector3(0,camRaise,0));
+				if(!masterScript.isEnd()){
+					//CameraObject.transform.localPosition = this.transform.position + cameraPosition;
+					Vector3 temp = this.transform.position + (-this.transform.forward * camDistance);
+					temp.y += camHeight;
+					CameraObject.transform.localPosition = temp;
+					CameraObject.transform.LookAt(this.transform.position+new Vector3(0,camRaise,0));
+				}
 
 				self.position += velocity * Time.deltaTime;
 				//if we're not stopped then continue movement

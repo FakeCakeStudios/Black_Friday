@@ -9,6 +9,9 @@ public class Master_Control : MonoBehaviour
 
 	private bool inGame;
 	private bool pause;
+	public float endWait = 5;
+	private bool endScene = false;
+	private EndScene EndSceneObject;
 
 	//AI is currently not in so it is commented out from the master currently
 	//artificial intelligence
@@ -26,6 +29,7 @@ public class Master_Control : MonoBehaviour
 	{
 		inGame = false;
 		pause = false;
+		endScene = false;
 
 		//only call at the beginning of the application
 		ai = new HAL();
@@ -36,12 +40,20 @@ public class Master_Control : MonoBehaviour
 		//create new instance
 		player = new Player_Data();
 		player.Initialize();
+		EndSceneObject = GameObject.FindGameObjectWithTag("EndScene").GetComponent<EndScene>();
 	}
 	
 	// Update is called once per frame
 	void Update()
 	{
-		if(inGame)
+		if(endScene){
+			Camera.main.transform.position = EndSceneObject.cameraPosition;
+			Camera.main.transform.LookAt(EndSceneObject.scorePosition);
+			if(Time.time > EndSceneObject.time+endWait){
+				Application.LoadLevel(1);
+			}
+		}
+		else if(inGame)
 		{
 			ai.MyUpdate();
 		}
@@ -84,6 +96,12 @@ public class Master_Control : MonoBehaviour
 		resumeButton.SetActive(false);
 	}
 
+	public void EndScene(){
+		endScene = true;
+	}
+	public bool isEnd(){
+		return endScene;
+	}
 	public void SetInGame(bool source)
 	{
 		inGame = source;
