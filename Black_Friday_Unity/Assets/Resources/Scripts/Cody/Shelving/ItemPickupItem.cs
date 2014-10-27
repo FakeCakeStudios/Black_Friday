@@ -18,6 +18,6 @@ public class ItemPickupItem : MonoBehaviour {
 }
 [System.Serializable]
 public class itemStuff{
-	public GameObject mesh;
+	public Object mesh;
 	public int score;
 }
