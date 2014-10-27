@@ -24,8 +24,9 @@ public class Player_Control : MonoBehaviour
 	private bool powerUp = false;
 	private Vector3 target;
 
-	private float camDistance;
-	private float camHeight;
+	public float camDistance = 1.0f;
+	public float camHeight = 3.0f;
+	public float camRaise = 3.0f;
 
 
 
@@ -73,8 +74,8 @@ public class Player_Control : MonoBehaviour
 		maxRotation 		= 100.0f;
 		maxAccel 			= 100.0f;
 		target = new Vector3();
-		camDistance = 1.0f;
-		camHeight = 3.0f;
+		//camDistance = 1.0f;
+		//camHeight = 3.0f;
 
 		OverView.ViewStart();
 		CameraObject = Camera.main.gameObject;
@@ -100,7 +101,7 @@ public class Player_Control : MonoBehaviour
 				Vector3 temp = this.transform.position + (-this.transform.forward * camDistance);
 				temp.y += camHeight;
 				CameraObject.transform.localPosition = temp;
-				CameraObject.transform.LookAt(this.transform.position);
+				CameraObject.transform.LookAt(this.transform.position+new Vector3(0,camRaise,0));
 
 				self.position += velocity * Time.deltaTime;
 				//if we're not stopped then continue movement
