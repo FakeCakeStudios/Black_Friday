@@ -131,16 +131,20 @@ public class Player_Control : MonoBehaviour
 			}
 			target = Vector3.zero;
 			target = self.position + (self.forward * 2.0f);
+			output.angle = 0.0f;
+			output.linear = self.position + (self.forward * 2.0f);
 
 			if(leftOn)
 			{
-				leftOn = false;
+				//leftOn = false;
 				target += -self.right * 2.0f;
+				output.angle = -100;
 			}
 			if(rightOn)
 			{
-				rightOn = false;
+				//rightOn = false;
 				target += self.right * 2.0f;
+				output.angle = 100;
 			}
 			if(powerUp)
 			{
@@ -149,10 +153,10 @@ public class Player_Control : MonoBehaviour
 
 			if(target != Vector3.zero)
 			{
-				output = Steering.Seek(self.position, target);
+				//output = Steering.Seek(self.position, target);
 			}
 			//always look in the direction we are moving
-			output = Steering.AddSteeringOutputs(output, Steering.LookInDir(self, output.linear));
+			//output = Steering.AddSteeringOutputs(output, Steering.LookInDir(self, output.linear));
 		}
 	}
 

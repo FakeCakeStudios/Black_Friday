@@ -13,16 +13,16 @@ public class Input_Button : MonoBehaviour
 	
 	void OnPress(bool isPressed)
 	{
-		playerControl.SendMessage(functionName, true, SendMessageOptions.DontRequireReceiver);
+		playerControl.SendMessage(functionName, isPressed, SendMessageOptions.DontRequireReceiver);
 	}
 	
 	void OnHover(bool isOver)
 	{
-		
+
 	}
 	
 	void OnSelect(bool selected)
 	{
-
+		//playerControl.SendMessage(functionName, selected, SendMessageOptions.DontRequireReceiver);
 	}
 }
