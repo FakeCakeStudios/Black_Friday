@@ -19,7 +19,7 @@ public class Guard1 : Behavior
 
 	}
 
-	public void BehaviorControl(Entity_Data source, Entity_Data playerInfo, Path path)
+	public void BehaviorControl(Entity_Data source, Player_Control playerInfo, Path path)
 	{
 		source.AddTime();
 		Transform self 				= source.GetSelf();

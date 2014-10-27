@@ -30,7 +30,7 @@ public class HAL
 	private Guard1					guardType1;
 	private Guard2					guardType2;
 	private Shopper1				shopperType1;
-	public Entity_Data				playerScript;
+	public Player_Control			playerScript;
 	
 	private Object 					Guard1;
 //	private Object 					Guard2;
@@ -77,7 +77,7 @@ public class HAL
 	public void SetPlayer()
 	{
 		playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-		playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Entity_Data>();
+		playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Control>();
 	}
 
 	public void Reset()

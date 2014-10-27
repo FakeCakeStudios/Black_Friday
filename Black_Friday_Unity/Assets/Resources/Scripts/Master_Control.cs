@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Master_Control : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Master_Control : MonoBehaviour
 	
 	//this keeps track of player changes from the webstore to apply them at game time
 	private Player_Data player;
+
+	private List<Input_Button> buttons;
 
 	//shoulmd only be done one during runtie at the beginning of the application start
 	void Awake()
@@ -59,6 +62,21 @@ public class Master_Control : MonoBehaviour
 		
 		//call at the beginning of every level
 		ai.SetupLevel();
+
+		buttons = new List<Input_Button>();
+		GameObject[] temp;
+		temp = new GameObject[GameObject.FindGameObjectsWithTag("Button").Length];
+		temp = GameObject.FindGameObjectsWithTag("Button");
+		for(int i = 0; i < temp.Length; i++)
+		{
+			Debug.Log (temp[i].ToString());
+			buttons.Add(temp[i].GetComponent<Input_Button>()); 
+		}
+
+		for(int i = 0; i < temp.Length; i++)
+		{
+			buttons[i].Initialize(); 
+		}
 	}
 
 	public void SetInGame(bool source)
