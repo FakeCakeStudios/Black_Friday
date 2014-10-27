@@ -3,25 +3,28 @@ using System.Collections;
 
 public class Indicator_Control : MonoBehaviour
 {
-	private Vector3 	target;
+	private Vector3 	target = new Vector3(100.0f, 0.0f, 100.0f);
 	private float 		maxRotation;
 	private Transform 	camera;
-	private Vector3 	offset;
+	private float		distance;
+	private float 		height;
 
 	// Use this for initialization
 	void Start()
 	{
-		maxRotation = 25.0f;
-		camera = GameObject.Find("Main Camera").GetComponent<Transform>();
-		offset = new Vector3(0.0f, 1.5f, 3.2f);
+		maxRotation = 360.0f;
+		camera 		= GameObject.Find("Main Camera").GetComponent<Transform>();
+		distance 	= 3.2f;
+		height 		= 1.25f;
 	}
 	
 	// Update is called once per frame
-	void LateUpdate()
+	void Update()
 	{
 		SteeringOutput output = Steering.Face2D(this.transform, target);
 
-		if(Mathf.Abs(output.angle) > maxRotation)
+		float temp = Mathf.Abs(output.angle);
+		if(temp > maxRotation)
 		{
 			if(output.angle < 0.0f)
 			{
@@ -32,9 +35,14 @@ public class Indicator_Control : MonoBehaviour
 				output.angle = maxRotation;
 			}
 		}
+		else if(temp < 1.0f)
+		{
+			output.angle = 0.0f;
+		}
 		this.transform.Rotate(new Vector3(0.0f, 1.0f, 0.0f), output.angle * Time.deltaTime);
 
-		Vector3 pos 			= camera.position + offset;
+		Vector3 pos 			= camera.position + (camera.forward * distance);
+		pos.y 					+= height;
 		this.transform.position = pos;
 	}
 

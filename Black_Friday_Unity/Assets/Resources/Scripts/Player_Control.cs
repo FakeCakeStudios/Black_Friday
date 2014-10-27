@@ -28,6 +28,8 @@ public class Player_Control : MonoBehaviour
 	public float camHeight = 3.0f;
 	public float camRaise = 3.0f;
 
+	private Master_Control masterScript;
+
 
 
 	//everything but the player will have a personality
@@ -61,6 +63,7 @@ public class Player_Control : MonoBehaviour
 		self 			= this.gameObject.transform;
 		output 			= new SteeringOutput();
 		charAnimations	= this.gameObject.GetComponent<Animator>();
+		masterScript = GameObject.FindGameObjectWithTag("Master").GetComponent<Master_Control>();
 	}
 	
 	// Use this for initialization
@@ -174,6 +177,15 @@ public class Player_Control : MonoBehaviour
 	public void SetPowerup(bool source)
 	{
 		powerUp = source;
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if(other.tag == "Guards")
+		{
+			//for now just end the game, but need to activate losing animations and what not here before actually going back to menu
+			masterScript.GameOver();
+		}
 	}
 }
 

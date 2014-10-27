@@ -97,4 +97,11 @@ public class Master_Control : MonoBehaviour
 			Time.timeScale = 0.0f;
 		}
 	}
+	
+	public void GameOver()
+	{
+		inGame = false;
+		DontDestroyOnLoad(this.gameObject);
+		Application.LoadLevel("Menu");
+	}
 }

@@ -13,6 +13,7 @@ using System.Collections.Generic;
  */
 public class Guard1 : Behavior
 {
+
 	//use this function for additional variable intialization for the needed behavior
 	override public void Initialize()
 	{

@@ -205,7 +205,7 @@ public static class Steering
 		float leftDist = Vector3.Magnitude(leftPoint);
 
 		//if within an amount, then we are already facing the correct direction
-		if(output.angle <= 0.02f)
+		if(output.angle <= 2.0f)
 		{
 			output.angle = 0.0f;
 			return output;
