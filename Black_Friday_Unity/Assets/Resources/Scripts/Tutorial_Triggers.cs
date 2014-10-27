@@ -3,9 +3,9 @@ using System.Collections;
 
 public class Tutorial_Triggers : MonoBehaviour
 {
-	public string tutorialMessage;
-	private UILabel	uiTextMessage;
-	private Master_Control masterScript;
+	public string 			tutorialMessage;
+	private UILabel			uiTextMessage;
+	private Master_Control 	masterScript;
 
 	// Use this for initialization
 	void Start()
@@ -26,8 +26,19 @@ public class Tutorial_Triggers : MonoBehaviour
 		{
 			uiTextMessage.text = tutorialMessage;
 			masterScript.SetPause();
+			masterScript.AblerResumeButton(true);
 		}
 	}
+
+	void OnTriggerExit(Collider other)
+	{
+		if(other.tag == "Player")
+		{
+			uiTextMessage.text = "";
+			Destroy(this.gameObject);
+		}
+	}
+
 
 	public void DestroyTrigger()
 	{

@@ -19,6 +19,8 @@ public class Master_Control : MonoBehaviour
 
 	private List<Input_Button> buttons;
 
+	private GameObject 		resumeButton;
+
 	//shoulmd only be done one during runtie at the beginning of the application start
 	void Awake()
 	{
@@ -77,6 +79,9 @@ public class Master_Control : MonoBehaviour
 		{
 			buttons[i].Initialize(); 
 		}
+
+		resumeButton = GameObject.Find("Resume Button");
+		resumeButton.SetActive(false);
 	}
 
 	public void SetInGame(bool source)
@@ -103,5 +108,10 @@ public class Master_Control : MonoBehaviour
 		inGame = false;
 		DontDestroyOnLoad(this.gameObject);
 		Application.LoadLevel("Menu");
+	}
+
+	public void AblerResumeButton(bool source)
+	{
+		resumeButton.SetActive(source);
 	}
 }

@@ -1,16 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\HAL.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Tutorial_Triggers.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\Player_Control.cs" Line="183" Column="3" />
-      <File FileName="Assets\Resources\Scripts\Entity_Data.cs" Line="327" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Guard1.cs" Line="126" Column="3" />
-      <File FileName="Assets\Resources\Scripts\Guard2.cs" Line="6" Column="2" />
-      <File FileName="Assets\Resources\Scripts\Behavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Master_Control.cs" Line="103" Column="18" />
-      <File FileName="Assets\Resources\Scripts\Indicator_Control.cs" Line="18" Column="18" />
-      <File FileName="Assets\Resources\Scripts\Steering.cs" Line="265" Column="1" />
-      <File FileName="Assets\Resources\Scripts\HAL.cs" Line="67" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Tutorial_Triggers.cs" Line="37" Column="27" />
+      <File FileName="Assets\Resources\Scripts\Master_Control.cs" Line="84" Column="33" />
+      <File FileName="Assets\Resources\Scripts\Pause_Button.cs" Line="29" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
