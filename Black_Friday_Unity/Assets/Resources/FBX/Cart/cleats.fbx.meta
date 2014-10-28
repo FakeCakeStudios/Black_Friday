@@ -11,10 +11,13 @@ ModelImporter:
     400004: //RootNode
     2300000: cleat
     2300002: cleat1
+    2300004: //RootNode
     3300000: cleat
     3300002: cleat1
+    3300004: //RootNode
     4300000: cleat
     4300002: cleat1
+    4300004: Cleats
     9500000: //RootNode
   materials:
     importMaterials: 1
