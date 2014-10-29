@@ -6,6 +6,7 @@ public class Master_Control : MonoBehaviour
 {
 	public GameObject playerObject;
 	private GameObject thePlayer;
+	private Transform spawn;
 
 	private bool inGame;
 	private bool pause;
@@ -67,7 +68,10 @@ public class Master_Control : MonoBehaviour
 
 	public void LevelSetup()
 	{
-		thePlayer = Instantiate(playerObject, transform.position, transform.rotation) as GameObject;
+		spawn = GameObject.FindGameObjectWithTag("Spawn Point").transform;
+
+
+		thePlayer = Instantiate(playerObject, spawn.position, spawn.rotation) as GameObject;
 		// names the player's game object
 		thePlayer.name = "Player(Prefab)";
 
