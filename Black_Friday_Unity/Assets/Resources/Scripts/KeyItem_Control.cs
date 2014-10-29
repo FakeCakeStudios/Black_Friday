@@ -4,12 +4,13 @@ using System.Collections;
 public class KeyItem_Control : MonoBehaviour
 {
 	public float 			rotateAngle;
-	public int 				cost;
 	public int 				savings;
 	private bool 			active;
 	private Material 		glowMat;
 	private Material 		original;
 	private MeshRenderer 	selfMats;
+	private Master_Control 	masterScript;
+	public string 			listName;
 
 	void Start()
 	{
@@ -18,6 +19,7 @@ public class KeyItem_Control : MonoBehaviour
 		original 			= selfMats.materials[0];
 		selfMats.material 	= glowMat;
 		SetActive(false);
+		masterScript = GameObject.FindGameObjectWithTag("Master").GetComponent<Master_Control>();
 	}
 
 	void Update()
@@ -27,11 +29,6 @@ public class KeyItem_Control : MonoBehaviour
 			Vector3 axis = new Vector3(0.0f, 1.0f, 0.0f);
 			this.transform.Rotate(axis, rotateAngle * Time.deltaTime);
 		}
-	}
-
-	public int GetCost()
-	{
-		return cost;
 	}
 
 	public int GetSavings()
@@ -45,15 +42,21 @@ public class KeyItem_Control : MonoBehaviour
 		
 		if(active)
 		{
-			selfMats.enabled 				= true;
 			selfMats.material 				= glowMat;
-			this.particleEmitter.enabled 	= true;
+			this.gameObject.SetActive(true);
 		}
 		else
 		{
-			selfMats.enabled				= false;
-			selfMats.material 				= original;
-			this.particleEmitter.enabled 	= false;
+			this.gameObject.SetActive(false);
+		}
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if(other.gameObject.tag == "Player")
+		{
+			masterScript.AddCash(savings);
+			Destroy(this.gameObject);
 		}
 	}
 }

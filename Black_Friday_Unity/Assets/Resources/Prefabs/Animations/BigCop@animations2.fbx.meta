@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: d2977765ab1141540afeefc210fb0eeb
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Head_JNT
+    100004: Head_Spine_END
+    100006: Left_angkle_leg_END
+    100008: Left_arm_END
+    100010: Left_clavical_JNT
+    100012: Left_elbow_JNT
+    100014: Left_finger_A_JNT
+    100016: Left_finger_B_JNT
+    100018: Left_finger_END
+    100020: Left_foot_ankle_JNT
+    100022: Left_foot_ball_JNT
+    100024: Left_foot_toe_end
+    100026: Left_hand_JNT
+    100028: Left_hip_leg_JNT
+    100030: Left_knee_leg_JNT
+    100032: Left_shoulder_JNT
+    100034: Left_wrist_JNT1
+    100036: Master_CNTL
+    100038: Neck_JNT
+    100040: Pelvis_spine_JNT
+    100042: Right_angkle_leg_END
+    100044: Right_arm_END
+    100046: Right_clavical_JNT
+    100048: Right_elbow_JNT
+    100050: Right_finger_A_JNT
+    100052: Right_finger_B_JNT
+    100054: Right_finger_END
+    100056: Right_foot_ankle_JNT
+    100058: Right_foot_ball_JNT
+    100060: Right_foot_toe_end
+    100062: Right_hand_JNT
+    100064: Right_hip_leg_JNT
+    100066: Right_knee_leg_JNT
+    100068: Right_shoulder_JNT
+    100070: Right_wrist_JNT
+    100072: Root_JNT
+    100074: Spine_A_JNT
+    100076: Spine_B_JNT
+    100078: Spine_C_JNT
+    100080: Spine_D_JNT
+    100082: Spine_E_JNT
+    100084: Spine_END
+    400000: //RootNode
+    400002: Head_JNT
+    400004: Head_Spine_END
+    400006: Left_angkle_leg_END
+    400008: Left_arm_END
+    400010: Left_clavical_JNT
+    400012: Left_elbow_JNT
+    400014: Left_finger_A_JNT
+    400016: Left_finger_B_JNT
+    400018: Left_finger_END
+    400020: Left_foot_ankle_JNT
+    400022: Left_foot_ball_JNT
+    400024: Left_foot_toe_end
+    400026: Left_hand_JNT
+    400028: Left_hip_leg_JNT
+    400030: Left_knee_leg_JNT
+    400032: Left_shoulder_JNT
+    400034: Left_wrist_JNT1
+    400036: Master_CNTL
+    400038: Neck_JNT
+    400040: Pelvis_spine_JNT
+    400042: Right_angkle_leg_END
+    400044: Right_arm_END
+    400046: Right_clavical_JNT
+    400048: Right_elbow_JNT
+    400050: Right_finger_A_JNT
+    400052: Right_finger_B_JNT
+    400054: Right_finger_END
+    400056: Right_foot_ankle_JNT
+    400058: Right_foot_ball_JNT
+    400060: Right_foot_toe_end
+    400062: Right_hand_JNT
+    400064: Right_hip_leg_JNT
+    400066: Right_knee_leg_JNT
+    400068: Right_shoulder_JNT
+    400070: Right_wrist_JNT
+    400072: Root_JNT
+    400074: Spine_A_JNT
+    400076: Spine_B_JNT
+    400078: Spine_C_JNT
+    400080: Spine_D_JNT
+    400082: Spine_E_JNT
+    400084: Spine_END
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

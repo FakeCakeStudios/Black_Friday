@@ -241,7 +241,6 @@ public class Entity_Data : MonoBehaviour
 		//ints
 		if(this.gameObject.tag == "Shoppers")
 		{
-			Debug.Log ("here");
 			pathRoute = Random.Range(0, 2);
 		}
 		else

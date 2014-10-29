@@ -289,7 +289,7 @@ public class HAL
 
 	void SetKeyPoints()
 	{
-		GameObject[] items = GameObject.FindGameObjectsWithTag("itemLocations");
+		GameObject[] items = GameObject.FindGameObjectsWithTag("Item Location");
 		for(int i = 0; i < items.Length; i++)
 		{
 			keyPoints.Add(items[i].transform.position);

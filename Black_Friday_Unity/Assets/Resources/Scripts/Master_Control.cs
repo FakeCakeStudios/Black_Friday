@@ -77,10 +77,20 @@ public class Master_Control : MonoBehaviour
 		player.RemovePowerup(player.GetPowerups()[0]);
 	}
 
+	public void AddCash(int source)
+	{
+		player.AddCash(source);
+		Debug.Log (player.GetCash().ToString());
+	}
+
+	public void SubCash(int source)
+	{
+		player.SubtractCash(source);
+	}
+
 	public void LevelSetup()
 	{
 		spawn = GameObject.FindGameObjectWithTag("Spawn Point").transform;
-
 
 		thePlayer = Instantiate(playerObject, spawn.position, spawn.rotation) as GameObject;
 		// names the player's game object

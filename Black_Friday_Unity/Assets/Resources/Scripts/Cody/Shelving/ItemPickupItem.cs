@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ItemPickupItem : MonoBehaviour {
-	public float rotationSpeed = 5f;
+public class ItemPickupItem : MonoBehaviour
+{
 	public itemStuff[] items;
 	public itemStuff thisItem;
 
@@ -12,12 +12,9 @@ public class ItemPickupItem : MonoBehaviour {
 		thisItem = items[temp];
 		clone.transform.parent = transform;
 	}
-	void Update(){
-		transform.Rotate(0, rotationSpeed*Time.deltaTime, 0, Space.World);
-	}
 }
+
 [System.Serializable]
 public class itemStuff{
 	public Object mesh;
-	public int score;
 }
