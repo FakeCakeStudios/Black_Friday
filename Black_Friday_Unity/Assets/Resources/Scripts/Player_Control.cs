@@ -198,11 +198,6 @@ public class Player_Control : MonoBehaviour
 			
 			break;
 		}
-		case(Powerups.Jawbreakers):
-		{
-			
-			break;
-		}
 		case(Powerups.Marbles):
 		{
 			

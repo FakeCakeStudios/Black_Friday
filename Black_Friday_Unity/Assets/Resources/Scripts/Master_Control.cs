@@ -73,8 +73,8 @@ public class Master_Control : MonoBehaviour
 
 	public void UsePowerup()
 	{
-		playerControl.PowerupUsed(player.GetPowerups[0]);
-		player.RemovePowerup(player.GetPowerups[0]);
+		playerControl.PowerupUsed(player.GetPowerups()[0]);
+		player.RemovePowerup(player.GetPowerups()[0]);
 	}
 
 	public void LevelSetup()

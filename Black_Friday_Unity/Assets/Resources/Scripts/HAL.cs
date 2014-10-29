@@ -207,14 +207,14 @@ public class HAL
 
 	void SpawnShopper()
 	{
-		GameObject spawn;
+		Object type = Shopper1;
 
 		int shopperModel = Random.Range(0, 2);
 		switch(shopperModel)
 		{
 		case(0):
 		{
-			spawn = GameObject.Instantiate(Shopper1, spawnPoint, spawnRot)as GameObject;
+			type = Shopper1;
 			break;
 		}
 		case(1):
@@ -229,12 +229,13 @@ public class HAL
 		}
 		default:
 		{
-			spawn = GameObject.Instantiate(Shopper1, spawnPoint, spawnRot)as GameObject;
+			type = Shopper1;
 			break;
 		}
 		}
 
-		spawn = GameObject.Instantiate(Shopper1, spawnPoint, spawnRot)as GameObject;
+		GameObject spawn;
+		spawn = GameObject.Instantiate(type, spawnPoint, spawnRot)as GameObject;
 		entities.Add(spawn);
 		scriptEnts.Add(spawn.GetComponent<Entity_Data>());
 		//make new shopper act in one of the behaviors randomly
@@ -285,6 +286,16 @@ public class HAL
 			triggers.Add(spawnTriggers[i].GetComponent<Spawn_Triggers>());
 		}
 	}
+
+	void SetKeyPoints()
+	{
+		GameObject[] items = GameObject.FindGameObjectsWithTag("itemLocations");
+		for(int i = 0; i < items.Length; i++)
+		{
+			keyPoints.Add(items[i].transform.position);
+		}
+	}
+
 
 	void SetCheckoutPoint()
 	{

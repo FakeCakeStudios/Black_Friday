@@ -239,7 +239,15 @@ public class Entity_Data : MonoBehaviour
 		tackle 				= false;
 
 		//ints
-		pathRoute 			= 0;
+		if(this.gameObject.tag == "Shoppers")
+		{
+			Debug.Log ("here");
+			pathRoute = Random.Range(0, 2);
+		}
+		else
+		{
+			pathRoute 		= 0;
+		}
 		animRepeat 			= 1;
 
 		//floats

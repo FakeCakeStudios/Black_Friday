@@ -26,6 +26,11 @@ public class PathManager
 	public void SetupPaths()
 	{
 		paths = new List<Path>();
+		for(int i = 0; i < 2; i++)
+		{
+			paths.Add(new Path());
+			paths[i].Setup();
+		}
 	}
 
 	public void ResetPaths()
@@ -43,11 +48,7 @@ public class PathManager
 		for(int i = 0; i < points.Length; i++)
 		{
 			int pathIndex = -8 + points[i].layer;
-			if(pathIndex + 1 > paths.Count)
-			{
-				paths.Add(new Path());
-				paths[pathIndex].Setup();
-			}
+
 			paths[pathIndex].checkPoints.Add(points[i].GetComponent<CheckPoint>());
 		}
 	}
