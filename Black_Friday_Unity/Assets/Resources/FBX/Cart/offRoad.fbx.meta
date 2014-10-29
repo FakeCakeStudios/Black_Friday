@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: cd8e5d8011356a1408b74517f8df5ba3
+guid: e92dc43c4fcdc6e4f8af592ed749182f
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: spray_paint1
-    100004: spray_paint2
-    100006: spray_paint3
     400000: //RootNode
-    400002: spray_paint1
-    400004: spray_paint2
-    400006: spray_paint3
-    2300000: spray_paint1
-    2300002: spray_paint2
-    2300004: spray_paint3
-    3300000: spray_paint1
-    3300002: spray_paint2
-    3300004: spray_paint3
-    4300000: spray_paint1
-    4300002: spray_paint2
-    4300004: spray_paint3
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: polySurface58
     9500000: //RootNode
   materials:
     importMaterials: 1

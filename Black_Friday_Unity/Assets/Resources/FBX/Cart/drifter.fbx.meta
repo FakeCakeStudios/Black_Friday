@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f23e484398892a14aac26aefc3a324ac
+guid: 00c3d100b6a880d4fb7234d16c080611
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,7 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: scrolls1
+    4300000: cartDrifter
     9500000: //RootNode
   materials:
     importMaterials: 1
