@@ -87,7 +87,6 @@ public class Master_Control : MonoBehaviour
 		temp = GameObject.FindGameObjectsWithTag("Button");
 		for(int i = 0; i < temp.Length; i++)
 		{
-			Debug.Log (temp[i].ToString());
 			buttons.Add(temp[i].GetComponent<Input_Button>()); 
 		}
 
