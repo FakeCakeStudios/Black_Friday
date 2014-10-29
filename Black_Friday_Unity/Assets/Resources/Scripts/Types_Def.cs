@@ -13,16 +13,14 @@ public enum Interaction
 	None, Slow, Stop, Runaway, Undetectable
 }
 
-//TODO needs to be completed with the names of the powerups in the game
 public enum Powerups
 {
-
+	Box, Glue, Horn, Jawbreakers, Marbles, Mask, Megacubes, Repellent, Tacks
 }
 
-//TODO needs to be completed with the names of the kart upgrades in the game
 public enum KartUpgrades
 {
-
+	Fans, Glove, Oil, Repeller, Scroll, WD
 }
 
 //the output format used to maneuver all NPC's

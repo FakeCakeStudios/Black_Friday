@@ -165,6 +165,7 @@
      <Compile Include="Assets\Resources\Scripts\Play_Button.cs" />
      <Compile Include="Assets\Resources\Scripts\Player_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Player_Data.cs" />
+     <Compile Include="Assets\Resources\Scripts\Powerup_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Powerups_Button.cs" />
      <Compile Include="Assets\Resources\Scripts\RunTime.cs" />
      <Compile Include="Assets\Resources\Scripts\Select_Control.cs" />

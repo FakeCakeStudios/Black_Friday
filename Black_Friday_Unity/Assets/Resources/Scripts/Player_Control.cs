@@ -16,8 +16,6 @@ public class Player_Control : MonoBehaviour
 	//cody's
 	public static bool camDone = false;
 	public CameraOverView OverView;
-	public Vector3 cameraPosition = new Vector3(0, 3, -7);
-	public Vector3 lookAtOffset = new Vector3(0, 1, 0);
 	private GameObject CameraObject;
 	private bool leftOn = false;
 	private bool rightOn = false;
@@ -83,12 +81,9 @@ public class Player_Control : MonoBehaviour
 		OverView.ViewStart();
 		CameraObject = Camera.main.gameObject;
 	}
-	
-	//thinking of changing this to a custom call so HAL controls when NPC's update, or to let HAL update their decisions and each entity updates their actual location
+
 	void Update()
 	{
-		//ANY REASON WE DONT WANT THIS HAPPENING ON UPDATE
-		//DOES PLAYER UPDATE NEED TO BE ENCAPSULATED IN THE IF ELSE STATEMENT?
 		if(!OverView.allDone){
 			OverView.ViewUpdate(CameraObject);
 		}
@@ -142,13 +137,11 @@ public class Player_Control : MonoBehaviour
 
 			if(leftOn)
 			{
-				//leftOn = false;
 				target += -self.right * 2.0f;
 				output.angle = -100;
 			}
 			if(rightOn)
 			{
-				//rightOn = false;
 				target += self.right * 2.0f;
 				output.angle = 100;
 			}
@@ -179,6 +172,63 @@ public class Player_Control : MonoBehaviour
 	public void SetPowerup(bool source)
 	{
 		powerUp = source;
+	}
+
+	public void PowerupUsed(Powerups source)
+	{
+		switch(source)
+		{
+		case(Powerups.Box):
+		{
+
+			break;
+		}
+		case(Powerups.Glue):
+		{
+			
+			break;
+		}
+		case(Powerups.Horn):
+		{
+			
+			break;
+		}
+		case(Powerups.Jawbreakers):
+		{
+			
+			break;
+		}
+		case(Powerups.Jawbreakers):
+		{
+			
+			break;
+		}
+		case(Powerups.Marbles):
+		{
+			
+			break;
+		}
+		case(Powerups.Mask):
+		{
+			
+			break;
+		}
+		case(Powerups.Megacubes):
+		{
+			
+			break;
+		}
+		case(Powerups.Repellent):
+		{
+			
+			break;
+		}
+		case(Powerups.Tacks):
+		{
+			
+			break;
+		}
+		}
 	}
 
 	void OnTriggerEnter(Collider other)

@@ -19,7 +19,8 @@ public class Master_Control : MonoBehaviour
 	private HAL ai;
 	
 	//this keeps track of player changes from the webstore to apply them at game time
-	private Player_Data player;
+	private Player_Data 	player;
+	private Player_Control 	playerControl;
 
 	private List<Input_Button> buttons;
 
@@ -41,7 +42,6 @@ public class Master_Control : MonoBehaviour
 		//create new instance
 		player = new Player_Data();
 		player.Initialize();
-		EndSceneObject = GameObject.FindGameObjectWithTag("EndScene").GetComponent<EndScene>();
 	}
 	
 	// Update is called once per frame
@@ -64,6 +64,17 @@ public class Master_Control : MonoBehaviour
 	public Player_Data GetPlayerData()
 	{
 		return player;
+	}
+
+	public void PowerupObtained(Powerups source)
+	{
+		player.AddPowerup(source);
+	}
+
+	public void UsePowerup()
+	{
+		playerControl.PowerupUsed(player.GetPowerups[0]);
+		player.RemovePowerup(player.GetPowerups[0]);
 	}
 
 	public void LevelSetup()
@@ -97,6 +108,10 @@ public class Master_Control : MonoBehaviour
 
 		resumeButton = GameObject.Find("Resume Button");
 		resumeButton.SetActive(false);
+
+		EndSceneObject = GameObject.FindGameObjectWithTag("EndScene").GetComponent<EndScene>();
+
+		playerControl = thePlayer.GetComponent<Player_Control>();
 	}
 
 	public void EndScene(){
