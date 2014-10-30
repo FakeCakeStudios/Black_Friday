@@ -148,6 +148,11 @@ public class Master_Control : MonoBehaviour
 			Time.timeScale = 0.0f;
 		}
 	}
+
+	public bool GetPause()
+	{
+		return pause;
+	}
 	
 	public void GameOver()
 	{
