@@ -14,7 +14,7 @@ public class Player_Control : MonoBehaviour
 	private float 			currentSpeed;
 	public float 			maxAccel;
 	//cody's
-	public static bool camDone = false;
+	public bool camDone = false;
 	public CameraOverView OverView;
 	private GameObject CameraObject;
 	private bool leftOn = false;
@@ -28,10 +28,8 @@ public class Player_Control : MonoBehaviour
 
 	private Master_Control masterScript;
 
-
-
 	//everything but the player will have a personality
-	public BehaviorType		behavior;
+	//public BehaviorType		behavior;
 	
 	//steering will be used to translate every entity after updating
 	private SteeringOutput	output;

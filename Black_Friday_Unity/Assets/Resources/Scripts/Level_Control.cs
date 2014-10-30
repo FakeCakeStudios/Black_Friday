@@ -5,66 +5,63 @@ using System.Collections.Generic;
 public class Level_Control : MonoBehaviour
 {
 	//public
-	public int 					levelNumber;
-	public float 				playTime;
+	public int 							levelNumber;
+	public float 						playTime;
+	public Object[]						levelItems;
 
 	//private
-	private GameObject 			master;
-	private Master_Control 		masterScript;
-	private UILabel				uiTimer;
-	private List<UILabel>		uiShoppingItem;
-	private List<GameObject>	uiShoppingButtons;
-
-	private List<Vector3> 		itemLocations;
-	public Object[]				levelItems;
-	private List<GameObject> 	shoppingList;
+	private GameObject 					master;
+	private Master_Control 				masterScript;
+	private UILabel						uiTimer;
+	private List<UILabel>				uiShoppingItem;
+	private List<ShoppingList_Button>	shoppingButtons;
+	private List<Vector3> 				itemLocations;
+	private List<GameObject> 			shoppingList;
 
 	void Awake()
 	{
-		master 			= GameObject.Find("Master Control");
-		masterScript 	= master.GetComponent<Master_Control>();
-		uiTimer 		= GameObject.FindGameObjectWithTag("Timer").GetComponent<UILabel>();
-		uiShoppingItem 	= new List<UILabel>();
-		uiShoppingButtons = new List<GameObject>();
-
-		itemLocations 	= new List<Vector3>();
-		shoppingList 	= new List<GameObject>();
+		master 				= GameObject.Find("Master Control");
+		masterScript 		= master.GetComponent<Master_Control>();
+		uiTimer 			= GameObject.FindGameObjectWithTag("Timer").GetComponent<UILabel>();
+		uiShoppingItem 		= new List<UILabel>();
+		shoppingButtons 	= new List<ShoppingList_Button>();
+		itemLocations 		= new List<Vector3>();
+		shoppingList 		= new List<GameObject>();
 
 		UILabel[] tempList = GameObject.Find("Shopping List").GetComponentsInChildren<UILabel>();
-		for(int i = 0; i < tempList.Length; i++)
-		{
-			uiShoppingItem.Add(tempList[i]);
-		}
-
-		GameObject[] buttonObjects = GameObject.FindGameObjectsWithTag("Shopping List");
-		int k = 0;
-		for(int i = buttonObjects.Length - 1; i >= 0; i--)
-		{
-			uiShoppingButtons.Add(buttonObjects[i]);
-			uiShoppingButtons[k].SetActive(false);
-			k += 1;
-		}
-		uiShoppingButtons[0].SetActive(true);
-
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Item Location");
 		for(int i = 0 ; i < temp.Length; i++)
 		{
 			itemLocations.Add(temp[i].transform.position);
 			Destroy(temp[i]);
-		}
 
-		for(int i = 0; i < temp.Length; i++)
-		{
 			int index = Random.Range(0, levelItems.Length);
 			shoppingList.Add(Instantiate(levelItems[index], itemLocations[i], Quaternion.identity)as GameObject);
 			shoppingList[i].name = levelItems[index].name;
+			uiShoppingItem.Add(tempList[i]);
 			uiShoppingItem[i].text = shoppingList[i].name;
+			shoppingButtons.Add(tempList[i].GetComponentInParent<ShoppingList_Button>());
+			shoppingButtons[i].SetActive(false);
+		}
+		shoppingButtons[0].SetActive(true);
+
+		for(int i = temp.Length; i < tempList.Length; i++)
+		{
+			tempList[i].GetComponentInParent<ShoppingList_Button>().DestroyExtras();
 		}
 
-		for(int i = temp.Length; i < uiShoppingButtons.Count; i++)
-		{
-			Destroy(uiShoppingButtons[i]);
-		}
+		//GameObject[] buttonObjects = GameObject.FindGameObjectsWithTag("Shopping List");
+		//for(int i = 0; i < buttonObjects.Length; i++)
+		//{
+			//uiShoppingButtons.Add(buttonObjects[i]);
+			//uiShoppingButtons[i].SetActive(false);
+		//}
+
+		//for(int i = temp.Length; i < uiShoppingButtons.Count; i++)
+		//{
+		//	Destroy(uiShoppingButtons[i]);
+			//uiShoppingButtons.RemoveAt(i);
+		//}
 	}
 
 	// Use this for initialization
@@ -97,17 +94,17 @@ public class Level_Control : MonoBehaviour
 
 	public void DisplayShoppingList()
 	{
-		for(int i = 0; i < uiShoppingButtons.Count; i++)
+		for(int i = 0; i < shoppingButtons.Count; i++)
 		{
-			uiShoppingButtons[i].SetActive(true);
+			shoppingButtons[i].SetActive(true);
 		}
 	}
 
 	public void CondenseShoppingList()
 	{
-		for(int i = 1; i < uiShoppingButtons.Count; i++)
+		for(int i = 1; i < shoppingButtons.Count; i++)
 		{
-			uiShoppingButtons[i].SetActive(false);
+			shoppingButtons[i].SetActive(false);
 		}
 	}
 }
