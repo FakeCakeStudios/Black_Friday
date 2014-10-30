@@ -17,6 +17,8 @@ public class Level_Control : MonoBehaviour
 	private List<ShoppingList_Button>	shoppingButtons;
 	private List<Vector3> 				itemLocations;
 	private List<GameObject> 			shoppingList;
+	private List<KeyItem_Control>		itemControl;
+	private UILabel						scoreBoard;
 
 	void Awake()
 	{
@@ -27,6 +29,8 @@ public class Level_Control : MonoBehaviour
 		shoppingButtons 	= new List<ShoppingList_Button>();
 		itemLocations 		= new List<Vector3>();
 		shoppingList 		= new List<GameObject>();
+		scoreBoard 			= GameObject.Find("Score").GetComponent<UILabel>();
+		itemControl 		= new List<KeyItem_Control>();
 
 		UILabel[] tempList = GameObject.Find("Shopping List").GetComponentsInChildren<UILabel>();
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Item Location");
@@ -38,30 +42,19 @@ public class Level_Control : MonoBehaviour
 			int index = Random.Range(0, levelItems.Length);
 			shoppingList.Add(Instantiate(levelItems[index], itemLocations[i], Quaternion.identity)as GameObject);
 			shoppingList[i].name = levelItems[index].name;
+			itemControl.Add(shoppingList[i].GetComponent<KeyItem_Control>());
 			uiShoppingItem.Add(tempList[i]);
 			uiShoppingItem[i].text = shoppingList[i].name;
 			shoppingButtons.Add(tempList[i].GetComponentInParent<ShoppingList_Button>());
 			shoppingButtons[i].SetActive(false);
 		}
 		shoppingButtons[0].SetActive(true);
+		itemControl[0].SetActive(true);
 
 		for(int i = temp.Length; i < tempList.Length; i++)
 		{
 			tempList[i].GetComponentInParent<ShoppingList_Button>().DestroyExtras();
 		}
-
-		//GameObject[] buttonObjects = GameObject.FindGameObjectsWithTag("Shopping List");
-		//for(int i = 0; i < buttonObjects.Length; i++)
-		//{
-			//uiShoppingButtons.Add(buttonObjects[i]);
-			//uiShoppingButtons[i].SetActive(false);
-		//}
-
-		//for(int i = temp.Length; i < uiShoppingButtons.Count; i++)
-		//{
-		//	Destroy(uiShoppingButtons[i]);
-			//uiShoppingButtons.RemoveAt(i);
-		//}
 	}
 
 	// Use this for initialization
@@ -76,6 +69,8 @@ public class Level_Control : MonoBehaviour
 	{
 		playTime -= Time.deltaTime;
 
+		scoreBoard.text = masterScript.GetPlayerData().GetCash().ToString();
+
 		if(playTime > 0.0f)
 		{
 			int minutes = (int)playTime / 60;
@@ -86,9 +81,18 @@ public class Level_Control : MonoBehaviour
 
 	public void SetCurrentListItem(int source)
 	{
+		int adjuster = 0;
 		for(int i = 0; i < shoppingList.Count; i++)
 		{
-			uiShoppingItem[i].text = shoppingList[source + i].name;
+			if(source + i >= shoppingList.Count)
+			{
+				adjuster = source + i - shoppingList.Count;
+				uiShoppingItem[i].text = shoppingList[adjuster].name;
+			}
+			else
+			{
+				uiShoppingItem[i].text = shoppingList[source + i].name;
+			}
 		}
 	}
 

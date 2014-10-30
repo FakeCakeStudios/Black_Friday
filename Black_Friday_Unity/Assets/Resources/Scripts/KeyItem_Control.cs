@@ -12,7 +12,7 @@ public class KeyItem_Control : MonoBehaviour
 	private Master_Control 	masterScript;
 	public string 			listName;
 
-	void Start()
+	void Awake()
 	{
 		selfMats 			= this.gameObject.GetComponent<MeshRenderer>();
 		glowMat 			= Resources.Load("Prefabs/Materials/yellowMat") as Material;
