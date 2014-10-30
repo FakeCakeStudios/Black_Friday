@@ -36,4 +36,14 @@ public class ShoppingList_Button : MonoBehaviour
 	{
 		
 	}
+
+	public void SetActive(bool source)
+	{
+		this.gameObject.SetActive(source);
+	}
+
+	public void DestroyExtras()
+	{
+		Destroy(this.gameObject);
+	}
 }
