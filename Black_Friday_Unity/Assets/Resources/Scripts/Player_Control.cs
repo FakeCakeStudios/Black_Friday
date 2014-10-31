@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Player_Control : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Player_Control : MonoBehaviour
 	public float 			slowSpeed;
 	private float 			currentSpeed;
 	public float 			maxAccel;
+	private List<Powerups>	powerupList;
 	//cody's
 	public bool camDone = false;
 	public CameraOverView OverView;
@@ -59,6 +61,8 @@ public class Player_Control : MonoBehaviour
 		self 			= this.gameObject.transform;
 		output 			= new SteeringOutput();
 		charAnimations	= this.gameObject.GetComponent<Animator>();
+		powerupList 	= new List<Powerups>();
+
 		masterScript = GameObject.FindGameObjectWithTag("Master").GetComponent<Master_Control>();
 	}
 	
@@ -171,7 +175,7 @@ public class Player_Control : MonoBehaviour
 	{
 		powerUp = source;
 	}
-
+	
 	public void PowerupUsed(Powerups source)
 	{
 		switch(source)
