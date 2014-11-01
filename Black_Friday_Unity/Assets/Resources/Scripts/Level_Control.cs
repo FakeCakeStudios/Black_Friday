@@ -19,6 +19,7 @@ public class Level_Control : MonoBehaviour
 	private List<GameObject> 			shoppingList;
 	private List<KeyItem_Control>		itemControl;
 	private UILabel						scoreBoard;
+	private bool						showScore;
 
 	void Awake()
 	{
@@ -31,6 +32,7 @@ public class Level_Control : MonoBehaviour
 		shoppingList 		= new List<GameObject>();
 		scoreBoard 			= GameObject.Find("Score").GetComponent<UILabel>();
 		itemControl 		= new List<KeyItem_Control>();
+		showScore 			= true;
 
 		UILabel[] tempList = GameObject.Find("Shopping List").GetComponentsInChildren<UILabel>();
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Item Location");
@@ -69,7 +71,14 @@ public class Level_Control : MonoBehaviour
 	{
 		playTime -= Time.deltaTime;
 
-		scoreBoard.text = masterScript.GetPlayerData().GetCash().ToString();
+		if(showScore)
+		{
+			scoreBoard.text = masterScript.GetPlayerData().GetCash().ToString();
+		}
+		else
+		{
+			scoreBoard.text = "";
+		}
 
 		if(playTime > 0.0f)
 		{
@@ -102,6 +111,7 @@ public class Level_Control : MonoBehaviour
 		{
 			shoppingButtons[i].SetActive(true);
 		}
+		showScore = false;
 	}
 
 	public void CondenseShoppingList()
@@ -110,5 +120,6 @@ public class Level_Control : MonoBehaviour
 		{
 			shoppingButtons[i].SetActive(false);
 		}
+		showScore = true;
 	}
 }

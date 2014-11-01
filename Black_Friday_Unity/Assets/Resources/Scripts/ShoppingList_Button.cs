@@ -6,24 +6,31 @@ public class ShoppingList_Button : MonoBehaviour
 	private Master_Control masterScript;
 	private Level_Control  sceneControl;
 	public int itemIndex;
+	private float buttonTimer;
+	private float buttontrigger;
 	
 	void Start()
 	{
 		masterScript = GameObject.FindGameObjectWithTag("Master").GetComponent<Master_Control>();
 		sceneControl = GameObject.Find("Scene Control").GetComponent<Level_Control>();
+		buttonTimer 	= 0.0f;
+		buttontrigger 	= 0.2f;
 	}
 	
 	void OnPress(bool isPressed)
 	{
-		masterScript.SetPause();
-		if(masterScript.GetPause())
+		if(!masterScript.GetTutorialUp() && isPressed)
 		{
-			sceneControl.DisplayShoppingList();
-		}
-		else
-		{
-			sceneControl.SetCurrentListItem(itemIndex);
-			sceneControl.CondenseShoppingList();
+			masterScript.SetPause();
+			if(masterScript.GetPause())
+			{
+				sceneControl.DisplayShoppingList();
+			}
+			else
+			{
+				sceneControl.SetCurrentListItem(itemIndex);
+				sceneControl.CondenseShoppingList();
+			}
 		}
 	}
 	

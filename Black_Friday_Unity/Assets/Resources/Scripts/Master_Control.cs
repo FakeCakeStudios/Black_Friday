@@ -13,6 +13,7 @@ public class Master_Control : MonoBehaviour
 	public float endWait = 5;
 	private bool endScene = false;
 	private EndScene EndSceneObject;
+	private bool tutorialUp;
 
 	//AI is currently not in so it is commented out from the master currently
 	//artificial intelligence
@@ -42,6 +43,8 @@ public class Master_Control : MonoBehaviour
 		//create new instance
 		player = new Player_Data();
 		player.Initialize();
+
+		tutorialUp = false;
 	}
 	
 	// Update is called once per frame
@@ -164,5 +167,15 @@ public class Master_Control : MonoBehaviour
 	public void AblerResumeButton(bool source)
 	{
 		resumeButton.SetActive(source);
+	}
+
+	public void SetTurorial(bool source)
+	{
+		tutorialUp = source;
+	}
+
+	public bool GetTutorialUp()
+	{
+		return tutorialUp;
 	}
 }
