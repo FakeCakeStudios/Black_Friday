@@ -20,6 +20,7 @@ public class Level_Control : MonoBehaviour
 	private List<KeyItem_Control>		itemControl;
 	private UILabel						scoreBoard;
 	private bool						showScore;
+	private Indicator_Control			itemIndicator;
 
 	void Awake()
 	{
@@ -33,6 +34,7 @@ public class Level_Control : MonoBehaviour
 		scoreBoard 			= GameObject.Find("Score").GetComponent<UILabel>();
 		itemControl 		= new List<KeyItem_Control>();
 		showScore 			= true;
+		itemIndicator		= GameObject.Find("Item Indicator").GetComponent<Indicator_Control>();
 
 		UILabel[] tempList = GameObject.Find("Shopping List").GetComponentsInChildren<UILabel>();
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Item Location");
@@ -52,6 +54,7 @@ public class Level_Control : MonoBehaviour
 		}
 		shoppingButtons[0].SetActive(true);
 		itemControl[0].SetActive(true);
+		itemIndicator.SetTarget(itemControl[0].transform.position);
 
 		for(int i = temp.Length; i < tempList.Length; i++)
 		{
@@ -90,6 +93,9 @@ public class Level_Control : MonoBehaviour
 
 	public void SetCurrentListItem(int source)
 	{
+		itemControl[source].SetActive(true);
+		itemIndicator.SetTarget(itemControl[source].transform.position);
+
 		int adjuster = 0;
 		for(int i = 0; i < shoppingList.Count; i++)
 		{
@@ -109,6 +115,7 @@ public class Level_Control : MonoBehaviour
 	{
 		for(int i = 0; i < shoppingButtons.Count; i++)
 		{
+			itemControl[i].SetActive(false);
 			shoppingButtons[i].SetActive(true);
 		}
 		showScore = false;

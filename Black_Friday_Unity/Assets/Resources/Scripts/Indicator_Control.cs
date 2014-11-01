@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Indicator_Control : MonoBehaviour
 {
-	private Vector3 	target = new Vector3(100.0f, 0.0f, 100.0f);
+	private Vector3 	target;
 	private float 		maxRotation;
 	private Transform 	camera;
 	private float		distance;

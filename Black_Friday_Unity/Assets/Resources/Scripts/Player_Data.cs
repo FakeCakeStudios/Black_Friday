@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Player_Data
 {
 	//floats
-	private float 				cash;
+	private int 				cash;
 
 	//lists
 	private List<Powerups> 		powerups;
@@ -15,7 +15,7 @@ public class Player_Data
 	public void Initialize()
 	{
 		//default value
-		cash 			= 0.0f;
+		cash 			= 0;
 
 		//create the lists
 		powerups 		= new List<Powerups>();
@@ -23,19 +23,19 @@ public class Player_Data
 	}
 
 	//return the cash amount stored
-	public float GetCash()
+	public int GetCash()
 	{
 		return cash;
 	}
 
 	//add cash to the stored amount
-	public void AddCash(float source)
+	public void AddCash(int source)
 	{
 		cash += source;
 	}
 
 	//subtract the cash from the stored amount
-	public void SubtractCash(float source)
+	public void SubtractCash(int source)
 	{
 		cash -= source;
 	}

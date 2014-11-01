@@ -124,6 +124,8 @@ public class Player_Control : MonoBehaviour
 				{
 					//currently all object move in the direction they are facing, no side stepping
 					velocity += self.forward * maxAccel * Time.deltaTime;
+
+					charAnimations.SetBool("running", true);
 					
 					if(velocity.magnitude > currentSpeed)
 					{
@@ -131,18 +133,28 @@ public class Player_Control : MonoBehaviour
 						velocity *= currentSpeed;
 					}
 				}
+				else
+				{
+					charAnimations.SetBool("running", false);
+				}
 			}
 			target = Vector3.zero;
 			target = self.position + (self.forward * 2.0f);
 			output.angle = 0.0f;
 			output.linear = self.position + (self.forward * 2.0f);
 
-			if(leftOn)
+			currentSpeed = walkSpeed;
+
+			if(leftOn && rightOn)
+			{
+				currentSpeed = slowSpeed;
+			}
+			else if(leftOn)
 			{
 				target += -self.right * 2.0f;
 				output.angle = -100;
 			}
-			if(rightOn)
+			else if(rightOn)
 			{
 				target += self.right * 2.0f;
 				output.angle = 100;
@@ -151,13 +163,6 @@ public class Player_Control : MonoBehaviour
 			{
 				//not setup yet
 			}
-
-			if(target != Vector3.zero)
-			{
-				//output = Steering.Seek(self.position, target);
-			}
-			//always look in the direction we are moving
-			//output = Steering.AddSteeringOutputs(output, Steering.LookInDir(self, output.linear));
 		}
 	}
 

@@ -83,7 +83,6 @@ public class Master_Control : MonoBehaviour
 	public void AddCash(int source)
 	{
 		player.AddCash(source);
-		Debug.Log (player.GetCash().ToString());
 	}
 
 	public void SubCash(int source)
