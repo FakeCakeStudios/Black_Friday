@@ -184,7 +184,7 @@ public class Player_Control : MonoBehaviour
 	
 	void PowerupUsed()
 	{
-		if(powerupList[0] != null)
+		if(powerupList.Count > 0)
 		{
 			switch(powerupList[0])
 			{
