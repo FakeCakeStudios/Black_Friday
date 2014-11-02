@@ -61,7 +61,7 @@ public class Player_Control : MonoBehaviour
 		self 			= this.gameObject.transform;
 		output 			= new SteeringOutput();
 		charAnimations	= this.gameObject.GetComponent<Animator>();
-		powerupList 	= new List<Powerups>();
+		//powerupList 	= new List<Powerups>();
 
 		masterScript = GameObject.FindGameObjectWithTag("Master").GetComponent<Master_Control>();
 	}
@@ -76,7 +76,8 @@ public class Player_Control : MonoBehaviour
 		currentSpeed		= walkSpeed;
 		maxRotation 		= 100.0f;
 		maxAccel 			= 100.0f;
-		target = new Vector3();
+		target 				= new Vector3();
+		powerupList 		= masterScript.GetPlayerData().GetPowerups();
 		//camDistance = 1.0f;
 		//camHeight = 3.0f;
 
@@ -161,7 +162,7 @@ public class Player_Control : MonoBehaviour
 			}
 			if(powerUp)
 			{
-				//not setup yet
+				PowerupUsed();
 			}
 		}
 	}
@@ -181,56 +182,69 @@ public class Player_Control : MonoBehaviour
 		powerUp = source;
 	}
 	
-	public void PowerupUsed(Powerups source)
+	void PowerupUsed()
 	{
-		switch(source)
+		if(powerupList[0] != null)
 		{
-		case(Powerups.Box):
-		{
+			switch(powerupList[0])
+			{
+			case(Powerups.Box):
+			{
+				masterScript.EffectEntities(Interaction.Undetectable, 15.0f);
+				break;
+			}
+			case(Powerups.Glue):
+			{
+				charAnimations.SetBool("DropItem", true);
+				break;
+			}
+			case(Powerups.Horn):
+			{
+				masterScript.EffectEntities(Interaction.Runaway, 15.0f);
+				break;
+			}
+			case(Powerups.Jawbreakers):
+			{
+				charAnimations.SetBool("DropItem", true);
+				break;
+			}
+			case(Powerups.Marbles):
+			{
+				charAnimations.SetBool("DropItem", true);
+				break;
+			}
+			case(Powerups.Mask):
+			{
+				charAnimations.SetBool("Mask", true);
+				break;
+			}
+			case(Powerups.Megacubes):
+			{
+				charAnimations.SetBool("DropItem", true);
+				break;
+			}
+			case(Powerups.Repellent):
+			{
+				masterScript.EffectEntities(Interaction.Runaway, 15.0f);
+				break;
+			}
+			case(Powerups.StickyHand):
+			{
+				charAnimations.SetBool("Sticky", true);
+				break;
+			}
+			case(Powerups.Tacks):
+			{
+				charAnimations.SetBool("DropItem", true);
+				break;
+			}
+			}
+		}
+	}
 
-			break;
-		}
-		case(Powerups.Glue):
-		{
-			
-			break;
-		}
-		case(Powerups.Horn):
-		{
-			
-			break;
-		}
-		case(Powerups.Jawbreakers):
-		{
-			
-			break;
-		}
-		case(Powerups.Marbles):
-		{
-			
-			break;
-		}
-		case(Powerups.Mask):
-		{
-			
-			break;
-		}
-		case(Powerups.Megacubes):
-		{
-			
-			break;
-		}
-		case(Powerups.Repellent):
-		{
-			
-			break;
-		}
-		case(Powerups.Tacks):
-		{
-			
-			break;
-		}
-		}
+	public void PowerupObtained(Powerups source)
+	{
+		powerupList.Add(source);
 	}
 
 	void OnTriggerEnter(Collider other)

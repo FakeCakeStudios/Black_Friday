@@ -73,13 +73,7 @@ public class Master_Control : MonoBehaviour
 	{
 		player.AddPowerup(source);
 	}
-
-	public void UsePowerup()
-	{
-		playerControl.PowerupUsed(player.GetPowerups()[0]);
-		player.RemovePowerup(player.GetPowerups()[0]);
-	}
-
+	
 	public void AddCash(int source)
 	{
 		player.AddCash(source);
@@ -176,5 +170,10 @@ public class Master_Control : MonoBehaviour
 	public bool GetTutorialUp()
 	{
 		return tutorialUp;
+	}
+
+	public void EffectEntities(Interaction source, float triggerTime)
+	{
+		ai.SetEntitiesInteractions(source, triggerTime);
 	}
 }

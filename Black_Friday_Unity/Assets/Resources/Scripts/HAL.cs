@@ -113,6 +113,7 @@ public class HAL
 
 		for(int i = 0; i < entities.Count; i++)
 		{
+			scriptEnts[i].AddTime();
 			switch(scriptEnts[i].behavior)
 			{
 			case(BehaviorType.Guard1):
@@ -321,7 +322,24 @@ public class HAL
 		}
 	}
 
-	public void SetPlayerDetectable(bool source, float effectedTime)
+	public void SetEntitiesInteractions(Interaction source, float effectTime)
+	{
+		switch(source)
+		{
+		case(Interaction.Undetectable):
+		{
+			SetPlayerDetectable(effectTime);
+			break;
+		}
+		case(Interaction.Runaway):
+		{
+			SetFleePlayer(effectTime);
+			break;
+		}
+		}
+	}
+
+	public void SetPlayerDetectable(float effectedTime)
 	{
 		for(int i = 0; i < entities.Count; i++)
 		{
@@ -337,26 +355,12 @@ public class HAL
 			}
 			case(BehaviorType.Guard1):
 			{
-				if(source)
-				{
-					scriptEnts[i].SetAction(Interaction.Undetectable, effectedTime);
-				}
-				else
-				{
-					scriptEnts[i].SetAction(Interaction.None, 0.0f);
-				}
+				scriptEnts[i].SetAction(Interaction.Undetectable, effectedTime);
 				break;
 			}
 			case(BehaviorType.Guard2):
 			{
-				if(source)
-				{
-					scriptEnts[i].SetAction(Interaction.Undetectable, effectedTime);
-				}
-				else
-				{
-					scriptEnts[i].SetAction(Interaction.None, 0.0f);
-				}
+				scriptEnts[i].SetAction(Interaction.Undetectable, effectedTime);
 				break;
 			}
 			}

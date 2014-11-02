@@ -6,11 +6,11 @@ public class Powerup_Control : MonoBehaviour
 	public Powerups powerup;
 	public float rotateAngle;
 
-	private Master_Control masterScript;
+	private Player_Control playerScript;
 	
 	void Start()
 	{
-		masterScript = GameObject.FindGameObjectWithTag("Master").GetComponent<Master_Control>();
+		playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Control>();
 	}
 	
 	void Update()
@@ -23,7 +23,7 @@ public class Powerup_Control : MonoBehaviour
 	{
 		if(other.tag == "Player")
 		{
-			masterScript.PowerupObtained(powerup);
+			playerScript.PowerupObtained(powerup);
 			Destroy(this.gameObject);
 		}
 	}
