@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_1;UNITY_4_5;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_0;UNITY_4_5;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -131,20 +131,12 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITiledSprite.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
-     <Compile Include="Assets\Resources\Scripts\Back_Button.cs" />
      <Compile Include="Assets\Resources\Scripts\Behavior.cs" />
      <Compile Include="Assets\Resources\Scripts\Camera_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\CheckPoint.cs" />
      <Compile Include="Assets\Resources\Scripts\Cody\EndScene\EndScene.cs" />
-     <Compile Include="Assets\Resources\Scripts\Cody\Shelving\ItemPickup.cs" />
-     <Compile Include="Assets\Resources\Scripts\Cody\Shelving\ItemPickupItem.cs" />
-     <Compile Include="Assets\Resources\Scripts\Cody\Shelving\_ItemSpawner.cs" />
      <Compile Include="Assets\Resources\Scripts\Cody\player\Entities\ClassesSetOne.cs" />
-     <Compile Include="Assets\Resources\Scripts\Cody\player\Entities\PCPLayerController.cs" />
-     <Compile Include="Assets\Resources\Scripts\Cody\player\Entities\PlayerController.cs" />
      <Compile Include="Assets\Resources\Scripts\Cody\player\EntityScripts\CamRotation.cs" />
-     <Compile Include="Assets\Resources\Scripts\Cody\player\EntityScripts\EntityCharacter.cs" />
-     <Compile Include="Assets\Resources\Scripts\Credits_Button.cs" />
      <Compile Include="Assets\Resources\Scripts\Credits_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Customization_Button.cs" />
      <Compile Include="Assets\Resources\Scripts\DeathZone_Trigger.cs" />
@@ -160,14 +152,15 @@
      <Compile Include="Assets\Resources\Scripts\Level_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Master_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Menu_Control.cs" />
+     <Compile Include="Assets\Resources\Scripts\Options_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\PathManager.cs" />
      <Compile Include="Assets\Resources\Scripts\Pause_Button.cs" />
-     <Compile Include="Assets\Resources\Scripts\Play_Button.cs" />
      <Compile Include="Assets\Resources\Scripts\Player_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Player_Data.cs" />
      <Compile Include="Assets\Resources\Scripts\Powerup_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Powerups_Button.cs" />
      <Compile Include="Assets\Resources\Scripts\RunTime.cs" />
+     <Compile Include="Assets\Resources\Scripts\Scene_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Select_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Shopper1.cs" />
      <Compile Include="Assets\Resources\Scripts\ShoppingList_Button.cs" />
@@ -176,7 +169,6 @@
      <Compile Include="Assets\Resources\Scripts\Steering.cs" />
      <Compile Include="Assets\Resources\Scripts\Tutorial_Triggers.cs" />
      <Compile Include="Assets\Resources\Scripts\Types_Def.cs" />
-     <Compile Include="Assets\Resources\Scripts\Webstore_Button.cs" />
      <Compile Include="Assets\Resources\Scripts\Webstore_Control.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\GUI - Text Shader (SoftClip).shader" />

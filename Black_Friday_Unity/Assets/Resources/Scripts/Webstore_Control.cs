@@ -257,6 +257,14 @@ public class Webstore_Control : MonoBehaviour
 
 	public void SetSelection(int source)
 	{
-		selection = source;
+		if(source != 1)
+		{
+
+		}
+		else
+		{
+			DontDestroyOnLoad(master);
+			Application.LoadLevel(source);
+		}
 	}
 }

@@ -1,25 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Splash_Control : MonoBehaviour
+public class Splash_Control : Scene_Control
 {
 	private float timer;
 	public float displayTime;
 
 	// Use this for initialization
-	void Start()
+	override public void Initialize()
 	{
 		timer = 0.0f;
 	}
 	
 	// Update is called once per frame
-	void Update()
+	override public void MyUpdate()
 	{
 		timer += Time.deltaTime;
 
 		if(timer > displayTime)
 		{
-			Application.LoadLevel("Menu");
+			Application.LoadLevel(1);
 		}
 	}
 }

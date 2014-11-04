@@ -1,70 +1,112 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class Select_Control : MonoBehaviour
+public class Select_Control : Scene_Control
 {
-	//ints
-	private int 		selection;
+	private int 			selection;
+	private UIPanel 		levelSelectPanel;
+	private UIPanel 		characterSelectPanel;
+	private bool			levelSelectState;
+	private int				levelSelection;
+	private List<UISprite> 	levelButtons;
+	private List<string>	levelSprites;
 
-	//bools
-	private bool 		back;
-
-	//master game object
-	private GameObject 	master;
-
-	// Use this for initialization
-	void Start()
+	override public void Initialize()
 	{
-		//default values
-		selection 	= 0;
-		back 		= false;
+		selection 				= 0;
+		levelSelectPanel 		= GameObject.Find("Level Select Panel").GetComponent<UIPanel>();
+		characterSelectPanel 	= GameObject.Find("Character Select Panel").GetComponent<UIPanel>();
+		levelSelectState 		= true;
+		levelSelection 			= 5;
+		levelButtons 			= new List<UISprite>();
+		levelSprites			= new List<string>();
 
-		//obtain master object
-		master 		= GameObject.FindGameObjectWithTag("Master");
+		levelButtons.Add(GameObject.Find("Current Level Button").GetComponentInChildren<UISprite>());
+		levelButtons.Add(GameObject.Find("Top Next Level Button").GetComponentInChildren<UISprite>());
+		levelButtons.Add(GameObject.Find("Bottom Next Level Button").GetComponentInChildren<UISprite>());
+
+		for(int i = 0; i < levelButtons.Count; i++)
+		{
+			levelSprites.Add(levelButtons[i].spriteName);
+		}
 	}
-	
-	//change to appropiate level indicated by user input
-	//never destroy the master object
-	void Update()
+
+	override public void MyUpdate()
 	{
 		switch(selection)
 		{
-		case(1):
+		case(100):
 		{
-			DontDestroyOnLoad(master);
-			Application.LoadLevel("Level_1");
+			ChangePanels();
 			break;
 		}
-		case(2):
+		case(101):
 		{
-			DontDestroyOnLoad(master);
-			Application.LoadLevel("Level_2");
+			ChangeLevelButtons(selection - 100);
 			break;
 		}
-		case(3):
+		case(102):
 		{
-			//uncomment when level 3 is in the project, but commented out to prevent any errors
-			//DontDestroyOnLoad(master);
-			//Application.LoadLevel("Level_3");
+			ChangeLevelButtons(selection - 100);
 			break;
 		}
-		}
-
-		//back changes scene to the Main Menu
-		if(back)
-		{
-			DontDestroyOnLoad(master);
-			Application.LoadLevel("Menu");
 		}
 	}
 
-	public void SetSelection(int source)
+	override public void SceneAction(int source)
 	{
 		selection = source;
 	}
 
-	public void SetBack(bool source)
+	void ChangePanels()
 	{
-		back = source;
+		if(levelSelectState)
+		{
+			levelSelectPanel.enabled 		= true;
+			characterSelectPanel.enabled 	= false;
+		}
+		else
+		{
+			levelSelectPanel.enabled 		= false;
+			characterSelectPanel.enabled 	= true;
+		}
+	}
+
+	void ChangeLevelButtons(int source)
+	{
+		for(int i = 0; i < levelButtons.Count; i++)
+		{
+			int index = 0;
+			if(source + i < levelButtons.Count)
+			{
+				levelButtons[i].spriteName = levelSprites[source + i];
+			}
+			else
+			{
+				levelButtons[i].spriteName = levelSprites[index];
+				index += 1;
+			}
+		}
+		switch(levelSprites[source])
+		{
+		case("purple_32x32"):
+		{
+			levelSelection = 5;
+			break;
+		}
+		/*TODO Replace these strings, including the one above, to the names of the images used to represent each level
+		case("purple_32x32"):
+		{
+			levelSelection = 6;
+			break;
+		}
+		case("purple_32x32"):
+		{
+			levelSelection = 7;
+			break;
+		}
+		*/
+		}
 	}
 }

@@ -14,7 +14,10 @@ public class Index_Button : MonoBehaviour
 	
 	void OnPress(bool isPressed)
 	{
-		sceneControl.SendMessage("SetSelection", index, SendMessageOptions.DontRequireReceiver);
+		if(isPressed)
+		{
+			sceneControl.SendMessage("SetSelection", index, SendMessageOptions.DontRequireReceiver);
+		}
 	}
 	
 	void OnHover(bool isOver)

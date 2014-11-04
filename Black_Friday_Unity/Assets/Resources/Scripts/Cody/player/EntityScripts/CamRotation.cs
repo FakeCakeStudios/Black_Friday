@@ -10,8 +10,8 @@ public class CamRotation : MonoBehaviour {
 		localPos = transform.localRotation;
 	}
 	void Update(){
-		if(!EntityCharacter.camDone){
-			transform.localRotation = Quaternion.Euler(0, localPos.eulerAngles.y + (Mathf.Sin(Time.realtimeSinceStartup*speed)*angleAdj), 0);
-		}
+		//if(!EntityCharacter.camDone){
+			//transform.localRotation = Quaternion.Euler(0, localPos.eulerAngles.y + (Mathf.Sin(Time.realtimeSinceStartup*speed)*angleAdj), 0);
+		//}
 	}
 }

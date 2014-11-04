@@ -29,7 +29,7 @@ public struct SteeringOutput
 	public Vector3 	linear;
 	public float 	angle;
 }
-
+/*
 public enum Buttons{
 	Left,
 	Right,
@@ -45,4 +45,4 @@ public enum EntityType{
 	GuardOne,
 	GuardTwo,
 	NPC
-}
+}*/
