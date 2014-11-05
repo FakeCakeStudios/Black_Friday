@@ -4,15 +4,13 @@ using System.Collections.Generic;
 
 public class Master_Control : MonoBehaviour
 {
-	public GameObject playerObject;
-	private GameObject thePlayer;
 	private Transform spawn;
 
 	private bool inGame;
 	private bool pause;
-	public float endWait = 5;
-	private bool endScene = false;
-	private EndScene EndSceneObject;
+	//public float endWait = 5;
+	//private bool endScene = false;
+	//private EndScene EndSceneObject;
 	private bool tutorialUp;
 
 	//AI is currently not in so it is commented out from the master currently
@@ -21,7 +19,7 @@ public class Master_Control : MonoBehaviour
 	
 	//this keeps track of player changes from the webstore to apply them at game time
 	private Player_Data 	player;
-	private Player_Control 	playerControl;
+	//private Player_Control 	playerControl;
 
 	private List<Input_Button> buttons;
 
@@ -32,7 +30,7 @@ public class Master_Control : MonoBehaviour
 	{
 		inGame = false;
 		pause = false;
-		endScene = false;
+		//endScene = false;
 
 		//only call at the beginning of the application
 		ai = new HAL();
@@ -50,14 +48,14 @@ public class Master_Control : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if(endScene){
-			Camera.main.transform.position = EndSceneObject.cameraPosition;
-			Camera.main.transform.LookAt(EndSceneObject.scorePosition);
-			if(Time.time > EndSceneObject.time+endWait){
-				Application.LoadLevel(1);
-			}
-		}
-		else if(inGame)
+		//if(endScene){
+			//Camera.main.transform.position = EndSceneObject.cameraPosition;
+			//Camera.main.transform.LookAt(EndSceneObject.scorePosition);
+			//if(Time.time > EndSceneObject.time+endWait){
+				//Application.LoadLevel(1);
+			//}
+		//}
+		if(inGame)
 		{
 			ai.MyUpdate();
 		}
@@ -88,9 +86,10 @@ public class Master_Control : MonoBehaviour
 	{
 		spawn = GameObject.FindGameObjectWithTag("Spawn Point").transform;
 
-		thePlayer = Instantiate(playerObject, spawn.position, spawn.rotation) as GameObject;
-		// names the player's game object
-		thePlayer.name = "Player(Prefab)";
+		GameObject thePlayer = Instantiate(Resources.Load("Prefabs/Characters/Player and Cart"), spawn.position, spawn.rotation) as GameObject;
+		GameObject theCharacter = GameObject.Find("Character Position");
+		theCharacter = Instantiate(Resources.Load("Prefabs/Characters/" + player.GetPlayerModel().ToString()), theCharacter.transform.position, theCharacter.transform.rotation)as GameObject;
+
 
 		//call at the beginning of every level
 		ai.SetPlayer();
@@ -115,17 +114,18 @@ public class Master_Control : MonoBehaviour
 		resumeButton = GameObject.Find("Resume Button");
 		resumeButton.SetActive(false);
 
-		EndSceneObject = GameObject.FindGameObjectWithTag("EndScene").GetComponent<EndScene>();
+		//EndSceneObject = GameObject.FindGameObjectWithTag("EndScene").GetComponent<EndScene>();
 
-		playerControl = thePlayer.GetComponent<Player_Control>();
+		//playerControl = thePlayer.GetComponent<Player_Control>();
 	}
 
-	public void EndScene(){
-		endScene = true;
-	}
-	public bool isEnd(){
-		return endScene;
-	}
+	//public void EndScene(){
+	//	endScene = true;
+	//}
+	//public bool isEnd(){
+	//	return endScene;
+	//}
+
 	public void SetInGame(bool source)
 	{
 		inGame = source;

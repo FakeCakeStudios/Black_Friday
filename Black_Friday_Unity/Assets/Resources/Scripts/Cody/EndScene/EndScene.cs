@@ -17,6 +17,6 @@ public class EndScene : MonoBehaviour {
 		GameObject temp = Instantiate(PlayerEndSceneObject, playerPosition, Quaternion.identity)as GameObject;
 		Destroy(player);
 		time = Time.time;
-		masterControl.EndScene();
+		//masterControl.EndScene();
 	}
 }

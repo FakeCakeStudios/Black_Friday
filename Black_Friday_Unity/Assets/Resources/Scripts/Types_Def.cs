@@ -34,3 +34,8 @@ public enum PlayerModel
 {
 	Nerd, Psycho
 }
+
+public enum CartModel
+{
+	Starter, Drifter, Offroad
+}

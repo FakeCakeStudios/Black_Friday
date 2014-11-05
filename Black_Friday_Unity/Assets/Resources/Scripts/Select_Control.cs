@@ -84,7 +84,6 @@ public class Select_Control : Scene_Control
 				characterScripts[i].enabled 	= false;
 			}
 		}
-
 		characterSelectPanel.SetActive(false);
 	}
 

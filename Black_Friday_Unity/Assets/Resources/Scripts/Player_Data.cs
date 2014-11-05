@@ -15,6 +15,7 @@ public class Player_Data
 
 	//enum
 	private PlayerModel			playerModel;
+	private CartModel			cartModel;
 	
 	// Use this for initialization
 	public void Initialize()
@@ -36,7 +37,11 @@ public class Player_Data
 			characterUnlocks.Add(false);
 		}
 
-		playerModel		= new PlayerModel();
+		playerModel	= new PlayerModel();
+		cartModel	= new CartModel();
+
+		playerModel = PlayerModel.Nerd;
+		cartModel 	= CartModel.Starter;
 	}
 
 	//return the cash amount stored
@@ -113,6 +118,16 @@ public class Player_Data
 	public PlayerModel GetPlayerModel()
 	{
 		return playerModel;
+	}
+
+	public void SetCartModel(CartModel source)
+	{
+		cartModel = source;
+	}
+	
+	public CartModel GetCartModel()
+	{
+		return cartModel;
 	}
 
 	public void SetLevelUnlocks(int source)

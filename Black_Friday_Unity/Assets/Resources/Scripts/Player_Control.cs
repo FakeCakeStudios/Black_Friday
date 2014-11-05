@@ -60,7 +60,7 @@ public class Player_Control : MonoBehaviour
 	{
 		self 			= this.gameObject.transform;
 		output 			= new SteeringOutput();
-		charAnimations	= this.gameObject.GetComponent<Animator>();
+		charAnimations	= this.gameObject.GetComponentInChildren<Animator>();
 		//powerupList 	= new List<Powerups>();
 
 		masterScript = GameObject.FindGameObjectWithTag("Master").GetComponent<Master_Control>();
@@ -98,13 +98,13 @@ public class Player_Control : MonoBehaviour
 			}
 			else
 			{
-				if(!masterScript.isEnd()){
+				//if(!masterScript.isEnd()){
 					//CameraObject.transform.localPosition = this.transform.position + cameraPosition;
-					Vector3 temp = this.transform.position + (-this.transform.forward * camDistance);
-					temp.y += camHeight;
-					CameraObject.transform.localPosition = temp;
-					CameraObject.transform.LookAt(this.transform.position+new Vector3(0,camRaise,0));
-				}
+					//Vector3 temp = this.transform.position + (-this.transform.forward * camDistance);
+					//temp.y += camHeight;
+					//CameraObject.transform.localPosition = temp;
+					//CameraObject.transform.LookAt(this.transform.position+new Vector3(0,camRaise,0));
+				//}
 
 				self.position += velocity * Time.deltaTime;
 				//if we're not stopped then continue movement
