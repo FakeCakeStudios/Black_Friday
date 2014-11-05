@@ -3,30 +3,41 @@ using System.Collections;
 
 public class Camera_Control : MonoBehaviour
 {
-	private Vector3 	offset;
+	private float 		cameraDistance;
+	private float 		cameraHeight;
+	private float 		cameraTargetHeight;
 	private Transform 	player;
-	private bool 		active;
-
-
-	// Use this for initialization
+	private bool 		followPlayer;
+	
 	void Start()
 	{
-		offset = new Vector3(0.0f, 0.0f, 0.0f);
-		player = GameObject.FindGameObjectWithTag("Player").transform;
-		active = false;
+		cameraDistance 		= 2.0f;;
+		cameraHeight 		= 2.0f;
+		cameraTargetHeight 	= 1.0f;
+		followPlayer 		= false;
 	}
-	
-	// Update is called once per frame
+
 	void LateUpdate()
 	{
-		if(active)
+		if(followPlayer)
 		{
-			this.transform.position = player.position + offset;
+			Vector3 temp = player.position;
+			temp += -player.forward * cameraDistance;
+			temp.y += cameraHeight;
+			this.transform.position = temp;
+			temp = player.position;
+			temp.y += cameraTargetHeight;
+			this.transform.LookAt(temp);
 		}
 	}
 
-	public void SetActive(bool source)
+	public void SetFollowPlayer(bool source)
 	{
-		active = source;
+		followPlayer = source;
+	}
+
+	public void SetPlayer()
+	{
+		player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 }

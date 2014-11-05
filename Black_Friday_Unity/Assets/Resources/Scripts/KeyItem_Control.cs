@@ -15,7 +15,7 @@ public class KeyItem_Control : MonoBehaviour
 	void Awake()
 	{
 		selfMats 			= this.gameObject.GetComponent<MeshRenderer>();
-		glowMat 			= Resources.Load("Prefabs/Materials/yellowMat") as Material;
+		glowMat 			= Resources.Load("Placeholders/Materials/yellowMat") as Material;
 		original 			= selfMats.materials[0];
 		selfMats.material 	= glowMat;
 		SetActive(false);

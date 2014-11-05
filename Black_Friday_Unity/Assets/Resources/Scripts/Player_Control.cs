@@ -4,38 +4,26 @@ using System.Collections.Generic;
 
 public class Player_Control : MonoBehaviour
 {
-	//joshua's
+	//private
+	private float 			currentSpeed;
+	private bool 			leftOn;
+	private bool 			rightOn;
+	private bool 			powerUp;
 	private Animator		charAnimations;
 	private Transform 		self;
 	private Vector3	 		velocity;
+	private Vector3			target;
+	private Master_Control 	masterScript;
+	private SteeringOutput	output;
+	private List<Powerups>	powerupList;
+	
+	//public
 	public float			maxRotation;
 	public float 			runSpeed;
 	public float 			walkSpeed;
 	public float 			slowSpeed;
-	private float 			currentSpeed;
 	public float 			maxAccel;
-	private List<Powerups>	powerupList;
-	//cody's
-	public bool camDone = false;
-	public CameraOverView OverView;
-	private GameObject CameraObject;
-	private bool leftOn = false;
-	private bool rightOn = false;
-	private bool powerUp = false;
-	private Vector3 target;
-
-	public float camDistance = 1.0f;
-	public float camHeight = 3.0f;
-	public float camRaise = 3.0f;
-
-	private Master_Control masterScript;
-
-	//everything but the player will have a personality
-	//public BehaviorType		behavior;
 	
-	//steering will be used to translate every entity after updating
-	private SteeringOutput	output;
-
 	public Transform GetSelf()
 	{
 		return self;
@@ -61,109 +49,84 @@ public class Player_Control : MonoBehaviour
 		self 			= this.gameObject.transform;
 		output 			= new SteeringOutput();
 		charAnimations	= this.gameObject.GetComponentInChildren<Animator>();
-		//powerupList 	= new List<Powerups>();
-
-		masterScript = GameObject.FindGameObjectWithTag("Master").GetComponent<Master_Control>();
+		masterScript 	= GameObject.FindGameObjectWithTag("Master").GetComponent<Master_Control>();
 	}
 	
 	// Use this for initialization
 	void Start()
 	{
-		//floats
-		runSpeed 			= 6.0f;
-		walkSpeed			= 3.0f;
-		slowSpeed			= 1.5f;
-		currentSpeed		= walkSpeed;
-		maxRotation 		= 100.0f;
-		maxAccel 			= 100.0f;
-		target 				= new Vector3();
-		powerupList 		= masterScript.GetPlayerData().GetPowerups();
-		//camDistance = 1.0f;
-		//camHeight = 3.0f;
-
-		OverView.ViewStart();
-		CameraObject = Camera.main.gameObject;
+		runSpeed 		= 6.0f;
+		walkSpeed		= 3.0f;
+		slowSpeed		= 1.5f;
+		maxRotation 	= 100.0f;
+		maxAccel 		= 100.0f;
+		currentSpeed	= walkSpeed;
+		leftOn 			= false;
+		rightOn 		= false;
+		powerUp 		= false;
+		target 			= new Vector3();
+		powerupList 	= masterScript.GetPlayerData().GetPowerups();
 	}
 
 	void Update()
 	{
-		if(!OverView.allDone){
-			OverView.ViewUpdate(CameraObject);
-		}
-		else
+		self.position += velocity * Time.deltaTime;
+		//if we're not stopped then continue movement
+		if(Mathf.Abs(output.angle) > maxRotation)
 		{
-			if(!camDone)
+			if(output.angle < 0.0f)
 			{
-				camDone = true;
+				output.angle = -maxRotation;
 			}
 			else
 			{
-				//if(!masterScript.isEnd()){
-					//CameraObject.transform.localPosition = this.transform.position + cameraPosition;
-					//Vector3 temp = this.transform.position + (-this.transform.forward * camDistance);
-					//temp.y += camHeight;
-					//CameraObject.transform.localPosition = temp;
-					//CameraObject.transform.LookAt(this.transform.position+new Vector3(0,camRaise,0));
-				//}
-
-				self.position += velocity * Time.deltaTime;
-				//if we're not stopped then continue movement
-				if(Mathf.Abs(output.angle) > maxRotation)
-				{
-					if(output.angle < 0.0f)
-					{
-						output.angle = -maxRotation;
-					}
-					else
-					{
-						output.angle = maxRotation;
-					}
-				}
-				self.Rotate(new Vector3(0.0f, 1.0f, 0.0f), output.angle * Time.deltaTime);
+				output.angle = maxRotation;
+			}
+		}
+		self.Rotate(new Vector3(0.0f, 1.0f, 0.0f), output.angle * Time.deltaTime);
 				
-				if(output.linear != Vector3.zero)
-				{
-					//currently all object move in the direction they are facing, no side stepping
-					velocity += self.forward * maxAccel * Time.deltaTime;
+		if(output.linear != Vector3.zero)
+		{
+			//currently all object move in the direction they are facing, no side stepping
+			velocity += self.forward * maxAccel * Time.deltaTime;
 
-					charAnimations.SetBool("running", true);
+			charAnimations.SetBool("running", true);
 					
-					if(velocity.magnitude > currentSpeed)
-					{
-						velocity = Vector3.Normalize(velocity);
-						velocity *= currentSpeed;
-					}
-				}
-				else
-				{
-					charAnimations.SetBool("running", false);
-				}
+			if(velocity.magnitude > currentSpeed)
+			{
+				velocity = Vector3.Normalize(velocity);
+				velocity *= currentSpeed;
 			}
-			target = Vector3.zero;
-			target = self.position + (self.forward * 2.0f);
-			output.angle = 0.0f;
-			output.linear = self.position + (self.forward * 2.0f);
+		}
+		else
+		{
+			charAnimations.SetBool("running", false);
+		}
+	
+		target = Vector3.zero;
+		target = self.position + (self.forward * 2.0f);
+		output.angle = 0.0f;
+		output.linear = self.position + (self.forward * 2.0f);
 
-			currentSpeed = walkSpeed;
+		currentSpeed = walkSpeed;
 
-			if(leftOn && rightOn)
-			{
-				currentSpeed = slowSpeed;
-			}
-			else if(leftOn)
-			{
-				target += -self.right * 2.0f;
-				output.angle = -100;
-			}
-			else if(rightOn)
-			{
-				target += self.right * 2.0f;
-				output.angle = 100;
-			}
-			if(powerUp)
-			{
-				PowerupUsed();
-			}
+		if(leftOn && rightOn)
+		{
+			currentSpeed = slowSpeed;
+		}
+		else if(leftOn)
+		{
+			target += -self.right * 2.0f;
+			output.angle = -100;
+		}
+		else if(rightOn)
+		{
+			target += self.right * 2.0f;
+			output.angle = 100;
+		}
+		if(powerUp)
+		{
+			PowerupUsed();
 		}
 	}
 

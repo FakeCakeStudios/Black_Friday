@@ -21,6 +21,7 @@ public class Level_Control : MonoBehaviour
 	private UILabel						scoreBoard;
 	private bool						showScore;
 	private Indicator_Control			itemIndicator;
+	private Camera_Control				cameraScript;
 
 	void Awake()
 	{
@@ -35,6 +36,7 @@ public class Level_Control : MonoBehaviour
 		itemControl 		= new List<KeyItem_Control>();
 		showScore 			= true;
 		itemIndicator		= GameObject.Find("Item Indicator").GetComponent<Indicator_Control>();
+		cameraScript 		= Camera.main.GetComponent<Camera_Control>();
 
 		UILabel[] tempList = GameObject.Find("Shopping List").GetComponentsInChildren<UILabel>();
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Item Location");
@@ -67,6 +69,9 @@ public class Level_Control : MonoBehaviour
 	{
 		masterScript.LevelSetup();
 		masterScript.SetInGame(true);
+
+		cameraScript.SetPlayer();
+		cameraScript.SetFollowPlayer(true);
 	}
 	
 	// Update is called once per frame

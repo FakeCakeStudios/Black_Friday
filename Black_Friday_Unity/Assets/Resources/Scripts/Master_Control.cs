@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class Master_Control : MonoBehaviour
 {
+	GameObject thePlayer;
 	private Transform spawn;
 
 	private bool inGame;
@@ -85,11 +86,7 @@ public class Master_Control : MonoBehaviour
 	public void LevelSetup()
 	{
 		spawn = GameObject.FindGameObjectWithTag("Spawn Point").transform;
-
-		GameObject thePlayer = Instantiate(Resources.Load("Prefabs/Characters/Player and Cart"), spawn.position, spawn.rotation) as GameObject;
-		GameObject theCharacter = GameObject.Find("Character Position");
-		theCharacter = Instantiate(Resources.Load("Prefabs/Characters/" + player.GetPlayerModel().ToString()), theCharacter.transform.position, theCharacter.transform.rotation)as GameObject;
-
+		CreatePlayer();
 
 		//call at the beginning of every level
 		ai.SetPlayer();
@@ -175,5 +172,10 @@ public class Master_Control : MonoBehaviour
 	public void EffectEntities(Interaction source, float triggerTime)
 	{
 		ai.SetEntitiesInteractions(source, triggerTime);
+	}
+
+	void CreatePlayer()
+	{
+		thePlayer = Instantiate(Resources.Load("Prefabs/Characters/" + player.GetPlayerModel().ToString() + " and Carts"), spawn.position, spawn.rotation) as GameObject;
 	}
 }
