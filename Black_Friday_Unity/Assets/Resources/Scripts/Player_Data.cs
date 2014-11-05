@@ -10,7 +10,11 @@ public class Player_Data
 	//lists
 	private List<Powerups> 		powerups;
 	private List<KartUpgrades> 	kartUpgrades;
+	private List<bool>			unlocks;
 
+	//enum
+	private PlayerModel			playerModel;
+	
 	// Use this for initialization
 	public void Initialize()
 	{
@@ -20,6 +24,13 @@ public class Player_Data
 		//create the lists
 		powerups 		= new List<Powerups>();
 		kartUpgrades 	= new List<KartUpgrades>();
+		unlocks 		= new List<bool>();
+		for(int i = 0; i < 2; i ++)
+		{
+			unlocks.Add(false);
+		}
+
+		playerModel		= new PlayerModel();
 	}
 
 	//return the cash amount stored
@@ -86,5 +97,25 @@ public class Player_Data
 	public void ClearKartUpgrades()
 	{
 		kartUpgrades.Clear();
+	}
+
+	public void SetPlayerModel(PlayerModel source)
+	{
+		playerModel = source;
+	}
+
+	public PlayerModel GetPlayerModel()
+	{
+		return playerModel;
+	}
+
+	public void SetUnlocks(int source)
+	{
+		unlocks[source] = true;
+	}
+
+	public List<bool> GetUnlocks()
+	{
+		return unlocks;
 	}
 }

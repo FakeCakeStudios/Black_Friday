@@ -23,7 +23,7 @@ public class Scene_Control : MonoBehaviour
 
 	public void SetSelection(int source)
 	{
-		if(source <= 6)
+		if(source <= 7)
 		{
 			if(source != -1)
 			{
