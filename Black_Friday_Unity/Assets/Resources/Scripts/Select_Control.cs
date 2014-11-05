@@ -4,15 +4,19 @@ using System.Collections.Generic;
 
 public class Select_Control : Scene_Control
 {
-	private int 			selection;
-	private GameObject		levelSelectPanel;
-	private GameObject 		characterSelectPanel;
-	private bool			levelSelectState;
-	private int				levelSelection;
-	private List<UISprite> 	levelButtons;
-	private List<string>	levelSprites;
-	private List<UISprite> 	characterButtons;
-	private List<string>	characterSprites;
+	private int 				selection;
+	private GameObject			levelSelectPanel;
+	private GameObject 			characterSelectPanel;
+	private bool				levelSelectState;
+	private int					levelSelection;
+	private List<UISprite> 		levelButtons;
+	private List<string>		levelSprites;
+	private List<UISprite> 		characterButtons;
+	private List<string>		characterSprites;
+	private List<Collider> 		levelColliders;
+	private List<Index_Button>	levelScripts;
+	private List<Collider> 		characterColliders;
+	private List<Index_Button>	characterScripts;
 
 	override public void Initialize()
 	{
@@ -25,10 +29,20 @@ public class Select_Control : Scene_Control
 		levelSprites			= new List<string>();
 		characterButtons 		= new List<UISprite>();
 		characterSprites		= new List<string>();
+		levelColliders 			= new List<Collider>();
+		levelScripts 			= new List<Index_Button>();
+		characterColliders 		= new List<Collider>();
+		characterScripts 		= new List<Index_Button>();
 
 		levelButtons.Add(GameObject.Find("Current Level Image").GetComponent<UISprite>());
-		levelButtons.Add(GameObject.Find("Top Next Level Button").GetComponentInChildren<UISprite>());
-		levelButtons.Add(GameObject.Find("Bottom Next Level Button").GetComponentInChildren<UISprite>());
+		GameObject temp = GameObject.Find("Top Next Level Button");
+		levelButtons.Add(temp.GetComponentInChildren<UISprite>());
+		levelColliders.Add(temp.collider);
+		levelScripts.Add(temp.GetComponent<Index_Button>());
+		temp = GameObject.Find("Bottom Next Level Button");
+		levelButtons.Add(temp.GetComponentInChildren<UISprite>());
+		levelColliders.Add(temp.collider);
+		levelScripts.Add(temp.GetComponent<Index_Button>());
 
 		for(int i = 0; i < levelButtons.Count; i++)
 		{
@@ -36,11 +50,41 @@ public class Select_Control : Scene_Control
 		}
 
 		characterButtons.Add(GameObject.Find("Current Character Image").GetComponent<UISprite>());
-		characterButtons.Add(GameObject.Find("Character 2 Button").GetComponentInChildren<UISprite>());
+		temp = GameObject.Find("Character 2 Button");
+		characterButtons.Add(temp.GetComponentInChildren<UISprite>());
+		characterColliders.Add(temp.collider);
+		characterScripts.Add(temp.GetComponent<Index_Button>());
+
 		for(int i = 0; i < characterButtons.Count; i++)
 		{
 			characterSprites.Add(characterButtons[i].spriteName);
 		}
+
+		Player_Data playerUnlocks = masterScript.GetPlayerData();
+		List<bool> levelUnlocks = new List<bool>();
+		levelUnlocks = playerUnlocks.GetLevelUnlocks();
+
+		for(int i = 0; i < levelButtons.Count - 1; i++)
+		{
+			if(!levelUnlocks[i])
+			{
+				levelColliders[i].enabled 	= false;
+				levelScripts[i].enabled 	= false;
+			}
+		}
+
+		List<bool> characterUnlocks = new List<bool>();
+		characterUnlocks = playerUnlocks.GetCharacterUnlocks();
+		
+		for(int i = 0; i < characterButtons.Count - 1; i++)
+		{
+			if(!characterUnlocks[i])
+			{
+				characterColliders[i].enabled 	= false;
+				characterScripts[i].enabled 	= false;
+			}
+		}
+
 		characterSelectPanel.SetActive(false);
 	}
 
@@ -100,23 +144,11 @@ public class Select_Control : Scene_Control
 
 	void ChangeLevelButtons(int source)
 	{
-		int index = 0;
-		for(int i = 0; i < levelButtons.Count; i++)
-		{
-			if(source + i < levelButtons.Count)
-			{
-				levelButtons[i].spriteName = levelSprites[source + i];
-			}
-			else
-			{
-				levelButtons[i].spriteName = levelSprites[index];
-				index += 1;
-			}
-		}
-		for(int i = 0; i < levelButtons.Count; i++)
-		{
-			levelSprites[i] = levelButtons[i].spriteName;
-		}
+		string temp 					= levelButtons[0].spriteName;
+		levelButtons[0].spriteName 		= levelSprites[source];
+		levelButtons[source].spriteName = temp;
+		levelSprites[0] 				= levelButtons[0].spriteName;
+		levelSprites[source] 			= levelButtons[source].spriteName;
 
 		//TODO Replace these strings to the names of the images used to represent each level
 		switch(levelButtons[0].spriteName)
@@ -141,22 +173,10 @@ public class Select_Control : Scene_Control
 
 	void ChangeCharacterSelection(int source)
 	{
-		int index = 0;
-		for(int i = 0; i < characterButtons.Count; i++)
-		{
-			if(source + i < characterButtons.Count)
-			{
-				characterButtons[i].spriteName = characterSprites[source + i];
-			}
-			else
-			{
-				characterButtons[i].spriteName = characterSprites[index];
-				index += 1;
-			}
-		}
-		for(int i = 0; i < characterButtons.Count; i++)
-		{
-			characterSprites[i] = characterButtons[i].spriteName;
-		}
+		string temp 						= characterButtons[0].spriteName;
+		characterButtons[0].spriteName 		= characterSprites[source];
+		characterButtons[source].spriteName = temp;
+		characterSprites[0] 				= characterButtons[0].spriteName;
+		characterSprites[source] 			= characterButtons[source].spriteName;
 	}
 }

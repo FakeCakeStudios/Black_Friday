@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Select_Control.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\Select_Control.cs" Line="42" Column="34" />
-      <File FileName="Assets\Resources\Scripts\Scene_Control.cs" Line="51" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Player_Data.cs" Line="119" Column="18" />
+      <File FileName="Assets\Resources\Scripts\Select_Control.cs" Line="84" Column="14" />
+      <File FileName="Assets\Resources\Scripts\Player_Data.cs" Line="34" Column="23" />
+      <File FileName="Assets\Resources\Scripts\Index_Button.cs" Line="19" Column="1" />
+      <File FileName="Assets\Resources\Scripts\Scene_Control.cs" Line="15" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

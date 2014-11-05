@@ -10,7 +10,8 @@ public class Player_Data
 	//lists
 	private List<Powerups> 		powerups;
 	private List<KartUpgrades> 	kartUpgrades;
-	private List<bool>			unlocks;
+	private List<bool>			levelUnlocks;
+	private List<bool>			characterUnlocks;
 
 	//enum
 	private PlayerModel			playerModel;
@@ -22,12 +23,17 @@ public class Player_Data
 		cash 			= 0;
 
 		//create the lists
-		powerups 		= new List<Powerups>();
-		kartUpgrades 	= new List<KartUpgrades>();
-		unlocks 		= new List<bool>();
+		powerups 			= new List<Powerups>();
+		kartUpgrades 		= new List<KartUpgrades>();
+		levelUnlocks 		= new List<bool>();
+		characterUnlocks 	= new List<bool>();
 		for(int i = 0; i < 2; i ++)
 		{
-			unlocks.Add(false);
+			levelUnlocks.Add(false);
+		}
+		for(int i = 0; i < 1; i ++)
+		{
+			characterUnlocks.Add(false);
 		}
 
 		playerModel		= new PlayerModel();
@@ -109,13 +115,23 @@ public class Player_Data
 		return playerModel;
 	}
 
-	public void SetUnlocks(int source)
+	public void SetLevelUnlocks(int source)
 	{
-		unlocks[source] = true;
+		levelUnlocks[source] = true;
 	}
 
-	public List<bool> GetUnlocks()
+	public List<bool> GetLevelUnlocks()
 	{
-		return unlocks;
+		return levelUnlocks;
+	}
+
+	public void SetCharacterUnlocks(int source)
+	{
+		characterUnlocks[source] = true;
+	}
+	
+	public List<bool> GetCharacterUnlocks()
+	{
+		return characterUnlocks;
 	}
 }

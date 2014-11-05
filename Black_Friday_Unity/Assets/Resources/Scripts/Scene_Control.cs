@@ -4,13 +4,15 @@ using System.Collections;
 public class Scene_Control : MonoBehaviour
 {
 	//master game object
-	public GameObject master;
+	public GameObject 		master;
+	public Master_Control 	masterScript;
 
 	// Use this for initialization
 	void Start()
 	{
 		//obtain the master object
-		master = GameObject.FindGameObjectWithTag("Master");
+		master 			= GameObject.FindGameObjectWithTag("Master");
+		masterScript 	= master.GetComponent<Master_Control>();
 
 		Initialize();
 	}
