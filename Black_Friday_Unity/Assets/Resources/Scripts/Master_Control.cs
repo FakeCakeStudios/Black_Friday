@@ -179,35 +179,57 @@ public class Master_Control : MonoBehaviour
 			break;
 		}
 		}
+		//Fans, Glove, Oil, Repeller, Scroll, WD4000
+		///GameObject[] temp = GameObject.FindGameObjectsWithTag("Cart Upgrade");
+		GameObject[] temp = new GameObject[6];
+		temp[0] = GameObject.Find("Fans");
+		temp[1] = GameObject.Find("Glove");
+		temp[2] = GameObject.Find("Oil");
+		temp[3] = GameObject.Find("Repeller");
+		temp[4] = GameObject.Find("Scroll");
+		temp[5] = GameObject.Find("WD4000");
 
-		List<KartUpgrades> cartItems = player.GetKartUpgrades();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		for(int i = 0; i < temp.Length; i++)
+		{
+			temp[i].SetActive(false);
+		}
+		temp[2].SetActive(true);
+		List<KartUpgrades> cartUpgrades = player.GetKartUpgrades();
+		for(int i = 0; i < cartUpgrades.Count; i++)
+		{
+			switch(cartUpgrades[i])
+			{
+			case(KartUpgrades.Fans):
+			{
+				temp[0].SetActive(true);
+				break;
+			}
+			case(KartUpgrades.Glove):
+			{
+				temp[1].SetActive(true);
+				break;
+			}
+			case(KartUpgrades.Oil):
+			{
+				temp[2].SetActive(true);
+				break;
+			}
+			case(KartUpgrades.Repeller):
+			{
+				temp[3].SetActive(true);
+				break;
+			}
+			case(KartUpgrades.Scroll):
+			{
+				temp[4].SetActive(true);
+				break;
+			}
+			case(KartUpgrades.WD4000):
+			{
+				temp[5].SetActive(true);
+				break;
+			}
+			}
+		}
 	}
 }
