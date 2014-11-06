@@ -69,7 +69,13 @@ ModelImporter:
     400060: Spine_SR_AJNT
     400062: Spine_SR_BJNT
     400064: Spine_SR_End
-    7400000: Take 001
+    7400000: Idle
+    7400002: Grab
+    7400004: Tantrum
+    7400006: Block
+    7400008: Belly Bump
+    7400010: Taunt
+    7400012: Dodge Crash
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -80,13 +86,657 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 11
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_Control
+        weight: 1
+      - path: Master_Control/Control_Rig
+        weight: 1
+      - path: Master_Control/Control_Rig/Root_CR
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP/Movement_Control
+        weight: 1
+      - path: Master_Control/Skin_Rig
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT/LeftLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT/RightLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftThumb_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT/Head_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightThumb_SR_AJNT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Grab
+      takeName: Take 001
+      firstFrame: 51
+      lastFrame: 84
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_Control
+        weight: 1
+      - path: Master_Control/Control_Rig
+        weight: 1
+      - path: Master_Control/Control_Rig/Root_CR
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP/Movement_Control
+        weight: 1
+      - path: Master_Control/Skin_Rig
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT/LeftLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT/RightLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftThumb_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT/Head_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightThumb_SR_AJNT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Tantrum
+      takeName: Take 001
+      firstFrame: 91
+      lastFrame: 135
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_Control
+        weight: 1
+      - path: Master_Control/Control_Rig
+        weight: 1
+      - path: Master_Control/Control_Rig/Root_CR
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP/Movement_Control
+        weight: 1
+      - path: Master_Control/Skin_Rig
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT/LeftLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT/RightLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftThumb_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT/Head_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightThumb_SR_AJNT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Block
+      takeName: Take 001
+      firstFrame: 147
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_Control
+        weight: 1
+      - path: Master_Control/Control_Rig
+        weight: 1
+      - path: Master_Control/Control_Rig/Root_CR
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP/Movement_Control
+        weight: 1
+      - path: Master_Control/Skin_Rig
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT/LeftLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT/RightLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftThumb_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT/Head_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightThumb_SR_AJNT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Belly Bump
+      takeName: Take 001
+      firstFrame: 190
+      lastFrame: 203
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_Control
+        weight: 1
+      - path: Master_Control/Control_Rig
+        weight: 1
+      - path: Master_Control/Control_Rig/Root_CR
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP/Movement_Control
+        weight: 1
+      - path: Master_Control/Skin_Rig
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT/LeftLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT/RightLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftThumb_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT/Head_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightThumb_SR_AJNT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Taunt
+      takeName: Take 001
+      firstFrame: 206
+      lastFrame: 248
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_Control
+        weight: 1
+      - path: Master_Control/Control_Rig
+        weight: 1
+      - path: Master_Control/Control_Rig/Root_CR
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP/Movement_Control
+        weight: 1
+      - path: Master_Control/Skin_Rig
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT/LeftLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT/RightLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftThumb_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT/Head_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightThumb_SR_AJNT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dodge Crash
+      takeName: Take 001
+      firstFrame: 252
+      lastFrame: 281
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_Control
+        weight: 1
+      - path: Master_Control/Control_Rig
+        weight: 1
+      - path: Master_Control/Control_Rig/Root_CR
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP
+        weight: 1
+      - path: Master_Control/Movement_Control_GRP/Movement_Control
+        weight: 1
+      - path: Master_Control/Skin_Rig
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/LeftLeg_SR_AJNT/LeftLeg_SR_BJNT/LeftLeg_SR_CJNT/LeftLeg_SR_DJNT/LeftLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/RightLeg_SR_AJNT/RightLeg_SR_BJNT/RightLeg_SR_CJNT/RightLeg_SR_DJNT/RightLeg_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/LeftArm_SR_AJNT/LeftArm_SR_BJNT/LeftArm_SR_CJNT/LeftThumb_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/Neck_SR_AJNT/Head_SR_End
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightHand_SR_AJNT
+        weight: 1
+      - path: Master_Control/Skin_Rig/Root_SR/Spine_SR_AJNT/Spine_SR_BJNT/Spine_SR_End/RightArm_SR_AJNT/RightArm_SR_BJNT/RightArm_SR_CJNT/RightThumb_SR_AJNT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -109,10 +759,369 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
-    human: []
-    skeleton: []
+    human:
+    - boneName: Spine_SR_AJNT
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftLeg_SR_AJNT
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightLeg_SR_AJNT
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftLeg_SR_BJNT
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightLeg_SR_BJNT
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftLeg_SR_CJNT
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightLeg_SR_CJNT
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine_SR_BJNT
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine_SR_End
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck_SR_AJNT
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftArm_SR_AJNT
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightArm_SR_AJNT
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftArm_SR_BJNT
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightArm_SR_BJNT
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftArm_SR_CJNT
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightArm_SR_CJNT
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftLeg_SR_DJNT
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightLeg_SR_DJNT
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head_SR_End
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftHand_SR_AJNT
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftThumb_SR_AJNT
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightThumb_SR_AJNT
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightHand_SR_AJNT
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: FatBob(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Fat_Civilian_Rig01
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Master_Control
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Control_Rig
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Root_CR
+      position: {x: 1.56125113e-17, y: 0, z: -2.88889473e-33}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Movement_Control_GRP
+      position: {x: 4.16333634e-17, y: 0, z: 0}
+      rotation: {x: 0, y: 5.55111512e-17, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Movement_Control
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Skin_Rig
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Root_SR
+      position: {x: 1.56125113e-17, y: 0, z: -2.88889473e-33}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Spine_SR_AJNT
+      position: {x: 1.50826938e-17, y: .960205138, z: .042721007}
+      rotation: {x: .501579404, y: -.498415679, z: -.501579344, w: .498415679}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Spine_SR_BJNT
+      position: {x: -.351041645, y: 8.32667268e-17, z: 2.46595775e-19}
+      rotation: {x: -3.30375016e-08, y: -2.6170218e-08, z: .11835596, w: .992971301}
+      scale: {x: .999999821, y: .999999821, z: .999999881}
+      transformModified: 1
+    - name: Spine_SR_End
+      position: {x: -.266100556, y: -2.49800181e-16, z: 1.15371239e-17}
+      rotation: {x: 0, y: 0, z: 1.37345655e-08, w: 1}
+      scale: {x: 1, y: .999999881, z: 1}
+      transformModified: 1
+    - name: Neck_SR_AJNT
+      position: {x: -.200748891, y: .0718745515, z: -2.22728687e-17}
+      rotation: {x: 3.30375052e-08, y: 2.61702215e-08, z: -.167570576, w: .985860169}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Head_SR_End
+      position: {x: -.272597194, y: 3.33066907e-16, z: -2.05054143e-16}
+      rotation: {x: -.525735676, y: .47286579, z: .525735617, w: .47286579}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: LeftArm_SR_AJNT
+      position: {x: -.0880386829, y: -.0511586964, z: .26315704}
+      rotation: {x: .012995353, y: .712899983, z: .0379320383, w: .700118542}
+      scale: {x: .999999821, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: LeftArm_SR_BJNT
+      position: {x: -.341405809, y: -8.32667268e-17, z: -6.66133815e-16}
+      rotation: {x: -.0015367904, y: .000500945956, z: -.0677249655, w: .997702777}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: LeftArm_SR_CJNT
+      position: {x: -.388347775, y: 9.99200722e-16, z: -1.99840144e-15}
+      rotation: {x: .13253282, y: .0126647642, z: .00302386447, w: .991093159}
+      scale: {x: 1, y: .999999821, z: .99999994}
+      transformModified: 1
+    - name: LeftThumb_SR_AJNT
+      position: {x: -.0956133455, y: .03578531, z: -.126371458}
+      rotation: {x: .272295296, y: -.210363358, z: -.00719927857, w: .938909352}
+      scale: {x: 1.00000024, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: LeftHand_SR_AJNT
+      position: {x: -.163032249, y: -.00247709802, z: .00490537984}
+      rotation: {x: .00396181783, y: -.0159008205, z: -.0804381222, w: .996624947}
+      scale: {x: 1, y: 1.00000024, z: 1.00000012}
+      transformModified: 1
+    - name: RightArm_SR_AJNT
+      position: {x: -.0880391747, y: -.0511587374, z: -.26315698}
+      rotation: {x: -.71382618, y: -.0174103342, z: .697034597, w: -.0655120239}
+      scale: {x: .999999702, y: .999999762, z: .99999994}
+      transformModified: 1
+    - name: RightArm_SR_BJNT
+      position: {x: .341406226, y: -1.78074657e-07, z: -7.93449075e-08}
+      rotation: {x: -.00145363563, y: .00197225832, z: -.0742232502, w: .997238636}
+      scale: {x: 1, y: .999999702, z: .999999821}
+      transformModified: 1
+    - name: RightArm_SR_CJNT
+      position: {x: .388349384, y: 2.05756834e-08, z: -2.80074119e-06}
+      rotation: {x: .172896162, y: .0186311547, z: .00222349772, w: .984761298}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightThumb_SR_AJNT
+      position: {x: .0956078544, y: -.0357863419, z: .126370877}
+      rotation: {x: .272295356, y: -.210363373, z: -.00719926087, w: .938909292}
+      scale: {x: .999999762, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: RightHand_SR_AJNT
+      position: {x: .163031816, y: .00247698138, z: -.00490303989}
+      rotation: {x: .00396173634, y: -.0159008373, z: -.08043807, w: .996624947}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftLeg_SR_AJNT
+      position: {x: .213286579, y: -.0413721539, z: .213451996}
+      rotation: {x: -.0917879939, y: .990787446, z: -.0263614226, w: .0960225984}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: LeftLeg_SR_BJNT
+      position: {x: -.292630464, y: -2.60208505e-17, z: -8.32667268e-17}
+      rotation: {x: -.000146437087, y: .00619853381, z: .157427549, w: .987511098}
+      scale: {x: 1, y: 1, z: .999999821}
+      transformModified: 1
+    - name: LeftLeg_SR_CJNT
+      position: {x: -.317266107, y: -2.43399939e-10, z: 1.31349931e-11}
+      rotation: {x: -.00965674315, y: -.0156928524, z: -.446976691, w: .894355834}
+      scale: {x: .99999994, y: .99999994, z: 1}
+      transformModified: 1
+    - name: LeftLeg_SR_DJNT
+      position: {x: -.194734469, y: 2.78273488e-10, z: 2.92466051e-12}
+      rotation: {x: -.111936882, y: -.00818608981, z: -.400476247, w: .909407496}
+      scale: {x: 1.00000012, y: .999999881, z: 1}
+      transformModified: 1
+    - name: LeftLeg_SR_End
+      position: {x: -.174712464, y: -2.10431272e-09, z: 3.56061812e-11}
+      rotation: {x: -1.95514165e-08, y: 3.6024371e-08, z: -8.36113223e-09, w: 1}
+      scale: {x: .999999881, y: 1, z: 1}
+      transformModified: 1
+    - name: RightLeg_SR_AJNT
+      position: {x: .213286698, y: -.0413724221, z: -.213452235}
+      rotation: {x: -.990787387, y: -.0917879716, z: .0960225239, w: .0263617598}
+      scale: {x: .999999881, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: RightLeg_SR_BJNT
+      position: {x: .292630345, y: -1.04026107e-07, z: -2.31499882e-07}
+      rotation: {x: -.000146466715, y: .00619853567, z: .157427534, w: .987511158}
+      scale: {x: .99999994, y: .999999881, z: .999999821}
+      transformModified: 1
+    - name: RightLeg_SR_CJNT
+      position: {x: .317266077, y: 1.2291251e-07, z: -3.58679699e-07}
+      rotation: {x: .00965698622, y: .0156930983, z: .446976632, w: -.894355893}
+      scale: {x: 1, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: RightLeg_SR_DJNT
+      position: {x: .194734752, y: -1.6741717e-07, z: 5.69621761e-07}
+      rotation: {x: -.111937001, y: -.00818598829, z: -.400476247, w: .909407437}
+      scale: {x: .999999881, y: .999999762, z: 1}
+      transformModified: 1
+    - name: RightLeg_SR_End
+      position: {x: .174712464, y: 3.30829479e-08, z: 1.70311836e-07}
+      rotation: {x: 2.98427349e-09, y: -7.30286409e-09, z: -3.80986833e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: FatBobMesh
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
     armTwist: .5
     foreArmTwist: .5
     upperLegTwist: .5
@@ -121,7 +1130,8 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: a02b46b61c064994492abcce5d0dc9fb,
+    type: 3}
+  animationType: 3
   additionalBone: 0
   userData: 

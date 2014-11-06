@@ -95,7 +95,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: .75
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -198,14 +198,6 @@ ModelImporter:
         length: 0
         modified: 0
     - boneName: LeftArm_SR_AJNT
-      humanName: LeftShoulder
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: LeftArm_SR_BJNT
       humanName: LeftUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -221,7 +213,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: LeftArm_SR_CJNT
+    - boneName: LeftArm_SR_BJNT
       humanName: LeftLowerArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -237,7 +229,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: LeftHand_SR_AJNT
+    - boneName: LeftArm_SR_CJNT
       humanName: LeftHand
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -269,6 +261,46 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
+    - boneName: Head_SR_End
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftHand_SR_AJNT
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftThumb_SR_AJNT
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightThumb_SR_AJNT
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightHand_SR_AJNT
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
     skeleton:
     - name: FatBob(Clone)
       position: {x: 0, y: 0, z: 0}
@@ -291,12 +323,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Root_CR
-      position: {x: 2.08166812e-19, y: 0, z: -3.85185966e-35}
+      position: {x: 1.56125113e-17, y: 0, z: -2.88889473e-33}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Movement_Control_GRP
-      position: {x: 5.551115e-19, y: 0, z: 0}
+      position: {x: 4.16333634e-17, y: 0, z: 0}
       rotation: {x: 0, y: 5.55111512e-17, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
@@ -311,132 +343,132 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Root_SR
-      position: {x: 2.08166812e-19, y: 0, z: -3.85185966e-35}
+      position: {x: 1.56125113e-17, y: 0, z: -2.88889473e-33}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Spine_SR_AJNT
-      position: {x: 2.01102587e-19, y: .012802735, z: .000569613418}
+      position: {x: 1.50826938e-17, y: .960205138, z: .042721007}
       rotation: {x: .501579404, y: -.498415679, z: -.501579344, w: .498415679}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Spine_SR_BJNT
-      position: {x: -.00468055531, y: 1.110223e-18, z: 3.28794358e-21}
+      position: {x: -.351041645, y: 8.32667268e-17, z: 2.46595775e-19}
       rotation: {x: -3.30375016e-08, y: -2.6170218e-08, z: .11835596, w: .992971301}
       scale: {x: .999999821, y: .999999821, z: .999999881}
       transformModified: 1
     - name: Spine_SR_End
-      position: {x: -.00354800723, y: -3.330669e-18, z: 1.53828323e-19}
+      position: {x: -.266100556, y: -2.49800181e-16, z: 1.15371239e-17}
       rotation: {x: 0, y: 0, z: 1.37345655e-08, w: 1}
       scale: {x: 1, y: .999999881, z: 1}
       transformModified: 1
     - name: Neck_SR_AJNT
-      position: {x: -.00267665181, y: .00095832732, z: -2.96971592e-19}
+      position: {x: -.200748891, y: .0718745515, z: -2.22728687e-17}
       rotation: {x: 3.30375052e-08, y: 2.61702215e-08, z: -.167570576, w: .985860169}
       scale: {x: 1, y: 1.00000012, z: 1}
       transformModified: 1
     - name: Head_SR_End
-      position: {x: -.00363461417, y: 4.14295052e-08, z: 5.43559031e-10}
+      position: {x: -.272597194, y: 3.33066907e-16, z: -2.05054143e-16}
       rotation: {x: -.525735676, y: .47286579, z: .525735617, w: .47286579}
       scale: {x: 1, y: 1.00000012, z: 1}
       transformModified: 1
     - name: LeftArm_SR_AJNT
-      position: {x: -.0011738491, y: -.000682115962, z: .00350876059}
-      rotation: {x: .0129953492, y: .712899983, z: .0379320346, w: .700118542}
-      scale: {x: .999999881, y: 1.00000012, z: 1.00000012}
+      position: {x: -.0880386829, y: -.0511586964, z: .26315704}
+      rotation: {x: .012995353, y: .712899983, z: .0379320383, w: .700118542}
+      scale: {x: .999999821, y: 1.00000024, z: 1}
       transformModified: 1
     - name: LeftArm_SR_BJNT
-      position: {x: -.0045520775, y: -2.7755574e-18, z: -1.3322676e-17}
-      rotation: {x: -.00153679075, y: .000500939495, z: -.0677249357, w: .997702777}
-      scale: {x: 1.00000012, y: .999999881, z: 1}
+      position: {x: -.341405809, y: -8.32667268e-17, z: -6.66133815e-16}
+      rotation: {x: -.0015367904, y: .000500945956, z: -.0677249655, w: .997702777}
+      scale: {x: 1, y: .99999994, z: .99999994}
       transformModified: 1
     - name: LeftArm_SR_CJNT
-      position: {x: -.00517797051, y: 1.24900087e-17, z: -2.22044592e-17}
-      rotation: {x: .13253279, y: .0126647232, z: .00302382978, w: .991093159}
-      scale: {x: 1, y: .999999762, z: .999999881}
+      position: {x: -.388347775, y: 9.99200722e-16, z: -1.99840144e-15}
+      rotation: {x: .13253282, y: .0126647642, z: .00302386447, w: .991093159}
+      scale: {x: 1, y: .999999821, z: .99999994}
       transformModified: 1
     - name: LeftThumb_SR_AJNT
-      position: {x: -.00127484463, y: .000477137452, z: -.00168495276}
-      rotation: {x: .272295445, y: -.210363358, z: -.00719930045, w: .938909352}
-      scale: {x: 1, y: 1.00000036, z: 1.00000024}
+      position: {x: -.0956133455, y: .03578531, z: -.126371458}
+      rotation: {x: .272295296, y: -.210363358, z: -.00719927857, w: .938909352}
+      scale: {x: 1.00000024, y: 1.00000012, z: 1.00000024}
       transformModified: 1
     - name: LeftHand_SR_AJNT
-      position: {x: -.00217376323, y: -3.30279727e-05, z: 6.54050673e-05}
-      rotation: {x: .00396190071, y: -.0159008075, z: -.0804380625, w: .996624887}
-      scale: {x: .999999881, y: 1, z: 1.00000012}
+      position: {x: -.163032249, y: -.00247709802, z: .00490537984}
+      rotation: {x: .00396181783, y: -.0159008205, z: -.0804381222, w: .996624947}
+      scale: {x: 1, y: 1.00000024, z: 1.00000012}
       transformModified: 1
     - name: RightArm_SR_AJNT
-      position: {x: -.00117385562, y: -.000682116486, z: -.0035087599}
-      rotation: {x: -.71382618, y: -.0174104013, z: .697034597, w: -.0655120984}
-      scale: {x: 1.00000024, y: 1, z: .999999881}
+      position: {x: -.0880391747, y: -.0511587374, z: -.26315698}
+      rotation: {x: -.71382618, y: -.0174103342, z: .697034597, w: -.0655120239}
+      scale: {x: .999999702, y: .999999762, z: .99999994}
       transformModified: 1
     - name: RightArm_SR_BJNT
-      position: {x: .00455208309, y: -2.37432873e-09, z: -1.05793208e-09}
-      rotation: {x: -.00135919056, y: .00335869449, z: -.0788801834, w: .996877491}
-      scale: {x: .999999881, y: 1.00000048, z: 1.00000024}
-      transformModified: 1
-    - name: RightArm_SR_CJNT
-      position: {x: .00517799193, y: 2.74342438e-10, z: -3.73432165e-08}
-      rotation: {x: .172896206, y: .0186311975, z: .00222352985, w: .984761357}
+      position: {x: .341406226, y: -1.78074657e-07, z: -7.93449075e-08}
+      rotation: {x: -.00145363563, y: .00197225832, z: -.0742232502, w: .997238636}
       scale: {x: 1, y: .999999702, z: .999999821}
       transformModified: 1
-    - name: RightThumb_SR_AJNT
-      position: {x: .00127477141, y: -.000477151218, z: .00168494508}
-      rotation: {x: .272295386, y: -.210363448, z: -.00719926832, w: .938909233}
-      scale: {x: .99999994, y: 1, z: 1.00000024}
-      transformModified: 1
-    - name: RightHand_SR_AJNT
-      position: {x: .00217375765, y: 3.30264193e-05, z: -6.5373868e-05}
-      rotation: {x: .00396178477, y: -.0159008745, z: -.0804380625, w: .996624887}
+    - name: RightArm_SR_CJNT
+      position: {x: .388349384, y: 2.05756834e-08, z: -2.80074119e-06}
+      rotation: {x: .172896162, y: .0186311547, z: .00222349772, w: .984761298}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
+    - name: RightThumb_SR_AJNT
+      position: {x: .0956078544, y: -.0357863419, z: .126370877}
+      rotation: {x: .272295356, y: -.210363373, z: -.00719926087, w: .938909292}
+      scale: {x: .999999762, y: 1.00000012, z: 1.00000024}
+      transformModified: 1
+    - name: RightHand_SR_AJNT
+      position: {x: .163031816, y: .00247698138, z: -.00490303989}
+      rotation: {x: .00396173634, y: -.0159008373, z: -.08043807, w: .996624947}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
     - name: LeftLeg_SR_AJNT
-      position: {x: .00284382096, y: -.000551628706, z: .00284602656}
+      position: {x: .213286579, y: -.0413721539, z: .213451996}
       rotation: {x: -.0917879939, y: .990787446, z: -.0263614226, w: .0960225984}
       scale: {x: .99999994, y: 1, z: .999999881}
       transformModified: 1
     - name: LeftLeg_SR_BJNT
-      position: {x: -.0039017396, y: -3.46944675e-19, z: -1.110223e-18}
+      position: {x: -.292630464, y: -2.60208505e-17, z: -8.32667268e-17}
       rotation: {x: -.000146437087, y: .00619853381, z: .157427549, w: .987511098}
       scale: {x: 1, y: 1, z: .999999821}
       transformModified: 1
     - name: LeftLeg_SR_CJNT
-      position: {x: -.00423021475, y: -3.24533261e-12, z: 1.75133237e-13}
+      position: {x: -.317266107, y: -2.43399939e-10, z: 1.31349931e-11}
       rotation: {x: -.00965674315, y: -.0156928524, z: -.446976691, w: .894355834}
       scale: {x: .99999994, y: .99999994, z: 1}
       transformModified: 1
     - name: LeftLeg_SR_DJNT
-      position: {x: -.00259645958, y: 3.71031331e-12, z: 3.89954724e-14}
+      position: {x: -.194734469, y: 2.78273488e-10, z: 2.92466051e-12}
       rotation: {x: -.111936882, y: -.00818608981, z: -.400476247, w: .909407496}
       scale: {x: 1.00000012, y: .999999881, z: 1}
       transformModified: 1
     - name: LeftLeg_SR_End
-      position: {x: -.00232949946, y: -2.80575042e-11, z: 4.74749092e-13}
+      position: {x: -.174712464, y: -2.10431272e-09, z: 3.56061812e-11}
       rotation: {x: -1.95514165e-08, y: 3.6024371e-08, z: -8.36113223e-09, w: 1}
       scale: {x: .999999881, y: 1, z: 1}
       transformModified: 1
     - name: RightLeg_SR_AJNT
-      position: {x: .00284382259, y: -.000551632314, z: -.00284602982}
+      position: {x: .213286698, y: -.0413724221, z: -.213452235}
       rotation: {x: -.990787387, y: -.0917879716, z: .0960225239, w: .0263617598}
       scale: {x: .999999881, y: 1.00000012, z: .99999994}
       transformModified: 1
     - name: RightLeg_SR_BJNT
-      position: {x: .00390173774, y: -1.38701473e-09, z: -3.08666515e-09}
+      position: {x: .292630345, y: -1.04026107e-07, z: -2.31499882e-07}
       rotation: {x: -.000146466715, y: .00619853567, z: .157427534, w: .987511158}
       scale: {x: .99999994, y: .999999881, z: .999999821}
       transformModified: 1
     - name: RightLeg_SR_CJNT
-      position: {x: .00423021428, y: 1.6388334e-09, z: -4.78239581e-09}
+      position: {x: .317266077, y: 1.2291251e-07, z: -3.58679699e-07}
       rotation: {x: .00965698622, y: .0156930983, z: .446976632, w: -.894355893}
       scale: {x: 1, y: .99999994, z: 1.00000012}
       transformModified: 1
     - name: RightLeg_SR_DJNT
-      position: {x: .00259646331, y: -2.23222885e-09, z: 7.59495666e-09}
+      position: {x: .194734752, y: -1.6741717e-07, z: 5.69621761e-07}
       rotation: {x: -.111937001, y: -.00818598829, z: -.400476247, w: .909407437}
       scale: {x: .999999881, y: .999999762, z: 1}
       transformModified: 1
     - name: RightLeg_SR_End
-      position: {x: .00232949946, y: 4.41105957e-10, z: 2.27082442e-09}
+      position: {x: .174712464, y: 3.30829479e-08, z: 1.70311836e-07}
       rotation: {x: 2.98427349e-09, y: -7.30286409e-09, z: -3.80986833e-08, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1

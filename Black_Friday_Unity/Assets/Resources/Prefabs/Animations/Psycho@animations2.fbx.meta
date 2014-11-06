@@ -2225,197 +2225,197 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Skin_Spine_AJNT
-      position: {x: -0, y: 9.78945255, z: -1.11116767}
+      position: {x: -0, y: .978945255, z: -.111116767}
       rotation: {x: .494616896, y: -.505325794, z: -.494616896, w: .505325854}
       scale: {x: 1, y: .99999994, z: 1}
       transformModified: 1
     - name: Skin_Spine_BJNT
-      position: {x: -2.36785913, y: -.0380486026, z: 6.27840885e-16}
+      position: {x: -.236785918, y: -.0038048604, z: 6.27840871e-17}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Skin_Neck_AJNT
-      position: {x: -3.54093099, y: -.259538144, z: -4.03084599e-15}
+      position: {x: -.354093105, y: -.0259538144, z: -4.0308461e-16}
       rotation: {x: 3.66062842e-08, y: -2.08886703e-08, z: -.274012595, w: .961726069}
       scale: {x: .999999881, y: .999999821, z: .999999821}
       transformModified: 1
     - name: Skin_Head_AJNT
-      position: {x: -.939811468, y: -.675729156, z: -5.78137362e-16}
+      position: {x: -.0939811468, y: -.0675729141, z: -5.78137375e-17}
       rotation: {x: -2.08886721e-08, y: -3.66062878e-08, z: -.136320308, w: .99066484}
       scale: {x: .99999994, y: .999999702, z: 1}
       transformModified: 1
     - name: Skin_Head_BJNT
-      position: {x: -1.13271677, y: -.360942215, z: -5.08339544e-17}
+      position: {x: -.113271676, y: -.0360942222, z: -5.08339544e-18}
       rotation: {x: 0, y: 0, z: .622705877, w: .7824561}
       scale: {x: .999999762, y: .999999881, z: .999999821}
       transformModified: 1
     - name: Skin_Right_Clavicle_AJNT
-      position: {x: -2.23017097, y: .230558783, z: -1.00954688}
+      position: {x: -.223017097, y: .0230558775, z: -.100954689}
       rotation: {x: -.603766322, y: .446476251, z: -.391172677, w: -.532079995}
       scale: {x: .999999881, y: .999999762, z: .99999994}
       transformModified: 1
     - name: Skin_Right_Arm_AJNT
-      position: {x: -.92538321, y: 0, z: .232633263}
+      position: {x: -.0925383195, y: 0, z: .0232633259}
       rotation: {x: -.981193602, y: -.184124127, z: .0542628281, w: -.0203252137}
       scale: {x: 1.00000012, y: 1.00000024, z: 1}
       transformModified: 1
     - name: Skin_Skin_Right_Arm_BJNT
-      position: {x: -3.80887175, y: 3.55271368e-15, z: 1.11022302e-15}
+      position: {x: -.380887181, y: 3.55271373e-16, z: 1.11022302e-16}
       rotation: {x: -.00100392557, y: .0268654283, z: .0134751182, w: .99954778}
       scale: {x: .999999821, y: .999999642, z: 1}
       transformModified: 1
     - name: Skin_Skin_Right_Arm_End
-      position: {x: -4.37001467, y: 0, z: 1.77635684e-15}
+      position: {x: -.437001467, y: 0, z: 1.77635687e-16}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: .99999994, y: .99999994, z: 1}
       transformModified: 1
     - name: Skin_transform4
-      position: {x: 9.41858196, y: 14.9371948, z: 1.65688157}
+      position: {x: .941858232, y: 1.49371946, z: .165688157}
       rotation: {x: -.016440263, y: -.000265084091, z: .999734879, w: -.0161198024}
       scale: {x: 1.14811206, y: 1.14811206, z: 1.14811206}
       transformModified: 1
     - name: Skin_Skin_Right_Thumb_AJNT
-      position: {x: 8.9608345, y: 12.6695642, z: -.896471977}
+      position: {x: .896083474, y: 1.26695645, z: -.0896471962}
       rotation: {x: .0806176737, y: -.900501907, z: .0149007579, w: -.427054077}
       scale: {x: .999999881, y: 1.00000012, z: 1.00000012}
       transformModified: 1
     - name: Skin_Skin_Right_Thumb_BJNT
-      position: {x: -.40685159, y: -.0904826, z: 1.77635684e-15}
+      position: {x: -.0406851582, y: -.00904825982, z: 1.77635687e-16}
       rotation: {x: .0566982701, y: .0365965553, z: .0417622253, w: .99684602}
       scale: {x: 1.00000012, y: .99999994, z: 1.00000012}
       transformModified: 1
     - name: Skin_Skin_Right_Thumb_CJNT
-      position: {x: -.260788143, y: -.0336679444, z: -1.77635684e-15}
+      position: {x: -.0260788146, y: -.00336679444, z: -1.77635687e-16}
       rotation: {x: -3.57371448e-08, y: .247278363, z: 1.70543357e-09, w: .96894455}
       scale: {x: .999999881, y: 1, z: .99999994}
       transformModified: 1
     - name: Skin_transform5
-      position: {x: 9.41858196, y: 14.9371948, z: 1.65688157}
+      position: {x: .941858232, y: 1.49371946, z: .165688157}
       rotation: {x: -.016440263, y: -.000265084091, z: .999734879, w: -.0161198024}
       scale: {x: 1.14811206, y: 1.14811206, z: 1.14811206}
       transformModified: 1
     - name: Skin_Skin_Right_Finger_AJNT
-      position: {x: 9.46921825, y: 12.7694426, z: -1.15742517}
+      position: {x: .946921825, y: 1.27694428, z: -.115742519}
       rotation: {x: -.0907772332, y: -.995853782, z: -.000578138221, w: .00587055786}
       scale: {x: 1.00000012, y: 1.00000012, z: .999999881}
       transformModified: 1
     - name: Skin_Skin_Skin_Right_Finger_BJNT
-      position: {x: -.475975841, y: .0146236503, z: 2.22044605e-16}
+      position: {x: -.0475975834, y: .00146236503, z: 2.22044608e-17}
       rotation: {x: -1.10798668e-08, y: -1.97413314e-07, z: .0239572097, w: .999713063}
       scale: {x: 1.00000012, y: 1.00000012, z: 1}
       transformModified: 1
     - name: Skin_Skin_Skin_Right_Finger_CJNT
-      position: {x: -.36112231, y: 0, z: 4.4408921e-16}
+      position: {x: -.0361122303, y: 0, z: 4.44089216e-17}
       rotation: {x: 4.89099286e-08, y: 4.57223095e-08, z: .11160893, w: .993752241}
       scale: {x: 1.00000048, y: .999999821, z: 1.00000036}
       transformModified: 1
     - name: Skin_Left_Clavicle_AJNT
-      position: {x: -2.23017097, y: .230558783, z: 1.0095464}
+      position: {x: -.223017097, y: .0230558775, z: .100954644}
       rotation: {x: .446464032, y: .603773654, z: .532089889, w: -.391161978}
       scale: {x: .99999994, y: .999999881, z: 1}
       transformModified: 1
     - name: Skin_Left_Arm_AJNT
-      position: {x: .925354719, y: 4.13245143e-05, z: -.232636198}
+      position: {x: .0925354734, y: 4.13245152e-06, z: -.0232636202}
       rotation: {x: .981188476, y: .184152514, z: -.0542598814, w: .0203230791}
       scale: {x: 1.00000012, y: .999999642, z: .999999762}
       transformModified: 1
     - name: Skin_Left_Arm_BJNT
-      position: {x: 3.80887508, y: 5.72347344e-05, z: 2.39229212e-06}
+      position: {x: .380887508, y: 5.72347335e-06, z: 2.39229223e-07}
       rotation: {x: -.00100360811, y: .0268616285, z: .0134794936, w: .99954778}
       scale: {x: .999999821, y: .999999881, z: .99999994}
       transformModified: 1
     - name: Skin_Left_Arm_End
-      position: {x: 4.37000751, y: 1.4720139e-05, z: -4.6122268e-06}
+      position: {x: .437000751, y: 1.47201388e-06, z: -4.61222697e-07}
       rotation: {x: -2.80924368e-08, y: 2.29765327e-08, z: 1.52937716e-08, w: 1}
       scale: {x: 1.00000012, y: 1, z: 1}
       transformModified: 1
     - name: Skin_transform6
-      position: {x: -9.4185791, y: -14.9372177, z: -1.65688276}
+      position: {x: -.941857934, y: -1.49372172, z: -.165688276}
       rotation: {x: -.016440263, y: -.000265084091, z: .999734879, w: -.0161198024}
       scale: {x: 1.14811206, y: 1.14811206, z: 1.14811206}
       transformModified: 1
     - name: Skin_Skin_Left_Thumb_AJNT
-      position: {x: -8.96082973, y: -12.6696005, z: .896471977}
+      position: {x: -.896082997, y: -1.26696002, z: .0896471962}
       rotation: {x: -.0806348994, y: .900499046, z: -.0149045391, w: .42705667}
       scale: {x: .999999642, y: .999999881, z: .999999821}
       transformModified: 1
     - name: Skin_Skin_Left_Thumb_BJNT
-      position: {x: .406853199, y: .0904999971, z: -4.65685935e-06}
+      position: {x: .0406853184, y: .00904999953, z: -4.65685929e-07}
       rotation: {x: .0567238666, y: .0366092958, z: .041720327, w: .996845841}
       scale: {x: .999999702, y: .999999762, z: .999999881}
       transformModified: 1
     - name: Skin_Skin_Left_Thumb_CJNT
-      position: {x: .260791063, y: .0337000005, z: -1.00954173e-06}
+      position: {x: .0260791071, y: .00337000005, z: -1.00954175e-07}
       rotation: {x: 7.51049889e-09, y: .247278333, z: 4.11506518e-09, w: .96894449}
       scale: {x: 1.00000012, y: 1, z: 1.00000036}
       transformModified: 1
     - name: Skin_transform7
-      position: {x: -9.4185791, y: -14.9372177, z: -1.65688276}
+      position: {x: -.941857934, y: -1.49372172, z: -.165688276}
       rotation: {x: -.016440263, y: -.000265084091, z: .999734879, w: -.0161198024}
       scale: {x: 1.14811206, y: 1.14811206, z: 1.14811206}
       transformModified: 1
     - name: Skin_Skin_Left_Finger_AJNT
-      position: {x: -9.46922016, y: -12.7693996, z: 1.15743005}
+      position: {x: -.946922004, y: -1.27693999, z: .115743004}
       rotation: {x: .0907715484, y: .995854259, z: .000578160747, w: -.00587035203}
       scale: {x: .999999702, y: .999999762, z: 1.00000012}
       transformModified: 1
     - name: Skin_Left_Finger_BJNT
-      position: {x: .475978434, y: -.0146223782, z: -5.32907052e-15}
+      position: {x: .0475978442, y: -.00146223779, z: -5.32907073e-16}
       rotation: {x: -6.35873292e-08, y: 1.17459351e-07, z: .0240566097, w: .999710679}
       scale: {x: 1.00000012, y: 1.00000012, z: 1}
       transformModified: 1
     - name: Skin_Left_Finger_CJNT
-      position: {x: .361111432, y: -6.75582996e-05, z: -1.59872116e-14}
+      position: {x: .0361111425, y: -6.75582987e-06, z: -1.59872122e-15}
       rotation: {x: 4.57324631e-08, y: -1.66176353e-08, z: .11160896, w: .993752241}
       scale: {x: .999999821, y: .999999821, z: 1}
       transformModified: 1
     - name: Skin_Left_Hip_AJNT
-      position: {x: .315009207, y: .188533753, z: .675333083}
+      position: {x: .0315009207, y: .0188533757, z: .0675333068}
       rotation: {x: .0639036, y: .97586596, z: -.164812714, w: .128213733}
       scale: {x: 1.00000012, y: .99999994, z: 1.00000012}
       transformModified: 1
     - name: Skin_Left_Knee_AJNT
-      position: {x: -4.51699352, y: .386008263, z: .106152594}
+      position: {x: -.451699346, y: .0386008248, z: .0106152594}
       rotation: {x: -.987117529, y: .0129662808, z: .0384490825, w: -.154765874}
       scale: {x: .999999642, y: 1.00000036, z: 1}
       transformModified: 1
     - name: Skin_Left_Ankle_AJNT
-      position: {x: -4.40647554, y: .370336115, z: .0797134712}
+      position: {x: -.440647572, y: .03703361, z: .00797134731}
       rotation: {x: .8535586, y: .494164765, z: .0383390337, w: .160527632}
       scale: {x: .999999762, y: 1.00000012, z: .999999821}
       transformModified: 1
     - name: Skin_Left_Ball_AJNT
-      position: {x: -1.13623643, y: -.000129812688, z: .0122921728}
+      position: {x: -.113623641, y: -1.29812688e-05, z: .00122921728}
       rotation: {x: .00943084061, y: .00541242352, z: -.240638733, w: .970553875}
       scale: {x: .999999762, y: .99999994, z: .999999821}
       transformModified: 1
     - name: Left_Toe_End
-      position: {x: -.614152372, y: 2.77555756e-16, z: 1.77635684e-15}
+      position: {x: -.0614152364, y: 2.77555756e-17, z: 1.77635687e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Skin_Right_Hip_AJNT
-      position: {x: .315013558, y: .188533947, z: -.675333083}
+      position: {x: .0315013565, y: .0188533943, z: -.0675333068}
       rotation: {x: -.977602363, y: .0616993047, z: .127687231, w: .155508071}
       scale: {x: 1, y: 1.00000012, z: .99999994}
       transformModified: 1
     - name: Skin_Right_Knee_AJNT
-      position: {x: 4.52677584, y: -.392783314, z: -.134034917}
+      position: {x: .452677578, y: -.0392783321, z: -.013403492}
       rotation: {x: .987030566, y: -.0114897154, z: -.040681228, w: .154866546}
       scale: {x: .999999821, y: 1.00000024, z: 1.00000024}
       transformModified: 1
     - name: Skin_Right_Ankle_AJNT
-      position: {x: 4.5098834, y: -.370070308, z: -.0809352472}
+      position: {x: .450988352, y: -.0370070301, z: -.00809352472}
       rotation: {x: .85355562, y: .498672515, z: .0432451442, w: .144563109}
       scale: {x: 1, y: .999999642, z: .999999881}
       transformModified: 1
     - name: Skin_Right_Ball_AJNT
-      position: {x: 1.13628566, y: .000100201978, z: -.00961361919}
+      position: {x: .113628566, y: 1.00201978e-05, z: -.000961361919}
       rotation: {x: .00269488501, y: .00286662509, z: -.351490438, w: .936183274}
       scale: {x: 1.00000012, y: 1, z: 1.00000024}
       transformModified: 1
     - name: Right_Toe_End
-      position: {x: .61415273, y: -1.73105704e-07, z: 7.99360578e-15}
+      position: {x: .0614152737, y: -1.73105708e-08, z: 7.99360609e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
@@ -2425,7 +2425,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Psyco_GRP
-      position: {x: -0, y: 0, z: -.892737389}
+      position: {x: -0, y: 0, z: -.0892737359}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 3.06942391, y: 3.06942391, z: 3.06942391}
       transformModified: 1
