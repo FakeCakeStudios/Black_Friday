@@ -68,17 +68,14 @@ public class Level_Control : MonoBehaviour
 	void Start()
 	{
 		masterScript.LevelSetup();
-		masterScript.SetInGame(true);
 
 		cameraScript.SetPlayer();
-		cameraScript.SetFollowPlayer(true);
+		cameraScript.SetFollowPlayer(false);
 	}
 	
 	// Update is called once per frame
 	void Update()
 	{
-		playTime -= Time.deltaTime;
-
 		if(showScore)
 		{
 			scoreBoard.text = masterScript.GetPlayerData().GetCash().ToString();
@@ -88,8 +85,9 @@ public class Level_Control : MonoBehaviour
 			scoreBoard.text = "";
 		}
 
-		if(playTime > 0.0f)
+		if(playTime > 0.0f && masterScript.GetInGame())
 		{
+			playTime -= Time.deltaTime;
 			int minutes = (int)playTime / 60;
 			int seconds = (int)playTime % 60;
 			uiTimer.text = minutes.ToString() + ":" + seconds.ToString();

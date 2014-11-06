@@ -9,6 +9,7 @@ public class Player_Control : MonoBehaviour
 	private bool 			leftOn;
 	private bool 			rightOn;
 	private bool 			powerUp;
+	private bool			playing;
 	private Animator		charAnimations;
 	private Transform 		self;
 	private Vector3	 		velocity;
@@ -64,69 +65,73 @@ public class Player_Control : MonoBehaviour
 		leftOn 			= false;
 		rightOn 		= false;
 		powerUp 		= false;
+		playing 		= false;
 		target 			= new Vector3();
 		powerupList 	= masterScript.GetPlayerData().GetPowerups();
 	}
 
 	void Update()
 	{
-		self.position += velocity * Time.deltaTime;
-		//if we're not stopped then continue movement
-		if(Mathf.Abs(output.angle) > maxRotation)
+		if(playing)
 		{
-			if(output.angle < 0.0f)
+			self.position += velocity * Time.deltaTime;
+			//if we're not stopped then continue movement
+			if(Mathf.Abs(output.angle) > maxRotation)
 			{
-				output.angle = -maxRotation;
+				if(output.angle < 0.0f)
+				{
+					output.angle = -maxRotation;
+				}
+				else
+				{
+					output.angle = maxRotation;
+				}
+			}
+			self.Rotate(new Vector3(0.0f, 1.0f, 0.0f), output.angle * Time.deltaTime);
+					
+			if(output.linear != Vector3.zero)
+			{
+				//currently all object move in the direction they are facing, no side stepping
+				velocity += self.forward * maxAccel * Time.deltaTime;
+
+				charAnimations.SetBool("running", true);
+						
+				if(velocity.magnitude > currentSpeed)
+				{
+					velocity = Vector3.Normalize(velocity);
+					velocity *= currentSpeed;
+				}
 			}
 			else
 			{
-				output.angle = maxRotation;
+				charAnimations.SetBool("running", false);
 			}
-		}
-		self.Rotate(new Vector3(0.0f, 1.0f, 0.0f), output.angle * Time.deltaTime);
-				
-		if(output.linear != Vector3.zero)
-		{
-			//currently all object move in the direction they are facing, no side stepping
-			velocity += self.forward * maxAccel * Time.deltaTime;
+		
+			target = Vector3.zero;
+			target = self.position + (self.forward * 2.0f);
+			output.angle = 0.0f;
+			output.linear = self.position + (self.forward * 2.0f);
 
-			charAnimations.SetBool("running", true);
-					
-			if(velocity.magnitude > currentSpeed)
+			currentSpeed = walkSpeed;
+
+			if(leftOn && rightOn)
 			{
-				velocity = Vector3.Normalize(velocity);
-				velocity *= currentSpeed;
+				currentSpeed = slowSpeed;
 			}
-		}
-		else
-		{
-			charAnimations.SetBool("running", false);
-		}
-	
-		target = Vector3.zero;
-		target = self.position + (self.forward * 2.0f);
-		output.angle = 0.0f;
-		output.linear = self.position + (self.forward * 2.0f);
-
-		currentSpeed = walkSpeed;
-
-		if(leftOn && rightOn)
-		{
-			currentSpeed = slowSpeed;
-		}
-		else if(leftOn)
-		{
-			target += -self.right * 2.0f;
-			output.angle = -100;
-		}
-		else if(rightOn)
-		{
-			target += self.right * 2.0f;
-			output.angle = 100;
-		}
-		if(powerUp)
-		{
-			PowerupUsed();
+			else if(leftOn)
+			{
+				target += -self.right * 2.0f;
+				output.angle = -100;
+			}
+			else if(rightOn)
+			{
+				target += self.right * 2.0f;
+				output.angle = 100;
+			}
+			if(powerUp)
+			{
+				PowerupUsed();
+			}
 		}
 	}
 
@@ -202,6 +207,15 @@ public class Player_Control : MonoBehaviour
 				break;
 			}
 			}
+		}
+	}
+
+	public void SetPlaying(bool source)
+	{
+		playing = source;
+		if(playing)
+		{
+			masterScript.SetInGame(true);
 		}
 	}
 

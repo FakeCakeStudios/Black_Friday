@@ -6,7 +6,6 @@ public class Master_Control : MonoBehaviour
 {
 	GameObject thePlayer;
 	private Transform spawn;
-
 	private bool inGame;
 	private bool pause;
 	//public float endWait = 5;
@@ -29,8 +28,8 @@ public class Master_Control : MonoBehaviour
 	//shoulmd only be done one during runtie at the beginning of the application start
 	void Awake()
 	{
-		inGame = false;
-		pause = false;
+		inGame 		= false;
+		pause 		= false;
 		//endScene = false;
 
 		//only call at the beginning of the application
@@ -56,6 +55,7 @@ public class Master_Control : MonoBehaviour
 				//Application.LoadLevel(1);
 			//}
 		//}
+
 		if(inGame)
 		{
 			ai.MyUpdate();
@@ -126,6 +126,11 @@ public class Master_Control : MonoBehaviour
 	public void SetInGame(bool source)
 	{
 		inGame = source;
+	}
+
+	public bool GetInGame()
+	{
+		return inGame;
 	}
 
 	public void SetPause()
