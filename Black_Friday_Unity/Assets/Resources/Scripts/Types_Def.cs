@@ -20,7 +20,7 @@ public enum Powerups
 
 public enum KartUpgrades
 {
-	Fans, Glove, Oil, Repeller, Scroll, WD
+	Fans, Glove, Oil, Repeller, Scroll, WD4000
 }
 
 //the output format used to maneuver all NPC's

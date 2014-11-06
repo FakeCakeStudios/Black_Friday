@@ -11,8 +11,11 @@ public class Scene_Control : MonoBehaviour
 	void Start()
 	{
 		//obtain the master object
-		master 			= GameObject.FindGameObjectWithTag("Master");
-		masterScript 	= master.GetComponent<Master_Control>();
+		if(GameObject.FindGameObjectWithTag("Master") != null)
+		{
+			master 			= GameObject.FindGameObjectWithTag("Master");
+			masterScript 	= master.GetComponent<Master_Control>();
+		}
 
 		Initialize();
 	}

@@ -4,48 +4,32 @@ using System.Collections.Generic;
 
 public class Master_Control : MonoBehaviour
 {
-	GameObject thePlayer;
-	private Transform spawn;
-	private bool inGame;
-	private bool pause;
+	private GameObject 			thePlayer;
+	private Transform 			spawn;
+	private bool 				inGame;
+	private bool 				pause;
+	private bool 				tutorialUp;
 	//public float endWait = 5;
 	//private bool endScene = false;
 	//private EndScene EndSceneObject;
-	private bool tutorialUp;
-
-	//AI is currently not in so it is commented out from the master currently
-	//artificial intelligence
-	private HAL ai;
+	private HAL 				ai;
+	private Player_Data 		player;
+	private List<Input_Button> 	buttons;
+	private GameObject 			resumeButton;
 	
-	//this keeps track of player changes from the webstore to apply them at game time
-	private Player_Data 	player;
-	//private Player_Control 	playerControl;
-
-	private List<Input_Button> buttons;
-
-	private GameObject 		resumeButton;
-
-	//shoulmd only be done one during runtie at the beginning of the application start
 	void Awake()
 	{
 		inGame 		= false;
 		pause 		= false;
+		tutorialUp 	= false;
+		player 		= new Player_Data();
 		//endScene = false;
-
-		//only call at the beginning of the application
-		ai = new HAL();
-
-		//only call at the beginning of the application
-		ai.Initialize();
-
-		//create new instance
-		player = new Player_Data();
-		player.Initialize();
-
-		tutorialUp = false;
-	}
 	
-	// Update is called once per frame
+		ai = new HAL();
+		ai.Initialize();
+		player.Initialize();
+	}
+
 	void Update()
 	{
 		//if(endScene){
@@ -61,8 +45,7 @@ public class Master_Control : MonoBehaviour
 			ai.MyUpdate();
 		}
 	}
-
-	//get the data of the player
+	
 	public Player_Data GetPlayerData()
 	{
 		return player;
@@ -87,22 +70,17 @@ public class Master_Control : MonoBehaviour
 	{
 		spawn = GameObject.FindGameObjectWithTag("Spawn Point").transform;
 		CreatePlayer();
-
-		//call at the beginning of every level
 		ai.SetPlayer();
-		
-		//call at the beginning of every level
 		ai.SetupLevel();
 
 		buttons = new List<Input_Button>();
 		GameObject[] temp;
-		temp = new GameObject[GameObject.FindGameObjectsWithTag("Button").Length];
-		temp = GameObject.FindGameObjectsWithTag("Button");
+		temp 	= new GameObject[GameObject.FindGameObjectsWithTag("Button").Length];
+		temp 	= GameObject.FindGameObjectsWithTag("Button");
 		for(int i = 0; i < temp.Length; i++)
 		{
 			buttons.Add(temp[i].GetComponent<Input_Button>()); 
 		}
-
 		for(int i = 0; i < temp.Length; i++)
 		{
 			buttons[i].Initialize(); 
@@ -112,8 +90,6 @@ public class Master_Control : MonoBehaviour
 		resumeButton.SetActive(false);
 
 		//EndSceneObject = GameObject.FindGameObjectWithTag("EndScene").GetComponent<EndScene>();
-
-		//playerControl = thePlayer.GetComponent<Player_Control>();
 	}
 
 	//public void EndScene(){
@@ -182,5 +158,56 @@ public class Master_Control : MonoBehaviour
 	void CreatePlayer()
 	{
 		thePlayer = Instantiate(Resources.Load("Prefabs/Characters/" + player.GetPlayerModel().ToString() + " and Carts"), spawn.position, spawn.rotation) as GameObject;
+		switch(player.GetCartModel())
+		{
+		case(CartModel.Drifter):
+		{
+			GameObject.Find("Starter Cart").SetActive(false);
+			GameObject.Find("Offroad Cart").SetActive(false);
+			break;
+		}
+		case(CartModel.Offroad):
+		{
+			GameObject.Find("Starter Cart").SetActive(false);
+			GameObject.Find("Drifter Cart").SetActive(false);	
+			break;
+		}
+		case(CartModel.Starter):
+		{
+			GameObject.Find("Drifter Cart").SetActive(false);
+			GameObject.Find("Offroad Cart").SetActive(false);	
+			break;
+		}
+		}
+
+		List<KartUpgrades> cartItems = player.GetKartUpgrades();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	}
 }
