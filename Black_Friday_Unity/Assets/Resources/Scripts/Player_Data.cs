@@ -4,16 +4,12 @@ using System.Collections.Generic;
 
 public class Player_Data
 {
-	//floats
+	//private
 	private int 				cash;
-
-	//lists
 	private List<Powerups> 		powerups;
 	private List<KartUpgrades> 	kartUpgrades;
 	private List<bool>			levelUnlocks;
 	private List<bool>			characterUnlocks;
-
-	//enum
 	private PlayerModel			playerModel;
 	private CartModel			cartModel;
 	
@@ -28,6 +24,9 @@ public class Player_Data
 		kartUpgrades 		= new List<KartUpgrades>();
 		levelUnlocks 		= new List<bool>();
 		characterUnlocks 	= new List<bool>();
+		playerModel			= new PlayerModel();
+		cartModel			= new CartModel();
+
 		for(int i = 0; i < 2; i ++)
 		{
 			levelUnlocks.Add(false);
@@ -36,9 +35,6 @@ public class Player_Data
 		{
 			characterUnlocks.Add(false);
 		}
-
-		playerModel	= new PlayerModel();
-		cartModel	= new CartModel();
 
 		playerModel = PlayerModel.Nerd;
 		cartModel 	= CartModel.Starter;

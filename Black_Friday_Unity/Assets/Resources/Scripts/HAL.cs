@@ -104,12 +104,12 @@ public class HAL
 
 	public void MyUpdate()
 	{
-		testTimer += Time.deltaTime;
-		if(testTimer >= testTrigger)
-		{
-			SpawnShopper();
-			testTimer = 0.0f;
-		}
+		//testTimer += Time.deltaTime;
+		//if(testTimer >= testTrigger)
+		//{
+			//SpawnShopper();
+			//testTimer = 0.0f;
+		//}
 
 		for(int i = 0; i < entities.Count; i++)
 		{
@@ -163,12 +163,6 @@ public class HAL
 
 					}
 				}
-
-
-
-
-
-
 				break;
 			}
 			case(BehaviorType.Player):

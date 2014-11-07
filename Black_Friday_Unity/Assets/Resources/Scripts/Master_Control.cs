@@ -16,6 +16,7 @@ public class Master_Control : MonoBehaviour
 	private Player_Data 		player;
 	private List<Input_Button> 	buttons;
 	private GameObject 			resumeButton;
+	private RunTime				fpsCounter;
 	
 	void Awake()
 	{
@@ -23,13 +24,15 @@ public class Master_Control : MonoBehaviour
 		pause 		= false;
 		tutorialUp 	= false;
 		player 		= new Player_Data();
+		fpsCounter	= new RunTime();
 		//endScene = false;
 	
 		ai = new HAL();
 		ai.Initialize();
 		player.Initialize();
+		fpsCounter.Initialization();
 	}
-
+	
 	void Update()
 	{
 		//if(endScene){
@@ -40,10 +43,17 @@ public class Master_Control : MonoBehaviour
 			//}
 		//}
 
+		fpsCounter.MyUpdate();
+
 		if(inGame)
 		{
 			ai.MyUpdate();
 		}
+	}
+
+	void AIUpdate()
+	{
+		ai.MyUpdate();
 	}
 	
 	public Player_Data GetPlayerData()
