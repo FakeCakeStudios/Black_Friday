@@ -19,7 +19,7 @@ public class Splash_Control : Scene_Control
 
 		if(timer > displayTime)
 		{
-			Application.LoadLevel(1);
+			SetSelection(1);
 		}
 	}
 }

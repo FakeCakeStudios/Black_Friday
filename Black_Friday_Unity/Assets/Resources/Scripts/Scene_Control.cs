@@ -16,7 +16,7 @@ public class Scene_Control : MonoBehaviour
 			master 			= GameObject.FindGameObjectWithTag("Master");
 			masterScript 	= master.GetComponent<Master_Control>();
 		}
-
+		masterScript.InitializeAtLevelLoad();
 		Initialize();
 	}
 	

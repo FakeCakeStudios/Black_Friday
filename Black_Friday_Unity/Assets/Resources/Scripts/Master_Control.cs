@@ -9,6 +9,7 @@ public class Master_Control : MonoBehaviour
 	private bool 				inGame;
 	private bool 				pause;
 	private bool 				tutorialUp;
+	private int					sceneIndex;
 	//public float endWait = 5;
 	//private bool endScene = false;
 	//private EndScene EndSceneObject;
@@ -25,12 +26,13 @@ public class Master_Control : MonoBehaviour
 		tutorialUp 	= false;
 		player 		= new Player_Data();
 		fpsCounter	= new RunTime();
+		sceneIndex = 0;
 		//endScene = false;
-	
+		
 		ai = new HAL();
 		ai.Initialize();
 		player.Initialize();
-		fpsCounter.Initialization();
+		InitializeAtLevelLoad();
 	}
 	
 	void Update()
@@ -42,13 +44,17 @@ public class Master_Control : MonoBehaviour
 				//Application.LoadLevel(1);
 			//}
 		//}
-
 		fpsCounter.MyUpdate();
 
 		if(inGame)
 		{
 			ai.MyUpdate();
 		}
+	}
+
+	public void InitializeAtLevelLoad()
+	{
+		fpsCounter.Initialization();
 	}
 
 	void AIUpdate()
