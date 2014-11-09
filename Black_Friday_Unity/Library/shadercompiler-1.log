@@ -1,17 +1,43 @@
 Base path: C:/Program Files (x86)/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-1-5932
+Pipe name: \\.\pipe\UnityShaderCompiler-1-9032
 Cmd: getPlatforms
 Cmd: preprocess
-  insize=1913 outsize=1281 ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=5385 outsize=841 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=5385 outsize=572 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=3260 outsize=621 kw=POINT ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=3260 outsize=692 kw=POINT ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=892 outsize=316 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=892 outsize=29 kw= ok=1
+  insize=1671 outsize=948 ok=1
+Cmd: preprocess
+  insize=1907 outsize=961 ok=1
+Cmd: preprocess
+  insize=238 outsize=238 ok=1
+Cmd: preprocess
+  insize=1602 outsize=535 ok=1
+Cmd: preprocess
+  insize=1940 outsize=918 ok=1
+Cmd: preprocess
+  insize=514 outsize=514 ok=1
+Cmd: preprocess
+  insize=1943 outsize=936 ok=1
+Cmd: preprocess
+  insize=1541 outsize=535 ok=1
+Cmd: preprocess
+  insize=1984 outsize=958 ok=1
+Cmd: preprocess
+  insize=1914 outsize=947 ok=1
+Cmd: preprocess
+  insize=1907 outsize=944 ok=1
+Cmd: preprocess
+  insize=1982 outsize=959 ok=1
+Cmd: preprocess
+  insize=2003 outsize=921 ok=1
+Cmd: preprocess
+  insize=469 outsize=469 ok=1
+Cmd: preprocess
+  insize=1170 outsize=479 ok=1
+Cmd: preprocess
+  insize=1812 outsize=1056 ok=1
+Cmd: preprocess
+  insize=1624 outsize=947 ok=1
+Cmd: preprocess
+  insize=1315 outsize=524 ok=1
+Cmd: preprocess
+  insize=2002 outsize=1312 ok=1
+Cmd: preprocess
+  insize=1772 outsize=993 ok=1
