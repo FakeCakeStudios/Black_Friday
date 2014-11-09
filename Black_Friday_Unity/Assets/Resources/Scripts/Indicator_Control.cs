@@ -44,6 +44,7 @@ public class Indicator_Control : MonoBehaviour
 		Vector3 pos 			= camera.position + (camera.forward * distance);
 		pos.y 					+= height;
 		this.transform.position = pos;
+		//this.transform.LookAt(target);
 	}
 
 	public void SetTarget(Vector3 source)
