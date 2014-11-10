@@ -30,7 +30,7 @@ public class Camera_Control : MonoBehaviour
 	void Start()
 	{
 		cameraDistance 		= 2.0f;;
-		cameraHeight 		= 2.0f;
+		cameraHeight 		= 2.5f;
 		cameraTargetHeight 	= 1.0f;
 		viewTimer 			= 0.0f;
 		viewIndex 			= 0;
