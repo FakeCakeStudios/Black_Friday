@@ -170,6 +170,7 @@
      <Compile Include="Assets\Resources\Scripts\Tutorial_Triggers.cs" />
      <Compile Include="Assets\Resources\Scripts\Types_Def.cs" />
      <Compile Include="Assets\Resources\Scripts\Webstore_Control.cs" />
+     <Compile Include="Assets\Resources\Scripts\ZZZZ.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\GUI - Text Shader (SoftClip).shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Dynamic Font (AlphaClip).shader" />

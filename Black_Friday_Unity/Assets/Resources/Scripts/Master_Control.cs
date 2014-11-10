@@ -48,7 +48,7 @@ public class Master_Control : MonoBehaviour
 
 		if(inGame)
 		{
-			ai.MyUpdate();
+			StartCoroutine(ai.MyUpdate());
 		}
 	}
 

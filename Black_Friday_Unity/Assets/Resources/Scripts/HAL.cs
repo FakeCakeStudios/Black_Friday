@@ -102,7 +102,8 @@ public class HAL
 		SetCheckoutPoint();
 	}
 
-	public void MyUpdate()
+
+	public IEnumerator MyUpdate()
 	{
 		//testTimer += Time.deltaTime;
 		//if(testTimer >= testTrigger)
@@ -171,10 +172,10 @@ public class HAL
 			}
 			}
 		}
-		SpawnNPC();
+		yield return SpawnNPC();
 	}
 
-	void SpawnNPC()
+	IEnumerator SpawnNPC()
 	{
 		for(int i = 0; i < triggers.Count; i++)
 		{
@@ -197,6 +198,7 @@ public class HAL
 					triggers[i].collider.enabled = true;
 				}
 			}
+			yield return null;
 		}
 	}
 
