@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Level_Control : MonoBehaviour
+public class Level_Control : Scene_Control
 {
 	//public
 	public int 							levelNumber;
@@ -10,8 +10,6 @@ public class Level_Control : MonoBehaviour
 	public Object[]						levelItems;
 
 	//private
-	private GameObject 					master;
-	private Master_Control 				masterScript;
 	private UILabel						uiTimer;
 	private List<UILabel>				uiShoppingItem;
 	private List<ShoppingList_Button>	shoppingButtons;
@@ -23,10 +21,8 @@ public class Level_Control : MonoBehaviour
 	private Indicator_Control			itemIndicator;
 	private Camera_Control				cameraScript;
 
-	void Awake()
+	override public void Initialize()
 	{
-		master 				= GameObject.Find("Master Control");
-		masterScript 		= master.GetComponent<Master_Control>();
 		uiTimer 			= GameObject.FindGameObjectWithTag("Timer").GetComponent<UILabel>();
 		uiShoppingItem 		= new List<UILabel>();
 		shoppingButtons 	= new List<ShoppingList_Button>();
@@ -62,19 +58,19 @@ public class Level_Control : MonoBehaviour
 		{
 			tempList[i].GetComponentInParent<ShoppingList_Button>().DestroyExtras();
 		}
-	}
 
-	// Use this for initialization
-	void Start()
-	{
 		masterScript.LevelSetup();
-
+		
 		cameraScript.SetPlayer();
 		cameraScript.SetFollowPlayer(false);
+
 	}
+
+
+		
 	
 	// Update is called once per frame
-	void Update()
+	void MyUpdate()
 	{
 		if(showScore)
 		{

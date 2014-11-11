@@ -10,25 +10,26 @@ public class Master_Control : MonoBehaviour
 	private bool 				pause;
 	private bool 				tutorialUp;
 	private int					sceneIndex;
-	//public float endWait = 5;
-	//private bool endScene = false;
-	//private EndScene EndSceneObject;
 	private HAL 				ai;
 	private Player_Data 		player;
 	private List<Input_Button> 	buttons;
 	private GameObject 			resumeButton;
+	private GameObject 			restartButton;
+	private GameObject 			quitButton;
 	private RunTime				fpsCounter;
 	
 	void Awake()
 	{
-		inGame 		= false;
-		pause 		= false;
-		tutorialUp 	= false;
-		player 		= new Player_Data();
-		fpsCounter	= new RunTime();
-		sceneIndex = 0;
-		//endScene = false;
-		
+		if(Application.loadedLevel == 0)
+		{
+			inGame 		= false;
+			pause 		= false;
+			tutorialUp 	= false;
+			player 		= new Player_Data();
+			fpsCounter	= new RunTime();
+			sceneIndex = 0;
+		}
+
 		ai = new HAL();
 		ai.Initialize();
 		player.Initialize();
@@ -37,13 +38,6 @@ public class Master_Control : MonoBehaviour
 	
 	void Update()
 	{
-		//if(endScene){
-			//Camera.main.transform.position = EndSceneObject.cameraPosition;
-			//Camera.main.transform.LookAt(EndSceneObject.scorePosition);
-			//if(Time.time > EndSceneObject.time+endWait){
-				//Application.LoadLevel(1);
-			//}
-		//}
 		fpsCounter.MyUpdate();
 
 		if(inGame)
@@ -104,16 +98,11 @@ public class Master_Control : MonoBehaviour
 
 		resumeButton = GameObject.Find("Resume Button");
 		resumeButton.SetActive(false);
-
-		//EndSceneObject = GameObject.FindGameObjectWithTag("EndScene").GetComponent<EndScene>();
+		restartButton = GameObject.Find("Restart Button");
+		restartButton.SetActive(false);
+		quitButton = GameObject.Find("Quit Button");
+		quitButton.SetActive(false);
 	}
-
-	//public void EndScene(){
-	//	endScene = true;
-	//}
-	//public bool isEnd(){
-	//	return endScene;
-	//}
 
 	public void SetInGame(bool source)
 	{
@@ -131,11 +120,17 @@ public class Master_Control : MonoBehaviour
 		{
 			pause = false;
 			Time.timeScale = 1.0f;
+			resumeButton.SetActive(false);
+			restartButton.SetActive(false);
+			quitButton.SetActive(false);
 		}
 		else
 		{
 			pause = true;
 			Time.timeScale = 0.0f;
+			resumeButton.SetActive(true);
+			restartButton.SetActive(true);
+			quitButton.SetActive(true);
 		}
 	}
 
@@ -154,6 +149,8 @@ public class Master_Control : MonoBehaviour
 	public void AblerResumeButton(bool source)
 	{
 		resumeButton.SetActive(source);
+		quitButton.SetActive(source);
+		restartButton.SetActive(source);
 	}
 
 	public void SetTurorial(bool source)

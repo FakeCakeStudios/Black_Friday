@@ -23,6 +23,6 @@ public class Input_Button : MonoBehaviour
 	
 	void OnSelect(bool selected)
 	{
-		//playerControl.SendMessage(functionName, selected, SendMessageOptions.DontRequireReceiver);
+
 	}
 }

@@ -14,7 +14,7 @@ public class Pause_Button : MonoBehaviour
 	{
 		masterScript.SetPause();
 		masterScript.SetTurorial(false);
-		this.gameObject.SetActive(false);
+		//this.gameObject.SetActive(false);
 	}
 	
 	void OnHover(bool isOver)
