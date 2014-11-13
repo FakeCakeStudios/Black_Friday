@@ -134,9 +134,6 @@
      <Compile Include="Assets\Resources\Scripts\Behavior.cs" />
      <Compile Include="Assets\Resources\Scripts\Camera_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\CheckPoint.cs" />
-     <Compile Include="Assets\Resources\Scripts\Cody\EndScene\EndScene.cs" />
-     <Compile Include="Assets\Resources\Scripts\Cody\player\Entities\ClassesSetOne.cs" />
-     <Compile Include="Assets\Resources\Scripts\Cody\player\EntityScripts\CamRotation.cs" />
      <Compile Include="Assets\Resources\Scripts\Credits_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Customization_Button.cs" />
      <Compile Include="Assets\Resources\Scripts\DeathZone_Trigger.cs" />

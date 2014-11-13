@@ -6,11 +6,13 @@ public class Powerup_Control : MonoBehaviour
 	public Powerups powerup;
 	public float rotateAngle;
 
-	private Player_Control playerScript;
+	private Player_Control 	playerScript;
+	private Scene_Control	sceneControl;
 	
 	void Start()
 	{
 		playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Control>();
+		sceneControl = GameObject.Find ("Scene Control").GetComponent<Scene_Control>();
 	}
 	
 	void Update()

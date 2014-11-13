@@ -24,26 +24,6 @@ public class Player_Control : MonoBehaviour
 	public float 			walkSpeed;
 	public float 			slowSpeed;
 	public float 			maxAccel;
-	
-	public Transform GetSelf()
-	{
-		return self;
-	}
-	
-	public Vector3 GetVelocity()
-	{
-		return velocity;
-	}
-
-	public void SetOutput(SteeringOutput source)
-	{
-		output = source;
-	}
-	
-	public SteeringOutput GetOutput()
-	{
-		return output;
-	}
 
 	void Awake()
 	{
@@ -231,6 +211,26 @@ public class Player_Control : MonoBehaviour
 			//for now just end the game, but need to activate losing animations and what not here before actually going back to menu
 			masterScript.GameOver();
 		}
+	}
+
+	public Transform GetSelf()
+	{
+		return self;
+	}
+	
+	public Vector3 GetVelocity()
+	{
+		return velocity;
+	}
+	
+	public void SetOutput(SteeringOutput source)
+	{
+		output = source;
+	}
+	
+	public SteeringOutput GetOutput()
+	{
+		return output;
 	}
 }
 

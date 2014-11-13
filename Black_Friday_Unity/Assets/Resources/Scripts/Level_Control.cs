@@ -20,6 +20,8 @@ public class Level_Control : Scene_Control
 	private bool						showScore;
 	private Indicator_Control			itemIndicator;
 	private Camera_Control				cameraScript;
+	private UISprite					powerupDisplay;
+	private List<Sprite>				powerupSprites;
 
 	override public void Initialize()
 	{
@@ -33,6 +35,8 @@ public class Level_Control : Scene_Control
 		showScore 			= true;
 		itemIndicator		= GameObject.Find("Item Indicator").GetComponent<Indicator_Control>();
 		cameraScript 		= Camera.main.GetComponent<Camera_Control>();
+		powerupDisplay		= GameObject.Find("Powerup Button").GetComponentInChildren<UISprite>();
+		powerupSprites		= new List<Sprite>();
 
 		UILabel[] tempList = GameObject.Find("Shopping List").GetComponentsInChildren<UILabel>();
 		GameObject[] temp = GameObject.FindGameObjectsWithTag("Item Location");
@@ -63,12 +67,8 @@ public class Level_Control : Scene_Control
 		
 		cameraScript.SetPlayer();
 		cameraScript.SetFollowPlayer(false);
-
 	}
 
-
-		
-	
 	// Update is called once per frame
 	void MyUpdate()
 	{
@@ -127,5 +127,62 @@ public class Level_Control : Scene_Control
 			shoppingButtons[i].SetActive(false);
 		}
 		showScore = true;
+	}
+
+	public void ChangePowerup(Powerups source)
+	{
+		switch(source)
+		{
+		case(Powerups.Box):
+		{
+
+			break;
+		}
+		case(Powerups.Glue):
+		{
+
+			break;
+		}
+		case(Powerups.Horn):
+		{
+
+			break;
+		}
+		case(Powerups.Jawbreakers):
+		{
+
+			break;
+		}
+		case(Powerups.Marbles):
+		{
+
+			break;
+		}
+		case(Powerups.Mask):
+		{
+
+			break;
+		}
+		case(Powerups.Megacubes):
+		{
+
+			break;
+		}
+		case(Powerups.Repellent):
+		{
+
+			break;
+		}
+		case(Powerups.StickyHand):
+		{
+
+			break;
+		}
+		case(Powerups.Tacks):
+		{
+
+			break;
+		}
+		}
 	}
 }
