@@ -6,10 +6,12 @@ public class Player_Control : MonoBehaviour
 {
 	//private
 	private float 			currentSpeed;
+	private float			cooldown;
 	private bool 			leftOn;
 	private bool 			rightOn;
 	private bool 			powerUp;
 	private bool			playing;
+	private bool 			usedPowerup;
 	private Animator		charAnimations;
 	private Transform 		self;
 	private Vector3	 		velocity;
@@ -17,6 +19,7 @@ public class Player_Control : MonoBehaviour
 	private Master_Control 	masterScript;
 	private SteeringOutput	output;
 	private List<Powerups>	powerupList;
+	private UISprite		powerupDisplay;
 	
 	//public
 	public float			maxRotation;
@@ -41,19 +44,34 @@ public class Player_Control : MonoBehaviour
 		slowSpeed		= 1.5f;
 		maxRotation 	= 100.0f;
 		maxAccel 		= 100.0f;
+		cooldown 		= 0.0f;
 		currentSpeed	= walkSpeed;
 		leftOn 			= false;
 		rightOn 		= false;
 		powerUp 		= false;
 		playing 		= false;
+		usedPowerup		= false;
 		target 			= new Vector3();
 		powerupList 	= masterScript.GetPlayerData().GetPowerups();
+		powerupDisplay		= GameObject.Find("Powerup Button").GetComponentInChildren<UISprite>();
 	}
 
 	void Update()
 	{
-		if(playing)
+		charAnimations.SetBool("DropItem", false);
+		charAnimations.SetBool("Mask", false);
+
+		if(playing && masterScript.GetPause())
 		{
+			if(usedPowerup)
+			{
+				cooldown -= Time.deltaTime;
+				if(cooldown <= 0.0f)
+				{
+					usedPowerup = false;
+				}
+			}
+
 			self.position += velocity * Time.deltaTime;
 			//if we're not stopped then continue movement
 			if(Mathf.Abs(output.angle) > maxRotation)
@@ -134,6 +152,7 @@ public class Player_Control : MonoBehaviour
 	{
 		if(powerupList.Count > 0)
 		{
+			usedPowerup = true;
 			switch(powerupList[0])
 			{
 			case(Powerups.Box):
@@ -174,6 +193,13 @@ public class Player_Control : MonoBehaviour
 			case(Powerups.Repellent):
 			{
 				masterScript.EffectEntities(Interaction.Runaway, 15.0f);
+				break;
+			}
+			case(Powerups.RollerSkates):
+			{
+				charAnimations.SetBool("Skate", true);
+				currentSpeed 	= runSpeed;
+				cooldown 		= 30.0f;
 				break;
 			}
 			case(Powerups.StickyHand):
@@ -231,6 +257,11 @@ public class Player_Control : MonoBehaviour
 	public SteeringOutput GetOutput()
 	{
 		return output;
+	}
+
+	public void SetPowerupDisplay(string source)
+	{
+		powerupDisplay.spriteName = source;
 	}
 }
 
