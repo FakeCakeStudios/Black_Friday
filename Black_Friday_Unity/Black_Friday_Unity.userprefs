@@ -1,14 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Player_Control.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\Desktop\Black_Friday-BF_JLM_0001\Black_Friday-BF_JLM_0001\Black_Friday_Unity\Assets\Resources\Scripts\Player_Control.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\Player_Control.cs" Line="63" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Entity_Data.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Guard1.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Shopper1.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Behavior.cs" Line="1" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Player_Control.cs" Line="210" Column="19" />
-      <File FileName="Assets\Resources\Scripts\Types_Def.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\..\Desktop\Black_Friday-BF_JLM_0001\Black_Friday-BF_JLM_0001\Black_Friday_Unity\Assets\Resources\Scripts\Player_Control.cs" Line="64" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
