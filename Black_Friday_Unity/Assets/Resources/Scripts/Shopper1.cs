@@ -7,7 +7,7 @@ public class Shopper1 : Behavior
 	//use this function for additional variable intialization for the needed behavior
 	override public void Initialize()
 	{
-
+	
 	}
 
 	public void BehaviorControl(Entity_Data source, Player_Control playerInfo, Path path)

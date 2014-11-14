@@ -26,9 +26,8 @@ public class Guard1 : Behavior
 		Transform self 				= source.GetSelf();
 		Vector3 playerPos 			= playerInfo.GetSelf().position;
 		List<Interaction> actions 	= source.GetAction();
-
-		bool agrod 			= source.GetActAgro();
-		bool agroDetect 	= false;
+		bool agrod 					= source.GetActAgro();
+		bool agroDetect 			= false;
 
 		//check to see if player is within agro range and sight
 		if(!actions.Contains(Interaction.Undetectable))

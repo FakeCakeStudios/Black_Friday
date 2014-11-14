@@ -65,7 +65,7 @@ public class Master_Control : MonoBehaviour
 	{
 		player.AddPowerup(source);
 	}
-	
+
 	public void AddCash(int source)
 	{
 		player.AddCash(source);
