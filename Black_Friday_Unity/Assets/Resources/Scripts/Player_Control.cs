@@ -6,10 +6,12 @@ public class Player_Control : MonoBehaviour
 {
 	//private
 	private float 			currentSpeed;
+	private float			cooldown;
 	private bool 			leftOn;
 	private bool 			rightOn;
 	private bool 			powerUp;
 	private bool			playing;
+	private bool 			usedPowerup;
 	private Animator		charAnimations;
 	private Transform 		self;
 	private Vector3	 		velocity;
@@ -17,6 +19,9 @@ public class Player_Control : MonoBehaviour
 	private Master_Control 	masterScript;
 	private SteeringOutput	output;
 	private List<Powerups>	powerupList;
+	private UISprite		powerupDisplay;
+	private GameObject		powerupOverlay;
+	private GameObject		triggerDrop;
 	
 	//public
 	public float			maxRotation;
@@ -24,26 +29,7 @@ public class Player_Control : MonoBehaviour
 	public float 			walkSpeed;
 	public float 			slowSpeed;
 	public float 			maxAccel;
-	
-	public Transform GetSelf()
-	{
-		return self;
-	}
-	
-	public Vector3 GetVelocity()
-	{
-		return velocity;
-	}
-
-	public void SetOutput(SteeringOutput source)
-	{
-		output = source;
-	}
-	
-	public SteeringOutput GetOutput()
-	{
-		return output;
-	}
+	public Object			boxPrefab;
 
 	void Awake()
 	{
@@ -61,19 +47,42 @@ public class Player_Control : MonoBehaviour
 		slowSpeed		= 1.5f;
 		maxRotation 	= 100.0f;
 		maxAccel 		= 100.0f;
+		cooldown 		= 0.0f;
 		currentSpeed	= walkSpeed;
 		leftOn 			= false;
 		rightOn 		= false;
 		powerUp 		= false;
 		playing 		= false;
+		usedPowerup		= false;
 		target 			= new Vector3();
 		powerupList 	= masterScript.GetPlayerData().GetPowerups();
+		powerupDisplay	= GameObject.Find("Powerup Button").GetComponentInChildren<UISprite>();
+		powerupOverlay  = GameObject.Find("Powerup Overlay");
+		triggerDrop 	= GameObject.Find ("Trigger Drop");
+
+		powerupOverlay.SetActive(false);
+		triggerDrop.SetActive(false);
 	}
 
 	void Update()
 	{
-		if(playing)
+		charAnimations.SetBool("DropItem", false);
+		charAnimations.SetBool("Mask", false);
+
+		if(playing && !masterScript.GetPause())
 		{
+			if(usedPowerup)
+			{
+				cooldown -= Time.deltaTime;
+				if(cooldown <= 0.0f)
+				{
+					cooldown 	= 0.0f;
+					usedPowerup = false;
+					currentSpeed = walkSpeed;
+					powerupOverlay.SetActive(false);
+				}
+			}
+
 			self.position += velocity * Time.deltaTime;
 			//if we're not stopped then continue movement
 			if(Mathf.Abs(output.angle) > maxRotation)
@@ -107,10 +116,10 @@ public class Player_Control : MonoBehaviour
 				charAnimations.SetBool("running", false);
 			}
 		
-			target = Vector3.zero;
-			target = self.position + (self.forward * 2.0f);
-			output.angle = 0.0f;
-			output.linear = self.position + (self.forward * 2.0f);
+			target 			= Vector3.zero;
+			target 			= self.position + (self.forward * 2.0f);
+			output.angle 	= 0.0f;
+			output.linear 	= self.position + (self.forward * 2.0f);
 
 			currentSpeed = walkSpeed;
 
@@ -128,9 +137,12 @@ public class Player_Control : MonoBehaviour
 				target += self.right * 2.0f;
 				output.angle = 100;
 			}
-			if(powerUp)
+			if(powerUp && cooldown == 0.0f)
 			{
-				PowerupUsed();
+				if(powerupList.Count > 0)
+				{
+					PowerupUsed();
+				}
 			}
 		}
 	}
@@ -152,62 +164,109 @@ public class Player_Control : MonoBehaviour
 	
 	void PowerupUsed()
 	{
-		if(powerupList.Count > 0)
+		powerupOverlay.SetActive(true);
+		usedPowerup = true;
+		switch(powerupList[0])
 		{
-			switch(powerupList[0])
-			{
-			case(Powerups.Box):
-			{
-				masterScript.EffectEntities(Interaction.Undetectable, 15.0f);
-				break;
-			}
-			case(Powerups.Glue):
-			{
-				charAnimations.SetBool("DropItem", true);
-				break;
-			}
-			case(Powerups.Horn):
-			{
-				masterScript.EffectEntities(Interaction.Runaway, 15.0f);
-				break;
-			}
-			case(Powerups.Jawbreakers):
-			{
-				charAnimations.SetBool("DropItem", true);
-				break;
-			}
-			case(Powerups.Marbles):
-			{
-				charAnimations.SetBool("DropItem", true);
-				break;
-			}
-			case(Powerups.Mask):
-			{
-				charAnimations.SetBool("Mask", true);
-				break;
-			}
-			case(Powerups.Megacubes):
-			{
-				charAnimations.SetBool("DropItem", true);
-				break;
-			}
-			case(Powerups.Repellent):
-			{
-				masterScript.EffectEntities(Interaction.Runaway, 15.0f);
-				break;
-			}
-			case(Powerups.StickyHand):
-			{
-				charAnimations.SetBool("Sticky", true);
-				break;
-			}
-			case(Powerups.Tacks):
-			{
-				charAnimations.SetBool("DropItem", true);
-				break;
-			}
-			}
+		case(Powerups.BlackCoffee):
+		{
+			currentSpeed 	= runSpeed;
+			cooldown 		= 10.0f;
+			break;
 		}
+		case(Powerups.Box):
+		{
+			masterScript.EffectEntities(Interaction.Undetectable, 15.0f);
+			cooldown = 15.0f;
+			break;
+		}
+		case(Powerups.Glue):
+		{
+			charAnimations.SetBool("DropItem", true);
+			triggerDrop.SetActive(true);
+			Vector3 tempPos 				= self.position;
+			tempPos 						+= -self.forward * 2.0f;
+			tempPos.y 						+= 0.6f;
+			triggerDrop.transform.position 	= tempPos;
+			triggerDrop.tag 				= "Slower";
+			cooldown 						= 5.0f;
+			break;
+		}
+		case(Powerups.Horn):
+		{
+			masterScript.EffectEntities(Interaction.Runaway, 8.0f);
+			cooldown = 8.0f;
+			break;
+		}
+		case(Powerups.Jawbreakers):
+		{
+			charAnimations.SetBool("DropItem", true);
+			triggerDrop.SetActive(true);
+			Vector3 tempPos 				= self.position;
+			tempPos 						+= -self.forward * 2.0f;
+			tempPos.y 						+= 0.6f;
+			triggerDrop.transform.position 	= tempPos;
+			triggerDrop.tag 				= "Slower";
+			cooldown 						= 300.0f;
+			break;
+		}
+		case(Powerups.Marbles):
+		{
+			charAnimations.SetBool("DropItem", true);
+			triggerDrop.SetActive(true);
+			Vector3 tempPos 				= self.position;
+			tempPos 						+= self.forward * 3.0f;
+			tempPos.y 						+= 0.6f;
+			triggerDrop.transform.position 	= tempPos;
+			triggerDrop.tag 				= "Stopper";
+			cooldown 						= 1.0f;
+			break;
+		}
+		case(Powerups.Mask):
+		{
+			charAnimations.SetBool("Mask", true);
+			cooldown = 8.0f;
+			break;
+		}
+		case(Powerups.Megacubes):
+		{
+			charAnimations.SetBool("DropItem", true);
+			triggerDrop.SetActive(true);
+			Vector3 tempPos 				= self.position;
+			tempPos 						+= -self.forward * 2.0f;
+			tempPos.y 						+= 0.6f;
+			triggerDrop.transform.position 	= tempPos;
+			triggerDrop.tag 				= "Stopper";
+			cooldown 						= 3.0f;
+			break;
+		}
+		case(Powerups.RollerSkates):
+		{
+			charAnimations.SetBool("Skate", true);
+			currentSpeed 	= runSpeed;
+			cooldown 		= 30.0f;
+			break;
+		}
+		case(Powerups.StickyHand):
+		{
+			charAnimations.SetBool("Sticky", true);
+			cooldown = 10.0f;
+			break;
+		}
+		case(Powerups.Tacks):
+		{
+			charAnimations.SetBool("DropItem", true);
+			triggerDrop.SetActive(true);
+			Vector3 tempPos 				= self.position;
+			tempPos 						+= -self.forward * 2.0f;
+			tempPos.y 						+= 0.6f;
+			triggerDrop.transform.position 	= tempPos;
+			triggerDrop.tag 				= "Slower";
+			cooldown 						= 3.0f;
+			break;
+		}
+		}
+		powerupList.RemoveAt(0);
 	}
 
 	public void SetPlaying(bool source)
@@ -219,11 +278,6 @@ public class Player_Control : MonoBehaviour
 		}
 	}
 
-	public void PowerupObtained(Powerups source)
-	{
-		powerupList.Add(source);
-	}
-
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.tag == "Guards")
@@ -231,6 +285,36 @@ public class Player_Control : MonoBehaviour
 			//for now just end the game, but need to activate losing animations and what not here before actually going back to menu
 			masterScript.GameOver();
 		}
+	}
+
+	public Transform GetSelf()
+	{
+		return self;
+	}
+	
+	public Vector3 GetVelocity()
+	{
+		return velocity;
+	}
+	
+	public void SetOutput(SteeringOutput source)
+	{
+		output = source;
+	}
+	
+	public SteeringOutput GetOutput()
+	{
+		return output;
+	}
+
+	public void PowerupObtained(Powerups source)
+	{
+		powerupList.Add(source);
+	}
+
+	public void SetPowerupDisplay(string source)
+	{
+		powerupDisplay.spriteName = source;
 	}
 }
 

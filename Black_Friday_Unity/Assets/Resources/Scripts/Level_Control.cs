@@ -21,6 +21,7 @@ public class Level_Control : Scene_Control
 	private Indicator_Control			itemIndicator;
 	private Camera_Control				cameraScript;
 
+
 	override public void Initialize()
 	{
 		uiTimer 			= GameObject.FindGameObjectWithTag("Timer").GetComponent<UILabel>();
@@ -33,9 +34,9 @@ public class Level_Control : Scene_Control
 		showScore 			= true;
 		itemIndicator		= GameObject.Find("Item Indicator").GetComponent<Indicator_Control>();
 		cameraScript 		= Camera.main.GetComponent<Camera_Control>();
+		UILabel[] tempList 	= GameObject.Find("Shopping List").GetComponentsInChildren<UILabel>();
+		GameObject[] temp 	= GameObject.FindGameObjectsWithTag("Item Location");
 
-		UILabel[] tempList = GameObject.Find("Shopping List").GetComponentsInChildren<UILabel>();
-		GameObject[] temp = GameObject.FindGameObjectsWithTag("Item Location");
 		for(int i = 0 ; i < temp.Length; i++)
 		{
 			itemLocations.Add(temp[i].transform.position);
@@ -50,6 +51,7 @@ public class Level_Control : Scene_Control
 			shoppingButtons.Add(tempList[i].GetComponentInParent<ShoppingList_Button>());
 			shoppingButtons[i].SetActive(false);
 		}
+
 		shoppingButtons[0].SetActive(true);
 		itemControl[0].SetActive(true);
 		itemIndicator.SetTarget(itemControl[0].transform.position);
@@ -60,15 +62,10 @@ public class Level_Control : Scene_Control
 		}
 
 		masterScript.LevelSetup();
-		
 		cameraScript.SetPlayer();
 		cameraScript.SetFollowPlayer(false);
-
 	}
 
-
-		
-	
 	// Update is called once per frame
 	void MyUpdate()
 	{

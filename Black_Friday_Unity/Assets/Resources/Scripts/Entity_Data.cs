@@ -330,4 +330,19 @@ public class Entity_Data : MonoBehaviour
 	{
 		trigger1 = Random.Range(30.0f, 45.0f) - Random.Range(0.0f, 15.0f);
 	}
+
+	void OnTriggerStay(Collider other)
+	{
+		if(!slowed && !stopped)
+		{
+			if(other.tag == "Slower")
+			{
+				SetAction(Interaction.Slow, 5.0f);
+			}
+			else if(other.tag == "Stopper")
+			{
+				SetAction(Interaction.Stop, 5.0f);
+			}
+		}
+	}
 }

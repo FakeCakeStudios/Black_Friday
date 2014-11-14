@@ -3,10 +3,12 @@ using System.Collections;
 
 public class Powerup_Control : MonoBehaviour
 {
+	//public
 	public Powerups powerup;
 	public float rotateAngle;
 
-	private Player_Control playerScript;
+	//private
+	private Player_Control 	playerScript;
 	
 	void Start()
 	{
@@ -24,6 +26,7 @@ public class Powerup_Control : MonoBehaviour
 		if(other.tag == "Player")
 		{
 			playerScript.PowerupObtained(powerup);
+			playerScript.SetPowerupDisplay(this.gameObject.name);
 			Destroy(this.gameObject);
 		}
 	}

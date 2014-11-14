@@ -15,7 +15,7 @@ public enum Interaction
 
 public enum Powerups
 {
-	Box, Glue, Horn, Jawbreakers, Marbles, Mask, Megacubes, Repellent, RollerSkates, StickyHand, Tacks
+	BlackCoffee, Box, Glue, Horn, Jawbreakers, Marbles, Mask, Megacubes, RollerSkates, StickyHand, Tacks
 }
 
 public enum KartUpgrades
