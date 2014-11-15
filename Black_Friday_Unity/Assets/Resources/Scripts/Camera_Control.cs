@@ -10,8 +10,11 @@ public class Camera_Control : MonoBehaviour
 	private float 				cameraHeight;
 	private float 				cameraTargetHeight;
 	private float				viewTimer;
+	private float				endDistance;
+	private float				endHeight;
 	private bool 				followPlayer;
 	private bool				changeView;
+	private bool				setEndView;
 	private Transform 			player;
 	private Quaternion 			localPos;
 	private List<Transform> 	levelViewPoints;
@@ -35,8 +38,11 @@ public class Camera_Control : MonoBehaviour
 		cameraTargetHeight 	= 1.0f;
 		viewTimer 			= 0.0f;
 		viewIndex 			= 0;
+		endDistance			= 0.5f;
+		endHeight			= 1.15f;
 		followPlayer 		= false;
 		changeView			= true;
+		setEndView			= true;
 		localPos 			= transform.localRotation;
 		playerScript 		= GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Control>();
 		itemIndicator		= GameObject.Find("Item Indicator").GetComponent<Indicator_Control>();
@@ -56,13 +62,34 @@ public class Camera_Control : MonoBehaviour
 			{
 				SetPlayer();
 			}
-			Vector3 temp 			= player.position;
-			temp 					+= -player.forward * cameraDistance;
-			temp.y 					+= cameraHeight;
-			this.transform.position = temp;
-			temp 					= player.position;
-			temp.y 					+= cameraTargetHeight;
-			this.transform.LookAt(temp);
+			if(changeView)
+			{
+				if(setEndView)
+				{
+					Vector3 temp 			= player.position;
+					temp 					+= -player.forward * endDistance;
+					temp 					+= -player.right * endDistance;
+					temp.y 					+= cameraHeight;
+					this.transform.position = temp;
+					temp 					= player.position;
+					temp 					+= player.forward * cameraDistance;
+					temp.y 					+= endHeight;
+					this.transform.LookAt(temp);
+					itemIndicator.gameObject.SetActive(false);
+					setEndView 				= false;
+				}
+			}
+			else
+			{
+				Vector3 temp 			= player.position;
+				temp 					+= -player.forward * cameraDistance;
+				temp.y 					+= cameraHeight;
+				this.transform.position = temp;
+				temp 					= player.position;
+				temp.y 					+= cameraTargetHeight;
+				this.transform.LookAt(temp);
+			}
+
 		}
 		else
 		{
@@ -83,7 +110,8 @@ public class Camera_Control : MonoBehaviour
 				changeView 	= true;
 				if(viewIndex >= levelViewPoints.Count)
 				{
-					followPlayer = true;
+					followPlayer 	= true;
+					changeView		= false;
 					playerScript.SetPlaying(true);
 					itemIndicator.SetShown(true);
 				}
@@ -100,6 +128,7 @@ public class Camera_Control : MonoBehaviour
 
 	public void SetPlayer()
 	{
-		player = GameObject.FindGameObjectWithTag("Player").transform;
+		player 		= GameObject.FindGameObjectWithTag("Player").transform;
+		changeView 	= true;
 	}
 }

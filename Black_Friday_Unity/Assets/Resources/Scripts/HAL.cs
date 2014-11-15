@@ -38,6 +38,7 @@ public class HAL
 	//private Object 					Shopper2;
 	//private Object 					Shopper3;
 
+	private GameObject				endSceneObject;
 	private Transform				endPosition;
 	public Transform				playerPos;
 	private Vector3					spawnPoint;
@@ -101,7 +102,9 @@ public class HAL
 		pathsMng.SetPaths();
 		SetSpawnPoint();
 		SetCheckoutPoint();
-		endPosition		= GameObject.Find("End Position").transform;
+		endPosition	= GameObject.Find("End Position").transform;
+		endSceneObject = GameObject.Find("Checkout Items");
+		endSceneObject.SetActive(false);
 	}
 
 
@@ -380,6 +383,7 @@ public class HAL
 
 	public Transform GetEndPosition()
 	{
+		endSceneObject.SetActive(true);
 		return endPosition;
 	}
 }

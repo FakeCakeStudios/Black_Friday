@@ -23,7 +23,8 @@ public class Level_Control : Scene_Control
 	private List<UISprite>				scratchouts;
 	private int							collectedAmount;
 	private Transform					endPosition;
-
+	private List<string>				inCart;
+	private Transform					beltStart;
 
 	override public void Initialize()
 	{
@@ -42,6 +43,7 @@ public class Level_Control : Scene_Control
 		UISprite[] tempS  	= GameObject.Find("Shopping List").GetComponentsInChildren<UISprite>();
 		GameObject[] temp 	= GameObject.FindGameObjectsWithTag("Item Location");
 		collectedAmount		= 0;
+		inCart				= new List<string>();
 
 		for(int i = 0 ; i < temp.Length; i++)
 		{
@@ -140,8 +142,47 @@ public class Level_Control : Scene_Control
 	public void CollectedItem()
 	{
 		collectedAmount += 1;
+		inCart.Add(shoppingList[0].name.ToString());
 		SetCurrentListItem(shoppingButtons.Count - collectedAmount);
 		scratchouts[shoppingButtons.Count - collectedAmount].gameObject.SetActive(true);
 		shoppingButtons[shoppingButtons.Count - collectedAmount].collider.enabled = false;
+	}
+
+	public void SetupCheckout()
+	{
+		beltStart = GameObject.Find("Belt Start").transform;
+	}
+
+	private float 	itemTimer 	= 1.5f, 
+					itemTrigger = 1.5f, 
+					scanTimer 	= 0.0f, 
+					scanTrigger = 1.0f;
+	private int index 			= 0;
+	List<GameObject> cartItems = new List<GameObject>();
+	KeyItem_Control	itemScript;
+	Vector3 move;
+	float speed = 0.5f;
+
+	public void RunCheckout()
+	{
+		itemTimer += Time.deltaTime;
+
+		for(int i = 0; i < cartItems.Count; i++)
+		{
+			move = cartItems[i].transform.position;
+			move += beltStart.transform.forward * speed * Time.deltaTime;
+			cartItems[i].transform.position = move;
+		}
+
+		if(itemTimer >= itemTrigger && inCart.Count > index)
+		{
+			cartItems.Add(GameObject.Instantiate(Resources.Load("Prefabs/Key Items/" + inCart[index]), beltStart.position, beltStart.rotation)as GameObject);
+			cartItems[index].gameObject.SetActive(true);
+			itemScript = cartItems[index].GetComponent<KeyItem_Control>();
+			itemScript.SetActive(true);
+			itemTimer = 0.0f;
+		}
+
+		index += 1;
 	}
 }

@@ -60,5 +60,10 @@ public class KeyItem_Control : MonoBehaviour
 			masterScript.AddCash(savings);
 			levelControl.CollectedItem();
 		}
+		else if(other.gameObject.tag == "Scanner")
+		{
+			Debug.Log("called");
+			selfMats.material = original;
+		}
 	}
 }

@@ -1,13 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Camera_Control.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Level_Control.cs">
     <Files>
-      <File FileName="Assets\Resources\Scripts\HAL.cs" Line="104" Column="60" />
-      <File FileName="Assets\Resources\Scripts\Level_Control.cs" Line="44" Column="24" />
-      <File FileName="Assets\Resources\Scripts\Player_Control.cs" Line="290" Column="31" />
-      <File FileName="Assets\Resources\Scripts\Master_Control.cs" Line="256" Column="22" />
-      <File FileName="Assets\Resources\Scripts\Select_Control.cs" Line="69" Column="1" />
-      <File FileName="Assets\Resources\Scripts\Camera_Control.cs" Line="87" Column="1" />
+      <File FileName="Assets\Resources\Scripts\HAL.cs" Line="386" Column="34" />
+      <File FileName="Assets\Resources\Scripts\Level_Control.cs" Line="165" Column="2" />
+      <File FileName="Assets\Resources\Scripts\Master_Control.cs" Line="52" Column="31" />
+      <File FileName="Assets\Resources\Scripts\Player_Control.cs" Line="335" Column="2" />
+      <File FileName="Assets\Resources\Scripts\Camera_Control.cs" Line="75" Column="42" />
+      <File FileName="Assets\Resources\Scripts\KeyItem_Control.cs" Line="65" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

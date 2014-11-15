@@ -9,6 +9,7 @@ public class Master_Control : MonoBehaviour
 	private bool 				inGame;
 	private bool 				pause;
 	private bool 				tutorialUp;
+	private bool				checkout;
 	private int					sceneIndex;
 	private HAL 				ai;
 	private Player_Data 		player;
@@ -17,6 +18,7 @@ public class Master_Control : MonoBehaviour
 	private GameObject 			restartButton;
 	private GameObject 			quitButton;
 	private RunTime				fpsCounter;
+	private Level_Control		levelControl;
 	
 	void Awake()
 	{
@@ -25,6 +27,7 @@ public class Master_Control : MonoBehaviour
 			inGame 		= false;
 			pause 		= false;
 			tutorialUp 	= false;
+			checkout 	= false;
 			player 		= new Player_Data();
 			fpsCounter	= new RunTime();
 			sceneIndex = 0;
@@ -44,11 +47,19 @@ public class Master_Control : MonoBehaviour
 		{
 			StartCoroutine(ai.MyUpdate());
 		}
+		else if(checkout)
+		{
+			levelControl.RunCheckout();
+		}
 	}
 
 	public void InitializeAtLevelLoad()
 	{
 		fpsCounter.Initialization();
+		if(Application.loadedLevel >= 5)
+		{
+			levelControl = GameObject.Find("Scene Control").GetComponent<Level_Control>();
+		}
 	}
 
 	void AIUpdate()
@@ -207,6 +218,7 @@ public class Master_Control : MonoBehaviour
 		{
 			temp[i].SetActive(false);
 		}
+
 		List<KartUpgrades> cartUpgrades = player.GetKartUpgrades();
 		for(int i = 0; i < cartUpgrades.Count; i++)
 		{
@@ -253,7 +265,10 @@ public class Master_Control : MonoBehaviour
 
 	public void RunEndScene()
 	{
+		inGame = false;
+		checkout = true;
 		Destroy(thePlayer);
 		thePlayer = Instantiate(Resources.Load("Prefabs/Characters/" + player.GetPlayerModel().ToString()), ai.GetEndPosition().position, ai.GetEndPosition().rotation) as GameObject;
+		levelControl.SetupCheckout();
 	}
 }

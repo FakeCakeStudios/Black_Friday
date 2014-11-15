@@ -12,6 +12,7 @@ public class Player_Control : MonoBehaviour
 	private bool 			powerUp;
 	private bool			playing;
 	private bool 			usedPowerup;
+	private bool			end;
 	private Animator		charAnimations;
 	private Transform 		self;
 	private Vector3	 		velocity;
@@ -54,6 +55,7 @@ public class Player_Control : MonoBehaviour
 		powerUp 		= false;
 		playing 		= false;
 		usedPowerup		= false;
+		end 			= false;
 		target 			= new Vector3();
 		powerupList 	= masterScript.GetPlayerData().GetPowerups();
 		powerupDisplay	= GameObject.Find("Powerup Button").GetComponentInChildren<UISprite>();
@@ -320,5 +322,14 @@ public class Player_Control : MonoBehaviour
 	{
 		powerupDisplay.spriteName = source;
 	}
-}
 
+	public void SetEnd(bool source)
+	{
+		end = source;
+	}
+
+	public bool GetEnd()
+	{
+		return end;
+	}
+}
