@@ -141,9 +141,10 @@ public class Master_Control : MonoBehaviour
 	
 	public void GameOver()
 	{
+		GameReset();
 		inGame = false;
 		DontDestroyOnLoad(this.gameObject);
-		Application.LoadLevel("Menu");
+		Application.LoadLevel(1);
 	}
 
 	public void AblerResumeButton(bool source)
@@ -206,7 +207,6 @@ public class Master_Control : MonoBehaviour
 		{
 			temp[i].SetActive(false);
 		}
-		temp[2].SetActive(true);
 		List<KartUpgrades> cartUpgrades = player.GetKartUpgrades();
 		for(int i = 0; i < cartUpgrades.Count; i++)
 		{
@@ -244,5 +244,16 @@ public class Master_Control : MonoBehaviour
 			}
 			}
 		}
+	}
+
+	public void GameReset()
+	{
+		ai.Initialize();
+	}
+
+	public void RunEndScene()
+	{
+		Destroy(thePlayer);
+		thePlayer = Instantiate(Resources.Load("Prefabs/Characters/" + player.GetPlayerModel().ToString()), ai.GetEndPosition().position, ai.GetEndPosition().rotation) as GameObject;
 	}
 }

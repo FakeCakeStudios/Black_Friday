@@ -20,6 +20,9 @@ public class Level_Control : Scene_Control
 	private bool						showScore;
 	private Indicator_Control			itemIndicator;
 	private Camera_Control				cameraScript;
+	private List<UISprite>				scratchouts;
+	private int							collectedAmount;
+	private Transform					endPosition;
 
 
 	override public void Initialize()
@@ -32,10 +35,13 @@ public class Level_Control : Scene_Control
 		scoreBoard 			= GameObject.Find("Score").GetComponent<UILabel>();
 		itemControl 		= new List<KeyItem_Control>();
 		showScore 			= true;
+		scratchouts			= new List<UISprite>();
 		itemIndicator		= GameObject.Find("Item Indicator").GetComponent<Indicator_Control>();
 		cameraScript 		= Camera.main.GetComponent<Camera_Control>();
 		UILabel[] tempList 	= GameObject.Find("Shopping List").GetComponentsInChildren<UILabel>();
+		UISprite[] tempS  	= GameObject.Find("Shopping List").GetComponentsInChildren<UISprite>();
 		GameObject[] temp 	= GameObject.FindGameObjectsWithTag("Item Location");
+		collectedAmount		= 0;
 
 		for(int i = 0 ; i < temp.Length; i++)
 		{
@@ -50,8 +56,10 @@ public class Level_Control : Scene_Control
 			uiShoppingItem[i].text = shoppingList[i].name;
 			shoppingButtons.Add(tempList[i].GetComponentInParent<ShoppingList_Button>());
 			shoppingButtons[i].SetActive(false);
+			scratchouts.Add(tempS[i]);
+			scratchouts[i].gameObject.SetActive(false);
 		}
-
+		scratchouts[0].gameObject.SetActive(true);
 		shoppingButtons[0].SetActive(true);
 		itemControl[0].SetActive(true);
 		itemIndicator.SetTarget(itemControl[0].transform.position);
@@ -67,7 +75,7 @@ public class Level_Control : Scene_Control
 	}
 
 	// Update is called once per frame
-	void MyUpdate()
+	override public void MyUpdate()
 	{
 		if(showScore)
 		{
@@ -85,26 +93,29 @@ public class Level_Control : Scene_Control
 			int seconds = (int)playTime % 60;
 			uiTimer.text = minutes.ToString() + ":" + seconds.ToString();
 		}
+		else if(playTime <= 0.0f)
+		{
+			masterScript.GameOver();
+		}
 	}
 
 	public void SetCurrentListItem(int source)
 	{
 		itemControl[source].SetActive(true);
-		itemIndicator.SetTarget(itemControl[source].transform.position);
+		KeyItem_Control tempScript 	= itemControl[source];
+		itemControl[source] 		= itemControl[0];
+		itemControl[0] 				= tempScript;
 
-		int adjuster = 0;
-		for(int i = 0; i < shoppingList.Count; i++)
-		{
-			if(source + i >= shoppingList.Count)
-			{
-				adjuster = source + i - shoppingList.Count;
-				uiShoppingItem[i].text = shoppingList[adjuster].name;
-			}
-			else
-			{
-				uiShoppingItem[i].text = shoppingList[source + i].name;
-			}
-		}
+		GameObject tempObject 	= shoppingList[source];
+		shoppingList[source] 	= shoppingList[0];
+		shoppingList[0] 		= tempObject;
+
+		uiShoppingItem[source].text = shoppingList[source].name;
+		uiShoppingItem[0].text = shoppingList[0].name;
+
+		itemControl[0].SetActive(true);
+		itemControl[source].SetActive(false);
+		itemIndicator.SetTarget(itemControl[0].transform.position);
 	}
 
 	public void DisplayShoppingList()
@@ -124,5 +135,13 @@ public class Level_Control : Scene_Control
 			shoppingButtons[i].SetActive(false);
 		}
 		showScore = true;
+	}
+
+	public void CollectedItem()
+	{
+		collectedAmount += 1;
+		SetCurrentListItem(shoppingButtons.Count - collectedAmount);
+		scratchouts[shoppingButtons.Count - collectedAmount].gameObject.SetActive(true);
+		shoppingButtons[shoppingButtons.Count - collectedAmount].collider.enabled = false;
 	}
 }

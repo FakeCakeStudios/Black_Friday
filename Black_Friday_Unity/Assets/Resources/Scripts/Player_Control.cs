@@ -285,6 +285,10 @@ public class Player_Control : MonoBehaviour
 			//for now just end the game, but need to activate losing animations and what not here before actually going back to menu
 			masterScript.GameOver();
 		}
+		else if(other.tag == "EndScene")
+		{
+			masterScript.RunEndScene();
+		}
 	}
 
 	public Transform GetSelf()

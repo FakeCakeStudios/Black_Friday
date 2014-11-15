@@ -52,6 +52,10 @@ public class Camera_Control : MonoBehaviour
 	{
 		if(followPlayer)
 		{
+			if(player == null)
+			{
+				SetPlayer();
+			}
 			Vector3 temp 			= player.position;
 			temp 					+= -player.forward * cameraDistance;
 			temp.y 					+= cameraHeight;

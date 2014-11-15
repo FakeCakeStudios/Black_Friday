@@ -37,14 +37,15 @@ public class HAL
 	private Object 					Shopper1;
 	//private Object 					Shopper2;
 	//private Object 					Shopper3;
-	
+
+	private Transform				endPosition;
 	public Transform				playerPos;
 	private Vector3					spawnPoint;
 	private Quaternion				spawnRot;
 	private Vector3					exitPoint;
 
-	private float testTimer;
-	private float testTrigger;
+	private float 					testTimer;
+	private float 					testTrigger;
 
 	public void Initialize()
 	{
@@ -100,6 +101,7 @@ public class HAL
 		pathsMng.SetPaths();
 		SetSpawnPoint();
 		SetCheckoutPoint();
+		endPosition		= GameObject.Find("End Position").transform;
 	}
 
 
@@ -374,5 +376,10 @@ public class HAL
 				scriptEnts[i].SetAction(Interaction.Runaway, effectedTime);
 			}
 		}
+	}
+
+	public Transform GetEndPosition()
+	{
+		return endPosition;
 	}
 }

@@ -32,9 +32,9 @@ public class ShoppingList_Button : MonoBehaviour
 	{
 		if(!masterScript.GetTutorialUp() && isPressed == true)
 		{
-			masterScript.SetPause();
-			if(masterScript.GetPause())
+			if(!masterScript.GetPause())
 			{
+				masterScript.SetPause();
 				sceneControl.DisplayShoppingList();
 				pauseOverlay.SetActive(true);
 				currentItemAnchor.relativeOffset.x = 0.175f;

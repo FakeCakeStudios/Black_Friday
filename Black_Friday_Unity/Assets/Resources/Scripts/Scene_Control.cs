@@ -32,6 +32,8 @@ public class Scene_Control : MonoBehaviour
 		{
 			if(source != -1)
 			{
+				masterScript.SetInGame(false);
+
 				DontDestroyOnLoad(master);
 				Application.LoadLevel(source);
 			}

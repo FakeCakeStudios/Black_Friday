@@ -11,6 +11,7 @@ public class KeyItem_Control : MonoBehaviour
 	private MeshRenderer 	selfMats;
 	private Master_Control 	masterScript;
 	public string 			listName;
+	private Level_Control	levelControl;
 
 	void Awake()
 	{
@@ -20,6 +21,7 @@ public class KeyItem_Control : MonoBehaviour
 		selfMats.material 	= glowMat;
 		SetActive(false);
 		masterScript = GameObject.FindGameObjectWithTag("Master").GetComponent<Master_Control>();
+		levelControl = GameObject.Find("Scene Control").GetComponent<Level_Control>();
 	}
 
 	void Update()
@@ -56,7 +58,7 @@ public class KeyItem_Control : MonoBehaviour
 		if(other.gameObject.tag == "Player")
 		{
 			masterScript.AddCash(savings);
-			Destroy(this.gameObject);
+			levelControl.CollectedItem();
 		}
 	}
 }
