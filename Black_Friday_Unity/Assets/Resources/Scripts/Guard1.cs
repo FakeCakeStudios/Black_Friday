@@ -11,11 +11,11 @@ using System.Collections.Generic;
  * radius, the guard will continue their path from the closest point to their current
  * position.
  */
-public class Guard1 : Behavior
+public class Guard1
 {
 
 	//use this function for additional variable intialization for the needed behavior
-	override public void Initialize()
+	public void Initialize()
 	{
 
 	}
@@ -98,10 +98,19 @@ public class Guard1 : Behavior
 				Vector3 target = new Vector3();
 				target = Detection.AvoidObstacles(source);
 				//if target is not 0, then Seek the new target to avoid the obstacle
-				if(target != Vector3.zero)
+				if(target != Vector3.zero && !source.blocked)
 				{
 					//source.output = steering.AddSteeringOutputs(source.output, steering.Seek(source.self.position, target));
 					output = Steering.Seek(self.position, target);
+				}
+				else if(source.blocked)
+				{
+					output = Steering.Align2D(self.eulerAngles, -self.rotation.eulerAngles);
+					if(output.angle == 0.0f)
+					{
+						source.SetStopped(false);
+						source.blocked = false;
+					}
 				}
 				//always look in the direction we are moving
 				source.SetOutput(Steering.AddSteeringOutputs(output, Steering.LookInDir(self, output.linear)));
@@ -114,10 +123,19 @@ public class Guard1 : Behavior
 			Vector3 target 	= new Vector3();
 			target 			= Detection.AvoidObstacles(source);
 			//if target is not 0, then Seek the new target to avoid the obstacle
-			if(target != Vector3.zero)
+			if(target != Vector3.zero && !source.blocked)
 			{
 				//source.output = steering.AddSteeringOutputs(source.output, steering.Seek(source.self.position, target));
 				output = Steering.Seek(self.position, target);
+			}
+			else if(source.blocked)
+			{
+				output = Steering.Align2D(self.eulerAngles, -self.rotation.eulerAngles);
+				if(output.angle == 0.0f)
+				{
+					source.SetStopped(false);
+					source.blocked = false;
+				}
 			}
 			//always look in the direction we are moving
 			source.SetOutput(Steering.AddSteeringOutputs(output, Steering.LookInDir(self, output.linear)));

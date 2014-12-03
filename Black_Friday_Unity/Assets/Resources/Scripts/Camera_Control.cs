@@ -16,14 +16,11 @@ public class Camera_Control : MonoBehaviour
 	private bool				changeView;
 	private bool				setEndView;
 	private Transform 			player;
-	private Quaternion 			localPos;
 	private List<Transform> 	levelViewPoints;
 	private Player_Control		playerScript;
 	private Indicator_Control 	itemIndicator;
 
 	//public
-	//public float 			speed;
-	//public float 			angleAdj;
 	public float			timePerView;
 
 	void Awake()
@@ -33,7 +30,7 @@ public class Camera_Control : MonoBehaviour
 
 	void Start()
 	{
-		cameraDistance 		= 2.0f;;
+		cameraDistance 		= 2.0f;
 		cameraHeight 		= 2.0f;
 		cameraTargetHeight 	= 1.0f;
 		viewTimer 			= 0.0f;
@@ -43,7 +40,6 @@ public class Camera_Control : MonoBehaviour
 		followPlayer 		= false;
 		changeView			= true;
 		setEndView			= true;
-		localPos 			= transform.localRotation;
 		playerScript 		= GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Control>();
 		itemIndicator		= GameObject.Find("Item Indicator").GetComponent<Indicator_Control>();
 
@@ -95,8 +91,8 @@ public class Camera_Control : MonoBehaviour
 		{
 			if(changeView)
 			{
-				Vector3 adjustment = levelViewPoints[viewIndex].forward * 0.5f;
-				adjustment += levelViewPoints[viewIndex].position;
+				Vector3 adjustment 		= levelViewPoints[viewIndex].forward * 0.5f;
+				adjustment 				+= levelViewPoints[viewIndex].position;
 				this.transform.position = adjustment;
 				this.transform.rotation = levelViewPoints[viewIndex].rotation;
 				changeView 				= false;
@@ -116,8 +112,6 @@ public class Camera_Control : MonoBehaviour
 					itemIndicator.SetShown(true);
 				}
 			}
-			//Vector3 rotAxis = new Vector3(0.0f, 1.0f, 0.0f);
-			//transform.Rotate(rotAxis, speed * Time.deltaTime);
 		}
 	}
 

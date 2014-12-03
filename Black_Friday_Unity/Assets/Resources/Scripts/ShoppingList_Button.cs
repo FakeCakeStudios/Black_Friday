@@ -7,8 +7,6 @@ public class ShoppingList_Button : MonoBehaviour
 	private Level_Control  	sceneControl;
 	private GameObject 		pauseOverlay;
 	public int 				itemIndex;
-	private float 			buttonTimer;
-	private float 			buttontrigger;
 	private UIAnchor		currentItemAnchor;
 	private GameObject		currentItemBG;
 
@@ -19,12 +17,12 @@ public class ShoppingList_Button : MonoBehaviour
 		pauseOverlay 		= GameObject.Find("Pause Overlay");
 		currentItemAnchor	= GameObject.Find("Current Item").GetComponent<UIAnchor>();
 		currentItemBG		= GameObject.Find("Current Item Background");
-		buttonTimer 		= 0.0f;
-		buttontrigger 		= 0.2f;
 
 		if(this.name == "Current Item")
 		{
 			pauseOverlay.SetActive(false);
+			//currentItemBG		= GameObject.Find("Current Item Background");
+			currentItemBG = GameObject.FindWithTag("BG");
 		}
 	}
 	
@@ -37,17 +35,12 @@ public class ShoppingList_Button : MonoBehaviour
 				masterScript.SetPause();
 				sceneControl.DisplayShoppingList();
 				pauseOverlay.SetActive(true);
-				currentItemAnchor.relativeOffset.x = 0.175f;
-				currentItemBG.SetActive(false);
 			}
 			else
 			{
 				sceneControl.SetCurrentListItem(itemIndex);
-				sceneControl.CondenseShoppingList();
-				pauseOverlay.SetActive(false);
-				currentItemAnchor.relativeOffset.x = 0.4f;
-				currentItemBG.SetActive(true);
 			}
+			ResetPosition();
 		}
 	}
 	
@@ -69,5 +62,17 @@ public class ShoppingList_Button : MonoBehaviour
 	public void DestroyExtras()
 	{
 		Destroy(this.gameObject);
+	}
+
+	public void ResetPosition()
+	{
+		if(!masterScript.GetPause())
+		{
+			currentItemAnchor.relativeOffset.x = 0.4f;
+		}
+		else
+		{
+			currentItemAnchor.relativeOffset.x = 0.175f;
+		}
 	}
 }

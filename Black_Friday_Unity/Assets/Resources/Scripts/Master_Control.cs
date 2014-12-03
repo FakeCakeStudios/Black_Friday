@@ -10,6 +10,7 @@ public class Master_Control : MonoBehaviour
 	private bool 				pause;
 	private bool 				tutorialUp;
 	private bool				checkout;
+	private bool				lost;
 	private int					sceneIndex;
 	private HAL 				ai;
 	private Player_Data 		player;
@@ -28,6 +29,7 @@ public class Master_Control : MonoBehaviour
 			pause 		= false;
 			tutorialUp 	= false;
 			checkout 	= false;
+			lost 		= false;
 			player 		= new Player_Data();
 			fpsCounter	= new RunTime();
 			sceneIndex = 0;
@@ -51,6 +53,10 @@ public class Master_Control : MonoBehaviour
 		{
 			levelControl.RunCheckout();
 		}
+		else if(lost)
+		{
+			levelControl.PlayerLost();
+		}
 	}
 
 	public void InitializeAtLevelLoad()
@@ -59,6 +65,15 @@ public class Master_Control : MonoBehaviour
 		if(Application.loadedLevel >= 5)
 		{
 			levelControl = GameObject.Find("Scene Control").GetComponent<Level_Control>();
+		}
+		else if(Application.loadedLevel == 1)
+		{
+			inGame 		= false;
+			pause 		= false;
+			tutorialUp 	= false;
+			checkout 	= false;
+			lost 		= false;
+			sceneIndex = 1;
 		}
 	}
 
@@ -153,9 +168,7 @@ public class Master_Control : MonoBehaviour
 	public void GameOver()
 	{
 		GameReset();
-		inGame = false;
-		DontDestroyOnLoad(this.gameObject);
-		Application.LoadLevel(1);
+		lost 	= true;
 	}
 
 	public void AblerResumeButton(bool source)
@@ -205,7 +218,6 @@ public class Master_Control : MonoBehaviour
 		}
 		}
 		//Fans, Glove, Oil, Repeller, Scroll, WD4000
-		///GameObject[] temp = GameObject.FindGameObjectsWithTag("Cart Upgrade");
 		GameObject[] temp = new GameObject[6];
 		temp[0] = GameObject.Find("Fans");
 		temp[1] = GameObject.Find("Glove");
@@ -261,14 +273,18 @@ public class Master_Control : MonoBehaviour
 	public void GameReset()
 	{
 		ai.Initialize();
+		inGame 		= false;
+		pause 		= false;
+		tutorialUp 	= false;
+		checkout 	= false;
 	}
 
 	public void RunEndScene()
 	{
-		inGame = false;
-		checkout = true;
+		inGame 		= false;
+		checkout 	= true;
 		Destroy(thePlayer);
-		thePlayer = Instantiate(Resources.Load("Prefabs/Characters/" + player.GetPlayerModel().ToString()), ai.GetEndPosition().position, ai.GetEndPosition().rotation) as GameObject;
+		thePlayer 	= Instantiate(Resources.Load("Prefabs/Characters/" + player.GetPlayerModel().ToString()), ai.GetEndPosition().position, ai.GetEndPosition().rotation)as GameObject;
 		levelControl.SetupCheckout();
 	}
 }

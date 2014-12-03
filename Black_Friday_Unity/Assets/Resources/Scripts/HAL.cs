@@ -35,8 +35,8 @@ public class HAL
 	private Object 					Guard1;
 //	private Object 					Guard2;
 	private Object 					Shopper1;
-	//private Object 					Shopper2;
-	//private Object 					Shopper3;
+	//private Object 				Shopper2;
+	//private Object 				Shopper3;
 
 	private GameObject				endSceneObject;
 	private Transform				endPosition;
@@ -63,11 +63,11 @@ public class HAL
 		pathsMng.SetupPaths();
 
 		shopperType1	= new Shopper1();
-		shopperType1.Start();
+		shopperType1.Initialize();
 		guardType1		= new Guard1();
-		guardType1.Start();
+		guardType1.Initialize();
 		guardType2		= new Guard2();
-		guardType2.Start();
+		guardType2.Initialize();
 
 		Guard1 			= Resources.Load("Prefabs/Characters/BigCop");
 		//Guard2 			= Resources.Load("Prefabs/Guard2");

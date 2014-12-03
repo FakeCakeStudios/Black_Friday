@@ -1,31 +1,55 @@
 Base path: C:/Program Files (x86)/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-3-336
+Pipe name: \\.\pipe\UnityShaderCompiler-3-3168
 Cmd: getPlatforms
+Cmd: compileSnippet
+  api=9 type=1 insize=942 outsize=7 kw= ok=1
 Cmd: compileSnippet
   api=5 type=0 insize=5385 outsize=1051 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
   api=5 type=0 insize=5385 outsize=4825 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=5 type=0 insize=5385 outsize=5204 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+  api=9 type=0 insize=5385 outsize=1794 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=5 type=0 insize=5385 outsize=4726 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+  api=9 type=0 insize=5385 outsize=6009 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
 Cmd: compileSnippet
   api=5 type=0 insize=5385 outsize=5863 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
 Cmd: compileSnippet
   api=5 type=1 insize=5385 outsize=6 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=5 type=1 insize=5385 outsize=6 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+  api=9 type=1 insize=5385 outsize=7 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
   api=5 type=0 insize=3260 outsize=2341 kw=DIRECTIONAL ok=1
 Cmd: compileSnippet
-  api=9 type=0 insize=3260 outsize=3228 kw=SPOT ok=1
+  api=5 type=0 insize=3260 outsize=3174 kw=SPOT ok=1
 Cmd: compileSnippet
-  api=9 type=1 insize=3260 outsize=7 kw=DIRECTIONAL ok=1
+  api=5 type=0 insize=3260 outsize=2726 kw=DIRECTIONAL_COOKIE ok=1
 Cmd: compileSnippet
-  api=9 type=1 insize=3260 outsize=7 kw=SPOT ok=1
+  api=5 type=1 insize=3260 outsize=6 kw=DIRECTIONAL ok=1
 Cmd: compileSnippet
-  api=9 type=1 insize=3260 outsize=7 kw=DIRECTIONAL_COOKIE ok=1
-Unhandled exception: Readfile from pipe failed. GLE=The pipe has been ended.
-
-
-Quitting shader compiler process
+  api=5 type=1 insize=3260 outsize=6 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=892 outsize=1123 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=892 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=5 type=1 insize=1203 outsize=6 kw= ok=1
+Cmd: compileSnippet
+  api=5 type=1 insize=1322 outsize=6 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=1274 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=1260 outsize=1014 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=1260 outsize=1339 kw= ok=1
+Cmd: compileSnippet
+  api=5 type=1 insize=1282 outsize=6 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=1218 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=1277 outsize=1033 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=1277 outsize=7 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=1041 outsize=928 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=1041 outsize=7 kw= ok=1

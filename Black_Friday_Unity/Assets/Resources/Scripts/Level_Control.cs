@@ -8,6 +8,7 @@ public class Level_Control : Scene_Control
 	public int 							levelNumber;
 	public float 						playTime;
 	public Object[]						levelItems;
+	public int							collectedCash;
 
 	//private
 	private UILabel						uiTimer;
@@ -79,14 +80,7 @@ public class Level_Control : Scene_Control
 	// Update is called once per frame
 	override public void MyUpdate()
 	{
-		if(showScore)
-		{
-			scoreBoard.text = masterScript.GetPlayerData().GetCash().ToString();
-		}
-		else
-		{
-			scoreBoard.text = "";
-		}
+		scoreBoard.text = collectedCash.ToString();
 
 		if(playTime > 0.0f && masterScript.GetInGame())
 		{
@@ -113,7 +107,7 @@ public class Level_Control : Scene_Control
 		shoppingList[0] 		= tempObject;
 
 		uiShoppingItem[source].text = shoppingList[source].name;
-		uiShoppingItem[0].text = shoppingList[0].name;
+		uiShoppingItem[0].text 		= shoppingList[0].name;
 
 		itemControl[0].SetActive(true);
 		itemControl[source].SetActive(false);
@@ -127,21 +121,23 @@ public class Level_Control : Scene_Control
 			itemControl[i].SetActive(false);
 			shoppingButtons[i].SetActive(true);
 		}
-		showScore = false;
+		//showScore = false;
 	}
 
 	public void CondenseShoppingList()
 	{
+		shoppingButtons[0].ResetPosition();
 		for(int i = 1; i < shoppingButtons.Count; i++)
 		{
 			shoppingButtons[i].SetActive(false);
 		}
-		showScore = true;
+		//showScore = true;
 	}
 
-	public void CollectedItem()
+	public void CollectedItem(int source)
 	{
 		collectedAmount += 1;
+		collectedCash += source;
 		inCart.Add(shoppingList[0].name.ToString());
 		SetCurrentListItem(shoppingButtons.Count - collectedAmount);
 		scratchouts[shoppingButtons.Count - collectedAmount].gameObject.SetActive(true);
@@ -153,8 +149,8 @@ public class Level_Control : Scene_Control
 		beltStart = GameObject.Find("Belt Start").transform;
 	}
 
-	private float 	itemTimer 	= 1.5f, 
-					itemTrigger = 1.5f, 
+	private float 	itemTimer 	= 2.0f, 
+					itemTrigger = 2.0f, 
 					scanTimer 	= 0.0f, 
 					scanTrigger = 1.0f;
 	private int index 			= 0;
@@ -181,8 +177,26 @@ public class Level_Control : Scene_Control
 			itemScript = cartItems[index].GetComponent<KeyItem_Control>();
 			itemScript.SetActive(true);
 			itemTimer = 0.0f;
+			index += 1;
 		}
+		else if(itemTimer >= itemTrigger && index >= inCart.Count)
+		{
+			masterScript.AddCash(collectedCash);
+			SetSelection(1);
+		}
+	}
 
-		index += 1;
+	private float 	lostTimer 	= 0.0f, 
+					lostTrigger;
+
+	public void PlayerLost()
+	{
+		lostTrigger = 5.0f * inCart.Count;
+
+		lostTimer += Time.deltaTime;
+		if(lostTimer >= lostTrigger)
+		{
+			SetSelection(1);
+		}
 	}
 }

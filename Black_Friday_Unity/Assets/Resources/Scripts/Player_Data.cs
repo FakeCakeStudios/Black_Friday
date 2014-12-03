@@ -31,7 +31,7 @@ public class Player_Data
 		{
 			levelUnlocks.Add(false);
 		}
-		for(int i = 0; i < 1; i ++)
+		for(int i = 0; i < 3; i ++)
 		{
 			characterUnlocks.Add(false);
 		}

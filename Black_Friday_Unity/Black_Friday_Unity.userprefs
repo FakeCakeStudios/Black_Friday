@@ -1,12 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\Desktop\Planar\Project\Assets\Resources\Scripts\Shooting.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\Player_Control.cs">
     <Files>
-      <File FileName="..\..\..\..\Desktop\Planar\Project\Assets\Resources\Scripts\ShootStream.cs" Line="46" Column="35" />
-      <File FileName="..\..\..\..\Desktop\Planar\Project\Assets\Resources\Scripts\Shooting.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\..\Desktop\Planar\Project\Assets\Resources\Scripts\Stream.cs" Line="31" Column="6" />
-      <File FileName="..\..\..\..\Desktop\Planar\Project\Assets\Resources\Scripts\Weapon.cs" Line="79" Column="53" />
-      <File FileName="..\..\..\..\Desktop\Planar\Project\Assets\Resources\Scripts\CharacterSheet.cs" Line="28" Column="20" />
+      <File FileName="Assets\Resources\Scripts\Player_Control.cs" Line="61" Column="1" />
+      <File FileName="Assets\Resources\Scripts\NonPlayer_Control.cs" Line="27" Column="69" />
+      <File FileName="Assets\Resources\Scripts\Select_Control.cs" Line="37" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

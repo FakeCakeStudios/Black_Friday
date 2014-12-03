@@ -95,19 +95,29 @@ public static class Detection
 		GameObject.Destroy(whiskers.gameObject);
 
 		toSeek = Vector3.zero;
-
+		int blocks = 0;
 		for(int i = 0; i < 3; i++)
 		{
 			if(Physics.Raycast(rays[i], out hit, entity.rayDist[i]))
 			{
-				if(hit.transform.gameObject.layer != 9)
+				if(hit.transform.gameObject.layer == 10)
 				{
+					blocks += 1;
 					toSeek = (hit.point + hit.normal * avoidDist);
 					toSeek.y = 0.0f;
 				}
 			}
 		}
-		//the return variable is to remind to call the Seek function of Steering after this call if not zero vectors
+		if(blocks >= 2)
+		{
+			entity.SetStopped(true);
+			entity.blocked = true;
+		}
+		else
+		{
+			entity.SetStopped(false);
+			entity.blocked = false;
+		}
 		return toSeek;
 	}
 	#endregion

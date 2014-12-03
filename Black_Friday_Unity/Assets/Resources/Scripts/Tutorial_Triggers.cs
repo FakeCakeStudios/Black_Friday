@@ -27,7 +27,7 @@ public class Tutorial_Triggers : MonoBehaviour
 			uiTextMessage.text = tutorialMessage;
 			masterScript.SetPause();
 			masterScript.SetTurorial(true);
-			masterScript.AblerResumeButton(true);
+			//masterScript.AblerResumeButton(true);
 		}
 	}
 

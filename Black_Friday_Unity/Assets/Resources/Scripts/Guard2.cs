@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Guard2 : Behavior
+public class Guard2
 {
 	//use this function for additional variable intialization for the needed behavior
-	override public void Initialize()
+	public void Initialize()
 	{
 	
 	}

@@ -6,22 +6,15 @@ public class KeyItem_Control : MonoBehaviour
 	public float 			rotateAngle;
 	public int 				savings;
 	private bool 			active;
-	private Material 		glowMat;
-	private Material 		original;
+
 	private MeshRenderer 	selfMats;
-	private Master_Control 	masterScript;
 	public string 			listName;
 	private Level_Control	levelControl;
 
 	void Awake()
 	{
-		selfMats 			= this.gameObject.GetComponent<MeshRenderer>();
-		glowMat 			= Resources.Load("Prefabs/Placeholders/Materials/yellowMat") as Material;
-		original 			= selfMats.materials[0];
-		selfMats.material 	= glowMat;
 		SetActive(false);
-		masterScript = GameObject.FindGameObjectWithTag("Master").GetComponent<Master_Control>();
-		levelControl = GameObject.Find("Scene Control").GetComponent<Level_Control>();
+		levelControl 		= GameObject.Find("Scene Control").GetComponent<Level_Control>();
 	}
 
 	void Update()
@@ -41,10 +34,8 @@ public class KeyItem_Control : MonoBehaviour
 	public void SetActive(bool source)
 	{
 		active = source;
-		
 		if(active)
 		{
-			selfMats.material 				= glowMat;
 			this.gameObject.SetActive(true);
 		}
 		else
@@ -57,13 +48,11 @@ public class KeyItem_Control : MonoBehaviour
 	{
 		if(other.gameObject.tag == "Player")
 		{
-			masterScript.AddCash(savings);
-			levelControl.CollectedItem();
+			levelControl.CollectedItem(savings);
 		}
 		else if(other.gameObject.tag == "Scanner")
 		{
-			Debug.Log("called");
-			selfMats.material = original;
+	
 		}
 	}
 }

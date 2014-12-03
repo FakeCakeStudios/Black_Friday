@@ -21,7 +21,7 @@ public class Entity_Data : MonoBehaviour
 	private Vector3			postRotation;
 	private int 			animRepeat;
 	private bool 			playingAnim;
-	private bool 			stopped;
+	public bool 			stopped;
 	private bool 			slowed;
 	private bool 			tackle;
 
@@ -57,6 +57,10 @@ public class Entity_Data : MonoBehaviour
 	public float 			trigger1;
 	public float 			timer2;
 	public float 			trigger2;
+	public float			stopTimer;
+	public float			stopTrigger;
+
+	public bool blocked;
 
 	public Transform GetSelf()
 	{
@@ -237,6 +241,7 @@ public class Entity_Data : MonoBehaviour
 		doneShopping 		= false;
 		slowed 				= false;
 		tackle 				= false;
+		blocked 			= false;
 
 		//ints
 		if(this.gameObject.tag == "Shoppers")
@@ -250,7 +255,7 @@ public class Entity_Data : MonoBehaviour
 		animRepeat 			= 1;
 
 		//floats
-		runSpeed 			= 6.0f;
+		runSpeed 			= 3.0f;
 		walkSpeed			= 3.0f;
 		slowSpeed			= 1.5f;
 		currentSpeed		= walkSpeed;
@@ -258,11 +263,12 @@ public class Entity_Data : MonoBehaviour
 		maxAccel 			= 100.0f;
 		timer1 				= 0.0f;
 		timer2 				= 0.0f;
+		stopTimer			= 0.0f;
 
 		//triggers will be set in the inspector as it means different things for differnt behaviors
 		//lastCheckPoint is set by steering during runtime
 		//agroRad will be set in inspector for testing
-		trigger2 = Random.Range(30, 60);
+		trigger2 = Random.Range(120, 180);
 	}
 	
 	//thinking of changing this to a custom call so HAL controls when NPC's update, or to let HAL update their decisions and each entity updates their actual location
@@ -305,7 +311,7 @@ public class Entity_Data : MonoBehaviour
 				}
 				else
 				{
-					charAnimations.SetBool("walk", true);
+					charAnimations.SetBool("walking", true);
 					charAnimations.SetBool("idle", false);
 				}
 			}
@@ -313,22 +319,51 @@ public class Entity_Data : MonoBehaviour
 			{
 				velocity = Vector3.zero;
 				charAnimations.SetBool("idle", true);
-				charAnimations.SetBool("walk", false);
+				charAnimations.SetBool("walking", false);
 				charAnimations.SetBool("run", false);
 			}
 		}
 		else
 		{
+			if(!blocked)
+			{
+				stopTimer += Time.deltaTime;
+				if(stopTimer >= stopTrigger)
+				{
+					stopped = false;
+				}
+			}
+			else
+			{
+				if(Mathf.Abs(output.angle) > maxRotation)
+				{
+					if(output.angle < 0.0f)
+					{
+						output.angle = -maxRotation;
+					}
+					else
+					{
+						output.angle = maxRotation;
+					}
+				}
+				self.Rotate(new Vector3(0.0f, 1.0f, 0.0f), output.angle * Time.deltaTime);
+			}
 			velocity = Vector3.zero;
-			charAnimations.SetBool("idle", true);
-			charAnimations.SetBool("walk", false);
+			//commented out for the behavior script should set the animation to the desired clip depending on what the character is stopping for
+			//charAnimations.SetBool("idle", true);
+			charAnimations.SetBool("walking", false);
 			charAnimations.SetBool("run", false);
 		}
 	}
 
 	public void RandomTrigger()
 	{
-		trigger1 = Random.Range(30.0f, 45.0f) - Random.Range(0.0f, 15.0f);
+		trigger1 = Random.Range(30.0f, 60.0f) - Random.Range(0.0f, 15.0f);
+	}
+
+	public void RandomizeStopTrigger()
+	{
+		stopTrigger = Random.Range(15.0f, 30.0f) - Random.Range(0.0f, 15.0f);
 	}
 
 	void OnTriggerStay(Collider other)

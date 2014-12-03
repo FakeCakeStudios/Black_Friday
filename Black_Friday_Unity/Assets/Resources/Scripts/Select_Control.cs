@@ -54,6 +54,14 @@ public class Select_Control : Scene_Control
 		characterButtons.Add(temp.GetComponentInChildren<UISprite>());
 		characterColliders.Add(temp.collider);
 		characterScripts.Add(temp.GetComponent<Index_Button>());
+		temp = GameObject.Find("Character 3 Button");
+		characterButtons.Add(temp.GetComponentInChildren<UISprite>());
+		characterColliders.Add(temp.collider);
+		characterScripts.Add(temp.GetComponent<Index_Button>());
+		temp = GameObject.Find("More Characters Button");
+		characterButtons.Add(temp.GetComponentInChildren<UISprite>());
+		characterColliders.Add(temp.collider);
+		characterScripts.Add(temp.GetComponent<Index_Button>());
 
 		for(int i = 0; i < characterButtons.Count; i++)
 		{
@@ -81,7 +89,7 @@ public class Select_Control : Scene_Control
 			if(!characterUnlocks[i])
 			{
 				characterColliders[i].enabled 	= false;
-				characterScripts[i].enabled 	= false;
+				//characterScripts[i].enabled 	= false;
 			}
 		}
 		characterSelectPanel.SetActive(false);

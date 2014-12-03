@@ -64,6 +64,10 @@ public class Player_Control : MonoBehaviour
 
 		powerupOverlay.SetActive(false);
 		triggerDrop.SetActive(false);
+
+		charAnimations.SetBool("lightcrash", false);
+		charAnimations.SetBool("hardcrash", false);
+		charAnimations.SetBool("grabItem", false);
 	}
 
 	void Update()
@@ -82,6 +86,8 @@ public class Player_Control : MonoBehaviour
 					usedPowerup = false;
 					currentSpeed = walkSpeed;
 					powerupOverlay.SetActive(false);
+					//TODO the function below needs the name of the default image to be displayed when the player has no powerup
+					SetPowerupDisplay("");
 				}
 			}
 
@@ -284,7 +290,7 @@ public class Player_Control : MonoBehaviour
 	{
 		if(other.tag == "Guards")
 		{
-			//for now just end the game, but need to activate losing animations and what not here before actually going back to menu
+			//TODO, set the charAnimations to run the losing animation when it is connected
 			masterScript.GameOver();
 		}
 		else if(other.tag == "EndScene")
@@ -313,12 +319,13 @@ public class Player_Control : MonoBehaviour
 		return output;
 	}
 
-	public void PowerupObtained(Powerups source)
+	public void PowerupObtained(Powerups source, string name)
 	{
 		powerupList.Add(source);
+		SetPowerupDisplay(name);
 	}
 
-	public void SetPowerupDisplay(string source)
+	void SetPowerupDisplay(string source)
 	{
 		powerupDisplay.spriteName = source;
 	}

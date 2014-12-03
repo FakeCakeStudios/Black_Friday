@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Shopper1 : Behavior
+public class Shopper1
 {
 	//use this function for additional variable intialization for the needed behavior
-	override public void Initialize()
+	public void Initialize()
 	{
 	
 	}
@@ -35,7 +35,15 @@ public class Shopper1 : Behavior
 					output = Steering.Pursue(self.position, source.GetDestination(), source.GetVelocity(), Vector3.zero);
 					if(output.linear == Vector3.zero)
 					{
-						source.SetActAgro(false);
+						output = Steering.Align2D(self.eulerAngles, -self.rotation.eulerAngles);
+						if(output.angle == 0.0f)
+						{
+							source.SetStopped(false);
+							source.blocked = false;
+							source.SetActAgro(false);
+							source.RandomizeStopTrigger();
+							source.SetStopped(true);
+						}
 					}
 				}
 				else
@@ -66,10 +74,20 @@ public class Shopper1 : Behavior
 		Vector3 target 	= new Vector3();
 		target 			= Detection.AvoidObstacles(source);
 		//if target is not 0, then Seek the new target to avoid the obstacle
-		if(target != Vector3.zero)
+
+		if(target != Vector3.zero && !source.blocked)
 		{
 			//source.output = steering.AddSteeringOutputs(source.output, steering.Seek(source.self.position, target));
 			output = Steering.Seek(self.position, target);
+		}
+		else if(source.blocked)
+		{
+			output = Steering.Align2D(self.eulerAngles, -self.rotation.eulerAngles);
+			if(output.angle == 0.0f)
+			{
+				source.SetStopped(false);
+				source.blocked = false;
+			}
 		}
 		//always look in the direction we are moving
 		source.SetOutput(Steering.AddSteeringOutputs(output, Steering.LookInDir(self, output.linear)));
