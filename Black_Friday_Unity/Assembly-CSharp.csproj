@@ -148,13 +148,11 @@
      <Compile Include="Assets\Resources\Scripts\Level_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Master_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Menu_Control.cs" />
-     <Compile Include="Assets\Resources\Scripts\NonPlayer_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Options_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\PathManager.cs" />
      <Compile Include="Assets\Resources\Scripts\Pause_Button.cs" />
      <Compile Include="Assets\Resources\Scripts\Player_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Player_Data.cs" />
-     <Compile Include="Assets\Resources\Scripts\Player_Victory.cs" />
      <Compile Include="Assets\Resources\Scripts\Powerup_Control.cs" />
      <Compile Include="Assets\Resources\Scripts\Powerups_Button.cs" />
      <Compile Include="Assets\Resources\Scripts\RunTime.cs" />
@@ -167,7 +165,6 @@
      <Compile Include="Assets\Resources\Scripts\Steering.cs" />
      <Compile Include="Assets\Resources\Scripts\Tutorial_Triggers.cs" />
      <Compile Include="Assets\Resources\Scripts\Types_Def.cs" />
-     <Compile Include="Assets\Resources\Scripts\Video.cs" />
      <Compile Include="Assets\Resources\Scripts\Webstore_Control.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\GUI - Text Shader (SoftClip).shader" />
