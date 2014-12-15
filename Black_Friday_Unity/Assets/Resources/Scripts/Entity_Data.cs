@@ -23,7 +23,6 @@ public class Entity_Data : MonoBehaviour
 	private List<Interaction> 	action;
 	private List<float>			actionTimers;
 	private List<float>			actionTriggers;
-	private Vector3				search;
 
 	public float			maxRotation;
 	public float 			runSpeed;
@@ -270,7 +269,6 @@ public class Entity_Data : MonoBehaviour
 		charAnimations.SetBool("fall", true);
 		stopped = true;
 		source.Crash(velocity);
-		animTrigger = 0.1f;
 	}
 
 	public void SetTaunt()
@@ -317,43 +315,41 @@ public class Entity_Data : MonoBehaviour
 	void Update()
 	{
 		self.position += velocity * Time.deltaTime;
-	
-		if(this.tag == "Shoppers")
+
+		if(playingAnim)
 		{
-			if(this.name.Contains("Fat Shopper"))
+			animTimer += Time.deltaTime;
+			if(animTimer >= animTrigger)
 			{
+				//shopper specific
+				charAnimations.SetBool("grab", false);
+				charAnimations.SetBool("inspect", false);
+				charAnimations.SetBool("fall", false);
+
+				//fat shopper specific
 				charAnimations.SetBool("taunt", false);
-			}
-			else if(this.name.Contains("Bob"))
-			{
+
+				//fat bob specific
 				charAnimations.SetBool("block", false);
 				charAnimations.SetBool("dodge", false);
 				charAnimations.SetBool("emo", false);
 				charAnimations.SetInteger("attack", 0);
-			}
-			else
-			{
-				charAnimations.SetBool("grab", false);
-				charAnimations.SetBool("inspect", false);
-				charAnimations.SetBool("fall", false);
-			}
-		}
-		else if(this.tag == "Guards")
-		{
 
-			if(this.name.Contains("Fat Shopper"))
-			{
+				//big cop specific
 				charAnimations.SetBool("tackle", false);
 				charAnimations.SetBool("look", false);
 				charAnimations.SetBool("listen", false);
-			}
-			else if(this.name.Contains("Bob"))
-			{
+
+				//fat cop specific
 				charAnimations.SetBool("left", false);
 				charAnimations.SetBool("right", false);
+
+				animTimer 		= 0.0f;
+				stopped 		= false;
+				playingAnim 	= false;
 			}
 		}
-	
+
 		if(!stopped)
 		{
 			if(!tackle)

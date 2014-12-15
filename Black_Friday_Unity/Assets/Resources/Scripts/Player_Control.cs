@@ -377,7 +377,7 @@ public class Player_Control : MonoBehaviour
 		if(temp > 6.01f)
 		{
 			charAnimations.SetBool("hard", true);
-			animTrigger = 0.875f;
+			animTrigger = 0.833f;
 			currentSpeed = 0.0f;
 			animPlaying = true;
 		}
@@ -419,10 +419,6 @@ public class Player_Control : MonoBehaviour
 		if(other.gameObject.tag == "Shoppers")
 		{
 			other.gameObject.SendMessage("Crash", this, SendMessageOptions.DontRequireReceiver);
-		}
-		else
-		{
-			Crash(Vector3.zero);
 		}
 	}
 }

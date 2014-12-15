@@ -86,6 +86,10 @@ public class Master_Control : MonoBehaviour
 	{
 		return player;
 	}
+	public void SetPlayerData(Player_Data source)
+	{
+		player = source;
+	}
 
 	public void PowerupObtained(Powerups source)
 	{

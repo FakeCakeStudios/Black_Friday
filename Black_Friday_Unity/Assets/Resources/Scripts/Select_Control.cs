@@ -43,10 +43,10 @@ public class Select_Control : Scene_Control
 		levelButtons.Add(temp.GetComponentInChildren<UISprite>());
 		levelColliders.Add(temp.collider);
 		levelScripts.Add(temp.GetComponent<Index_Button>());
-		//temp = GameObject.Find("Bottom Next Level Button");
-		//levelButtons.Add(temp.GetComponentInChildren<UISprite>());
-		//levelColliders.Add(temp.collider);
-		//levelScripts.Add(temp.GetComponent<Index_Button>());
+		temp = GameObject.Find("Bottom Next Level Button");
+		levelButtons.Add(temp.GetComponentInChildren<UISprite>());
+		levelColliders.Add(temp.collider);
+		levelScripts.Add(temp.GetComponent<Index_Button>());
 		shownModelPoint = GameObject.Find("Nerd").transform.position;
 		hiddenModelPoint = GameObject.Find("Psycho").transform.position;
 		nerdModel = GameObject.Find("Nerd");

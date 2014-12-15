@@ -4,115 +4,67 @@ using System.Collections.Generic;
 
 public class Webstore_Control : Scene_Control
 {
-	//private
-	private bool 			back,
-							change,
-							kartMenu,
-							powerupMenu;
-	private List<int> 		itemCost;
-	private int				selection;
-	private GameObject 		kart;
-	private UIPanel[] 		panels;
+	public int cash;
+	private Player_Data playerdata;
 
-	void Initialize()
-	{
-		//default values
-		back 			= false;
-		change 			= false;
-		kartMenu		= false;
-		powerupMenu 	= false;
-		itemCost 		= new List<int>();
-		selection 		= 0;
-		panels 			= new UIPanel[3];
-		panels[0] 		= GameObject.Find("Webstore 1").GetComponent<UIPanel>();
-		panels[1] 		= GameObject.Find("Kart 1").GetComponent<UIPanel>();
-		panels[2] 		= GameObject.Find("Powerups 1").GetComponent<UIPanel>();
-	}
-	
-	// Update is called once per frame
-	void MyUpdate()
-	{
-		//only make changes if a change has been indicated from the user input
-		if(change)
-		{
-			change 				= false;
-			panels[0].enabled 	= true;
-			panels[1].enabled 	= true;
-
-			if(kartMenu)
-			{
-				panels[4].enabled = true;
-				SetupCosts(0);
-			}
-			else if(powerupMenu)
-			{
-					panels[7].enabled = true;
-				SetupCosts(1);
-			}
-		}
-
-		//controls all actions for the back button no matter current state of scene
-		if(back)
-		{
-			//if displaying a submenu then back out to previous
-			if(kartMenu || powerupMenu)
-			{
-				change 		= true;
-				kartMenu 	= false;
-				powerupMenu = false;
-
-				//always clear item cost list so it will be clean when setting back up
-				itemCost.Clear();
-			}
-			//if a submenu isn't displaying
-			else
-			{
-				DontDestroyOnLoad(master);
-				Application.LoadLevel("Menu");
-			}
+	override public void Initialize(){
+		if(GameObject.FindGameObjectWithTag("Master") != null){
+			playerdata = masterScript.GetPlayerData();
+			cash = playerdata.GetCash();
 		}
 	}
-	
-	void SetupCosts(int source)
-	{
-		switch(source)
-		{
-		case(0):
-		{
-			itemCost.Add(0);//only an example to copy paste for each cost that needs to be added
+
+	override public void SceneAction(int set){
+		switch(set){
+		case(10):{
+			playerdata.AddPowerup(Powerups.Megacubes);
 			break;
 		}
-		case(1):
-		{
-			itemCost.Add(0);
+		case(11):{
+			playerdata.AddPowerup(Powerups.Tacks);
+			break;
+		}
+		case(12):{
+			playerdata.AddPowerup(Powerups.StickyHand);
+			break;
+		}
+		case(13):{
+			playerdata.AddPowerup(Powerups.RollerSkates);
+			break;
+		}
+		case(14):{
+			//playerdata.AddPowerup(Powerups.);// ------
+			break;
+		}
+		case(15):{
+			playerdata.AddPowerup(Powerups.Mask);
+			break;
+		}
+		case(16):{
+			playerdata.AddPowerup(Powerups.Marbles);
+			break;
+		}
+		case(17):{
+			playerdata.AddPowerup(Powerups.Jawbreakers);
+			break;
+		}
+		case(18):{
+			playerdata.AddPowerup(Powerups.Glue);
+			break;
+		}
+		case(19):{
+			playerdata.AddPowerup(Powerups.BlackCoffee);
+			break;
+		}
+		case(20):{
+			playerdata.AddPowerup(Powerups.Box);
+			break;
+		}
+		case(21):{
+			playerdata.AddPowerup(Powerups.Horn);
 			break;
 		}
 		}
 	}
-
-	public void SetKartMenu(bool source)
-	{
-		kartMenu = source;
-	}
-
-	public void SetPowerupMenu(bool source)
-	{
-		powerupMenu = source;
-	}
-
-	public void SetBack(bool source)
-	{
-		back = source;
-	}
-
-	public void SetChange(bool source)
-	{
-		change = source;
-	}
-
-	//Define what will happen for values 8 and above
-	override public void SceneAction(int source)
-	{
-
-	}
+	public Player_Data GetPlayerData(){return playerdata;}
 }

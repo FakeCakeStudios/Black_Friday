@@ -1,0 +1,4 @@
+These icons fit in the squares on the appropriate (offense, defense, speed) buttons. (On Press)
+I found that scaling them down to 28% they fit just fine. Let me know if you want me to 
+rescale and send you the file again. One player presses the icon... display "select frame"
+and show the icon description in the appropriate window.

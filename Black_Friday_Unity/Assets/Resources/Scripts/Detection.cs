@@ -100,9 +100,12 @@ public static class Detection
 		{
 			if(Physics.Raycast(rays[i], out hit, entity.rayDist[i]))
 			{
-				blocks += 1;
-				toSeek = (hit.point + hit.normal * avoidDist);
-				toSeek.y = 0.0f;
+				if(hit.transform.gameObject.layer == 10)
+				{
+					blocks += 1;
+					toSeek = (hit.point + hit.normal * avoidDist);
+					toSeek.y = 0.0f;
+				}
 			}
 		}
 		if(blocks >= 2)
