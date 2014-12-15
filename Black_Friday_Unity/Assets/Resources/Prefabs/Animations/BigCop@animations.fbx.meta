@@ -1,0 +1,1492 @@
+fileFormatVersion: 2
+guid: 0674322287cb811488f67f962d4523ef
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Head_JNT
+    100004: Head_Spine_END
+    100006: Left_angkle_leg_END
+    100008: Left_arm_END
+    100010: Left_clavical_JNT
+    100012: Left_elbow_JNT
+    100014: Left_finger_A_JNT
+    100016: Left_finger_B_JNT
+    100018: Left_finger_END
+    100020: Left_foot_ankle_JNT
+    100022: Left_foot_ball_JNT
+    100024: Left_foot_toe_end
+    100026: Left_hand_JNT
+    100028: Left_hip_leg_JNT
+    100030: Left_knee_leg_JNT
+    100032: Left_shoulder_JNT
+    100034: Left_wrist_JNT1
+    100036: Master_CNTL
+    100038: Neck_JNT
+    100040: Pelvis_spine_JNT
+    100042: Right_angkle_leg_END
+    100044: Right_arm_END
+    100046: Right_clavical_JNT
+    100048: Right_elbow_JNT
+    100050: Right_finger_A_JNT
+    100052: Right_finger_B_JNT
+    100054: Right_finger_END
+    100056: Right_foot_ankle_JNT
+    100058: Right_foot_ball_JNT
+    100060: Right_foot_toe_end
+    100062: Right_hand_JNT
+    100064: Right_hip_leg_JNT
+    100066: Right_knee_leg_JNT
+    100068: Right_shoulder_JNT
+    100070: Right_wrist_JNT
+    100072: Root_JNT
+    100074: Spine_A_JNT
+    100076: Spine_B_JNT
+    100078: Spine_C_JNT
+    100080: Spine_D_JNT
+    100082: Spine_E_JNT
+    100084: Spine_END
+    400000: //RootNode
+    400002: Head_JNT
+    400004: Head_Spine_END
+    400006: Left_angkle_leg_END
+    400008: Left_arm_END
+    400010: Left_clavical_JNT
+    400012: Left_elbow_JNT
+    400014: Left_finger_A_JNT
+    400016: Left_finger_B_JNT
+    400018: Left_finger_END
+    400020: Left_foot_ankle_JNT
+    400022: Left_foot_ball_JNT
+    400024: Left_foot_toe_end
+    400026: Left_hand_JNT
+    400028: Left_hip_leg_JNT
+    400030: Left_knee_leg_JNT
+    400032: Left_shoulder_JNT
+    400034: Left_wrist_JNT1
+    400036: Master_CNTL
+    400038: Neck_JNT
+    400040: Pelvis_spine_JNT
+    400042: Right_angkle_leg_END
+    400044: Right_arm_END
+    400046: Right_clavical_JNT
+    400048: Right_elbow_JNT
+    400050: Right_finger_A_JNT
+    400052: Right_finger_B_JNT
+    400054: Right_finger_END
+    400056: Right_foot_ankle_JNT
+    400058: Right_foot_ball_JNT
+    400060: Right_foot_toe_end
+    400062: Right_hand_JNT
+    400064: Right_hip_leg_JNT
+    400066: Right_knee_leg_JNT
+    400068: Right_shoulder_JNT
+    400070: Right_wrist_JNT
+    400072: Root_JNT
+    400074: Spine_A_JNT
+    400076: Spine_B_JNT
+    400078: Spine_C_JNT
+    400080: Spine_D_JNT
+    400082: Spine_E_JNT
+    400084: Spine_END
+    7400000: Grab
+    7400002: Idle
+    7400004: Idle2 Intro
+    7400006: Idle2
+    7400008: Listening
+    7400010: Jump Attack
+    7400012: Walking
+    7400014: Running
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Grab
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_CNTL
+        weight: 1
+      - path: Master_CNTL/Root_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT/Left_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT/Right_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT/Left_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT/Right_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT/Head_Spine_END
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 113
+      lastFrame: 185
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_CNTL
+        weight: 1
+      - path: Master_CNTL/Root_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT/Left_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT/Right_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT/Left_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT/Right_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT/Head_Spine_END
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle2 Intro
+      takeName: Take 001
+      firstFrame: 191
+      lastFrame: 293
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_CNTL
+        weight: 1
+      - path: Master_CNTL/Root_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT/Left_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT/Right_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT/Left_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT/Right_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT/Head_Spine_END
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle2
+      takeName: Take 001
+      firstFrame: 233
+      lastFrame: 293
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_CNTL
+        weight: 1
+      - path: Master_CNTL/Root_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT/Left_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT/Right_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT/Left_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT/Right_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT/Head_Spine_END
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Listening
+      takeName: Take 001
+      firstFrame: 300
+      lastFrame: 388
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_CNTL
+        weight: 1
+      - path: Master_CNTL/Root_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT/Left_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT/Right_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT/Left_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT/Right_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT/Head_Spine_END
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump Attack
+      takeName: Take 001
+      firstFrame: 475
+      lastFrame: 504
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_CNTL
+        weight: 1
+      - path: Master_CNTL/Root_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT/Left_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT/Right_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT/Left_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT/Right_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT/Head_Spine_END
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walking
+      takeName: Take 001
+      firstFrame: 600
+      lastFrame: 632
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_CNTL
+        weight: 1
+      - path: Master_CNTL/Root_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT/Left_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT/Right_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT/Left_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT/Right_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT/Head_Spine_END
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Running
+      takeName: Take 001
+      firstFrame: 660
+      lastFrame: 685
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Master_CNTL
+        weight: 1
+      - path: Master_CNTL/Root_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Left_hip_leg_JNT/Left_knee_leg_JNT/Left_angkle_leg_END/Left_foot_ankle_JNT/Left_foot_ball_JNT/Left_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Pelvis_spine_JNT/Right_hip_leg_JNT/Right_knee_leg_JNT/Right_angkle_leg_END/Right_foot_ankle_JNT/Right_foot_ball_JNT/Right_foot_toe_end
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Left_clavical_JNT/Left_shoulder_JNT/Left_elbow_JNT/Left_arm_END/Left_wrist_JNT1/Left_hand_JNT/Left_finger_A_JNT/Left_finger_B_JNT/Left_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Right_clavical_JNT/Right_shoulder_JNT/Right_elbow_JNT/Right_arm_END/Right_wrist_JNT/Right_hand_JNT/Right_finger_A_JNT/Right_finger_B_JNT/Right_finger_END
+        weight: 0
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT
+        weight: 1
+      - path: Master_CNTL/Root_JNT/Spine_A_JNT/Spine_B_JNT/Spine_C_JNT/Spine_D_JNT/Spine_E_JNT/Spine_END/Neck_JNT/Head_JNT/Head_Spine_END
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .150000006
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human:
+    - boneName: Spine_A_JNT
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_hip_leg_JNT
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_hip_leg_JNT
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_knee_leg_JNT
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_knee_leg_JNT
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_foot_ankle_JNT
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_foot_ankle_JNT
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine_B_JNT
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine_C_JNT
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck_JNT
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head_JNT
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_clavical_JNT
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_clavical_JNT
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_shoulder_JNT
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_shoulder_JNT
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_elbow_JNT
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_elbow_JNT
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_wrist_JNT1
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_wrist_JNT
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_foot_ball_JNT
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_foot_ball_JNT
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_hand_JNT
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_finger_A_JNT
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Left_finger_B_JNT
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_hand_JNT
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_finger_A_JNT
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Right_finger_B_JNT
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: BigCop(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Master_CNTL
+      position: {x: -0, y: 0, z: .150000006}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Root_JNT
+      position: {x: -0, y: 0, z: -.150000006}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Spine_A_JNT
+      position: {x: 6.93334808e-34, y: 1.03888071, z: .124217801}
+      rotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Spine_B_JNT
+      position: {x: -.157405868, y: 3.33898733e-17, z: -8.32667268e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Spine_C_JNT
+      position: {x: -.226294413, y: 5.1288285e-17, z: -2.16493495e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Spine_D_JNT
+      position: {x: -.226294413, y: 4.76453684e-17, z: 1.6653346e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Spine_E_JNT
+      position: {x: -.226294413, y: -.000749997795, z: -1.16573426e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Spine_END
+      position: {x: -.158297762, y: 3.61007163e-17, z: 6.66133841e-17}
+      rotation: {x: 0, y: 0, z: .707106829, w: .707106829}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Neck_JNT
+      position: {x: .000749997795, y: -2.66453536e-16, z: -.000297085353}
+      rotation: {x: .497792572, y: -.502197742, z: -.497792572, w: .502197742}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Head_JNT
+      position: {x: -.13123329, y: .00436846307, z: -1.39547206e-17}
+      rotation: {x: .999971807, y: -.00751065183, z: -2.81287002e-17, w: -6.14453383e-17}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Head_Spine_END
+      position: {x: -.244718716, y: -2.44083003e-05, z: -4.1380452e-19}
+      rotation: {x: .498444825, y: -.501550376, z: .498444825, w: .501550376}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_clavical_JNT
+      position: {x: -.0972702876, y: .0799964294, z: .121932663}
+      rotation: {x: .088436842, y: -.0883586854, z: .692302287, w: .710696399}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_shoulder_JNT
+      position: {x: .250206709, y: .0166500006, z: -.158968687}
+      rotation: {x: -.0188795794, y: .0919365734, z: .0697479472, w: .993139684}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_elbow_JNT
+      position: {x: .503643036, y: -.07906501, z: -.00548790023}
+      rotation: {x: .00943843555, y: .183715984, z: .0244935285, w: .982628822}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_arm_END
+      position: {x: .483489931, y: -.0878549963, z: .188765898}
+      rotation: {x: 0, y: .0529952534, z: -0, w: .998594761}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_wrist_JNT
+      position: {x: -.00137585634, y: -.000339419115, z: .0045376881}
+      rotation: {x: .0332762972, y: -.147030741, z: .00800452381, w: .988539636}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_hand_JNT
+      position: {x: .085221, y: 1.50000005e-05, z: .0239805002}
+      rotation: {x: 0, y: .209153861, z: -0, w: .977882743}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_finger_A_JNT
+      position: {x: .0632703155, y: 0, z: .0709933564}
+      rotation: {x: 3.61163131e-07, y: .103039682, z: -2.25428892e-07, w: .994677305}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_finger_B_JNT
+      position: {x: .0381925106, y: 0, z: .0807228163}
+      rotation: {x: 6.40028645e-07, y: .433685035, z: -1.01709887e-07, w: .901064575}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_finger_END
+      position: {x: -.0300066806, y: 0, z: .0526573583}
+      rotation: {x: 0, y: -.492698818, z: -0, w: .870199919}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_clavical_JNT
+      position: {x: -.0972722694, y: -.0788844153, z: .121933274}
+      rotation: {x: -.0915570036, y: .0914778262, z: .710415065, w: .69178009}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_shoulder_JNT
+      position: {x: -.249529541, y: .0166466702, z: -.164566308}
+      rotation: {x: -.0180583205, y: -.0996788219, z: -.0720905736, w: .992240429}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_elbow_JNT
+      position: {x: -.503643632, y: -.0790601522, z: -.00548784388}
+      rotation: {x: .0140498709, y: -.00634951564, z: -.02059054, w: .999669135}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_arm_END
+      position: {x: -.51897794, y: -.0878581479, z: .00746810995}
+      rotation: {x: 0, y: .0529952534, z: -0, w: .998594761}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_wrist_JNT1
+      position: {x: -.00127718924, y: -.000345144013, z: .00456687249}
+      rotation: {x: .0340195149, y: -.135736719, z: .00176082051, w: .990159154}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_hand_JNT
+      position: {x: -.085221909, y: 2.26088687e-05, z: .0239795446}
+      rotation: {x: 0, y: .209153861, z: -0, w: .977882743}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_finger_A_JNT
+      position: {x: -.0950989649, y: -7.99360609e-16, z: 0}
+      rotation: {x: 6.87952539e-09, y: .0288658012, z: 2.06926515e-07, w: .999583364}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_finger_B_JNT
+      position: {x: -.0892785564, y: -5.32907073e-16, z: .00194935454}
+      rotation: {x: 4.12842098e-08, y: .197160974, z: -4.95537279e-07, w: .980371118}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_finger_END
+      position: {x: -.0583005026, y: 1.06581415e-15, z: -.0177657269}
+      rotation: {x: 0, y: -.492698818, z: -0, w: .870199919}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Pelvis_spine_JNT
+      position: {x: .00251739472, y: -.000193991262, z: 8.24264703e-07}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_hip_leg_JNT
+      position: {x: .0514513329, y: -.143973693, z: -.0210614372}
+      rotation: {x: -.117026359, y: -.491556048, z: .858568072, w: .0868241563}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_knee_leg_JNT
+      position: {x: -.42066896, y: 8.32667268e-17, z: -1.33226768e-16}
+      rotation: {x: -.452418059, y: -.00882687047, z: -.162189022, w: .876889229}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_angkle_leg_END
+      position: {x: -.509601593, y: 3.33066921e-17, z: 6.66133841e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_foot_ankle_JNT
+      position: {x: -1.40901202e-08, y: -1.90872029e-09, z: -8.56806737e-10}
+      rotation: {x: .632022679, y: .554811716, z: -.254084408, w: .477673978}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_foot_ball_JNT
+      position: {x: -.033933524, y: -.0903026909, z: .146598279}
+      rotation: {x: -.0513296649, y: .705241323, z: -.0513296612, w: .705241323}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Left_foot_toe_end
+      position: {x: -.121945038, y: -.00164420274, z: 4.25021347e-17}
+      rotation: {x: .0513296649, y: -.705241323, z: .0513296649, w: .705241323}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_hip_leg_JNT
+      position: {x: .051451277, y: .143973753, z: -.0210614391}
+      rotation: {x: .858448982, y: .0871850997, z: .116925292, w: .491724163}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_knee_leg_JNT
+      position: {x: .420669526, y: 2.68054663e-07, z: 4.18224246e-08}
+      rotation: {x: -.452474594, y: -.00878288969, z: -.161434069, w: .876999855}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_angkle_leg_END
+      position: {x: .509601355, y: 6.07142248e-09, z: -7.13630868e-07}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_foot_ankle_JNT
+      position: {x: 6.27338963e-08, y: 6.70015332e-09, z: 9.84118387e-09}
+      rotation: {x: .632423282, y: .554539979, z: -.254204512, w: .477395326}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_foot_ball_JNT
+      position: {x: .0339330025, y: .0903027058, z: -.14659816}
+      rotation: {x: -.0513296612, y: .705241323, z: -.0513296649, w: .705241323}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Right_foot_toe_end
+      position: {x: .12194559, y: .00164429983, z: -6.66133841e-17}
+      rotation: {x: .0513296649, y: -.705241323, z: .0513296649, w: .705241323}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Big_Cop_Mesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 80bd2af6707d5af43ac6fca6b3920aee,
+    type: 3}
+  animationType: 3
+  additionalBone: 0
+  userData: 

@@ -1,0 +1,112 @@
+fileFormatVersion: 2
+guid: 585ca2b841fcbce4b80bbad516793e83
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Maya_File_Assets:group1
+    100004: Maya_File_Assets:TexturedAssetsCurrent:Laptop
+    100006: Maya_File_Assets:TexturedAssetsCurrent:monitor_flat
+    100008: monitor_flat
+    100010: monitor_flat1
+    100012: monitor_flat2
+    100014: Monitor_0
+    100016: Monitor_1
+    100018: Monitor_2
+    100020: Monitor_3
+    100022: Monitor_4
+    400000: //RootNode
+    400002: Maya_File_Assets:group1
+    400004: Maya_File_Assets:TexturedAssetsCurrent:Laptop
+    400006: Maya_File_Assets:TexturedAssetsCurrent:monitor_flat
+    400008: monitor_flat
+    400010: monitor_flat1
+    400012: monitor_flat2
+    400014: Monitor_0
+    400016: Monitor_1
+    400018: Monitor_2
+    400020: Monitor_3
+    400022: Monitor_4
+    2300000: Maya_File_Assets:TexturedAssetsCurrent:Laptop
+    2300002: Maya_File_Assets:TexturedAssetsCurrent:monitor_flat
+    2300004: monitor_flat
+    2300006: monitor_flat1
+    2300008: monitor_flat2
+    2300010: Monitor_0
+    2300012: Monitor_1
+    2300014: Monitor_2
+    2300016: Monitor_3
+    2300018: Monitor_4
+    3300000: Maya_File_Assets:TexturedAssetsCurrent:Laptop
+    3300002: Maya_File_Assets:TexturedAssetsCurrent:monitor_flat
+    3300004: monitor_flat
+    3300006: monitor_flat1
+    3300008: monitor_flat2
+    3300010: Monitor_0
+    3300012: Monitor_1
+    3300014: Monitor_2
+    3300016: Monitor_3
+    3300018: Monitor_4
+    4300000: Maya_File_Assets:TexturedAssetsCurrent:monitor_flat
+    4300002: Maya_File_Assets:TexturedAssetsCurrent:Laptop
+    4300004: monitor_flat
+    4300006: monitor_flat1
+    4300008: monitor_flat2
+    4300010: Monitor_4
+    4300012: Monitor_0
+    4300014: Monitor_3
+    4300016: Monitor_2
+    4300018: Monitor_1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  userData: 

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 73a96c765c9d241f0befd2741355b889
+labels:
+- Editor
+- Tool
+- Object
+- Replacement
+- Utility
+- Extension
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
