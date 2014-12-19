@@ -11,8 +11,16 @@ public class WebstoreToggle : MonoBehaviour {
 	public int[] prices;
 	public PupInfo purchasedItem;
 	public GameObject[] purchasedDiplay;
+
+	public bool[] lastOffense;
+	public bool[] lastSpeed;
+	public bool[] lastDefense;
 	//Main Panel Functions
 	public void Awake(){
+		lastOffense = new bool[3];
+		lastSpeed = new bool[3];
+		lastDefense = new bool[3];
+
 		windows[0].SetActive(true);
 		windows[1].SetActive(false);
 		windows[2].SetActive(false);
@@ -191,6 +199,8 @@ public class WebstoreToggle : MonoBehaviour {
 			windows[11].SetActive(true);
 			windows[12].SetActive(false);
 			windows[16].SetActive(true);
+			windows[20].SetActive(false);
+			windows[24].SetActive(false);
 		}else{
 			windows[7].SetActive(true);
 			windows[8].SetActive(false);
@@ -199,6 +209,8 @@ public class WebstoreToggle : MonoBehaviour {
 			windows[11].SetActive(true);
 			windows[12].SetActive(false);
 			windows[16].SetActive(false);
+			windows[20].SetActive(false);
+			windows[24].SetActive(false);
 		}
 	}
 	public void SpeedToggle(){
@@ -209,7 +221,9 @@ public class WebstoreToggle : MonoBehaviour {
 			windows[10].SetActive(true);
 			windows[11].SetActive(true);
 			windows[12].SetActive(false);
+			windows[16].SetActive(false);
 			windows[20].SetActive(true);
+			windows[24].SetActive(false);
 		}else{
 			windows[7].SetActive(true);
 			windows[8].SetActive(false);
@@ -217,7 +231,9 @@ public class WebstoreToggle : MonoBehaviour {
 			windows[10].SetActive(false);
 			windows[11].SetActive(true);
 			windows[12].SetActive(false);
+			windows[16].SetActive(false);
 			windows[20].SetActive(false);
+			windows[24].SetActive(false);
 		}
 	}
 	public void DefenseToggle(){
@@ -228,6 +244,8 @@ public class WebstoreToggle : MonoBehaviour {
 			windows[10].SetActive(false);
 			windows[11].SetActive(false);
 			windows[12].SetActive(true);
+			windows[16].SetActive(false);
+			windows[20].SetActive(false);
 			windows[24].SetActive(true);
 		}else{
 			windows[7].SetActive(true);
@@ -236,12 +254,14 @@ public class WebstoreToggle : MonoBehaviour {
 			windows[10].SetActive(false);
 			windows[11].SetActive(true);
 			windows[12].SetActive(false);
+			windows[16].SetActive(false);
+			windows[20].SetActive(false);
 			windows[24].SetActive(false);
 		}
 	}
 
 	public void OffenseSlotOne(){
-		if(!windows[13].activeSelf){		
+		if(!windows[13].activeSelf){
 			windows[13].SetActive(true);
 		}else{		
 			windows[13].SetActive(false);
